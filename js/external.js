@@ -73,14 +73,14 @@ alert("Welcome to my Website!");
 
 /// Class Enrollment
 
-let classFull = confirm("Is class full?");
-let scheduleConflict = confirm("Does this class conflict with your schedule?");
-
-if (classFull === true || scheduleConflict === true) {
-    alert("Sorry, you  may not enroll!")
-} else {
-    alert("Congratulations! You have enrolled!")
-}
+// let classFull = confirm("Is class full?");
+// let scheduleConflict = confirm("Does this class conflict with your schedule?");
+//
+// if (classFull === true || scheduleConflict === true) {
+//     alert("Sorry, you  may not enroll!")
+// } else {
+//     alert("Congratulations! You have enrolled!")
+// }
 
 /// Product Offer
 
