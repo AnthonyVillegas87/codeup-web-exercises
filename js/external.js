@@ -5,6 +5,7 @@ const myName = "Anthony Villegas";
 alert("Hi, my name is " + myName + ".")
 
 //confirm
+
 // var userDecision = confirm("Are you a new user?");
 // console.log(userDecision);
 //
@@ -29,28 +30,24 @@ alert("Hi, my name is " + myName + ".")
 //alert
 alert("Welcome to my Website!");
 
-//prompt
-//  var userColor = prompt("What is your favorite color?")
-//
-// if (userColor === "blue") {
-//     alert(`Great, ${userColor} is my favorite color too!`)
-// } else {
-//     alert("Oh no, your loss!")
-// }
+/// Favorite color
 
+ // var userColor = prompt("What is your favorite color?");
+ //    alert(`${userColor} is my favorite color too!`);
+ //
 
 //// Movie Rentals
-/*
-let littleMermaid = prompt("Little Mermaid: How many days would you like to rent this title?");
-let brotherBear = prompt("Brother Bear: How many days would you like to rent title?");
-let hercules = prompt("Hercules: How many days would you like to rent this title?");
 
-let pricePerDay = 3;
+// let littleMermaid = prompt("Little Mermaid: How many days would you like to rent this title?");
+// let brotherBear = prompt("Brother Bear: How many days would you like to rent title?");
+// let hercules = prompt("Hercules: How many days would you like to rent this title?");
+//
+// let pricePerDay = 3;
+//
+// var totalRentCost = (parseInt(littleMermaid) + parseInt(brotherBear) + parseInt(hercules)) * parseInt(pricePerDay);
+//
+// alert(`Your total cost for your rentals is $${totalRentCost}. Thank you!`)
 
-var totalRentCost = (parseInt(littleMermaid) + parseInt(brotherBear) + parseInt(hercules)) * parseInt(pricePerDay);
-
-alert(`Your total cost for your rentals is $${totalRentCost}. Thank you!`)
-*/
 
 
 //// Jobs Worked Weekly Total
@@ -74,7 +71,20 @@ alert(`Your total cost for your rentals is $${totalRentCost}. Thank you!`)
 // let weeklyTotal = alert(`Your weekly total is $${googlePayment + amazonPayment + faceBookPayment}! Great Work!`)
 
 
-// Class Enrollment
+/// Class Enrollment
+
+let classFull = confirm("Is class full?");
+let scheduleConflict = confirm("Does this class conflict with your schedule?");
+
+if (classFull === true || scheduleConflict === true) {
+    alert("Sorry, you  may not enroll!")
+} else {
+    alert("Congratulations! You have enrolled!")
+}
+
+/// Product Offer
+
+
 
 
 
