@@ -55,23 +55,26 @@ alert(`Your total cost for your rentals is $${totalRentCost}. Thank you!`)
 
 //// Jobs Worked Weekly Total
 
-let googleHours = prompt("How many hours did you work at Google?");
-let amazonHours = prompt("How many hours did you work at Amazon?");
-let facebookHours = prompt("How many hours did you work at Facebook?");
+// let googleHours = prompt("How many hours did you work at Google?");
+// let amazonHours = prompt("How many hours did you work at Amazon?");
+// let facebookHours = prompt("How many hours did you work at Facebook?");
+//
+// let googleHourlyRate = 400;
+// let amazonHourlyRate = 380;
+// let facebookHourlyRate = 350;
+//
+// let googlePayment = googleHours * googleHourlyRate;
+// let amazonPayment = amazonHours * amazonHourlyRate;
+// let faceBookPayment = facebookHours * facebookHourlyRate;
+//
+// alert(`Your total payment for Google is: $${googlePayment}!`);
+// alert(`Your total payment for Amazon is: $${amazonPayment}!`);
+// alert(`Your total payment for FaceBook is: $${faceBookPayment}!`);
+//
+// let weeklyTotal = alert(`Your weekly total is $${googlePayment + amazonPayment + faceBookPayment}! Great Work!`)
 
-let googleHourlyRate = 400;
-let amazonHourlyRate = 380;
-let facebookHourlyRate = 350;
 
-let googlePayment = googleHours * googleHourlyRate;
-let amazonPayment = amazonHours * amazonHourlyRate;
-let faceBookPayment = facebookHours * facebookHourlyRate;
-
-alert(`Your total payment for Google is: $${googlePayment}!`);
-alert(`Your total payment for Amazon is: $${amazonPayment}!`);
-alert(`Your total payment for FaceBook is: $${faceBookPayment}!`);
-
-let weeklyTotal = alert(`Your weekly total is $${googlePayment + amazonPayment + faceBookPayment}! Great Work!`)
+// Class Enrollment
 
 
 
