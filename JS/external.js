@@ -1,8 +1,8 @@
 "use strict";
-const myName = "Anthony";
+const myName = "Anthony Villegas";
 
 //alert
-//alert("Hi, my name is " + myName + ".")
+alert("Hi, my name is " + myName + ".")
 
 //confirm
 // var userDecision = confirm("Are you a new user?");
@@ -16,12 +16,47 @@ const myName = "Anthony";
 
 //prompt
 
-var currentSpeedMph = 65;
-var plannedSpeedMph = prompt("How fast are we going?")
-var distanceLeftInMiles = prompt("How many miles are you from your destination?");
-var timeToDestinationAtCurrentSpeed = (distanceLeftInMiles/currentSpeedMph) * 60;
-var timeToDestinationAtPlannedSpeed = (distanceLeftInMiles/plannedSpeedMph) * 60;
-var timeGain = timeToDestinationAtCurrentSpeed - timeToDestinationAtPlannedSpeed;
-var minutesGained = Math.floor(timeGain);
-var seconds = Math.round((timeGain - minutesGained) * 60);
-console.log(`If you drive at ${plannedSpeedMph} mph, you will arrive ${minutesGained} minutes and ${seconds} seconds earlier`);
+// var currentSpeedMph = 65;
+// var plannedSpeedMph = prompt("How fast are we going?")
+// var distanceLeftInMiles = prompt("How many miles are you from your destination?");
+// var timeToDestinationAtCurrentSpeed = (distanceLeftInMiles/currentSpeedMph) * 60;
+// var timeToDestinationAtPlannedSpeed = (distanceLeftInMiles/plannedSpeedMph) * 60;
+// var timeGain = timeToDestinationAtCurrentSpeed - timeToDestinationAtPlannedSpeed;
+// var minutesGained = Math.floor(timeGain);
+// var seconds = Math.round((timeGain - minutesGained) * 60);
+// console.log(`If you drive at ${plannedSpeedMph} mph, you will arrive ${minutesGained} minutes and ${seconds} seconds earlier`);
+
+//alert
+alert("Welcome to my Website!");
+
+//prompt
+//  var userColor = prompt("What is your favorite color?")
+//
+// if (userColor === "blue") {
+//     alert(`Great, ${userColor} is my favorite color too!`)
+// } else {
+//     alert("Oh no, your loss!")
+// }
+
+
+//// Movie Rentals
+/*
+let littleMermaid = prompt("Little Mermaid: How many days would you like to rent this title?");
+let brotherBear = prompt("Brother Bear: How many days would you like to rent title?");
+let hercules = prompt("Hercules: How many days would you like to rent this title?");
+
+let pricePerDay = 3;
+
+var totalRentCost = (parseInt(littleMermaid) + parseInt(brotherBear) + parseInt(hercules)) * parseInt(pricePerDay);
+
+alert(`Your total cost for your rentals is $${totalRentCost}. Thank you!`)
+*/
+
+
+//// Jobs Worked Weekly Total
+
+
+
+
+
+
