@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Intro to JavaScript</title>
+    <style>
+        p {
+            border: 1px solid black;
+            padding: 5px;
+            border-radius: 5px;
+            margin: 10px;
+        }
+
+        .hidden {
+            visibility: hidden;
+        }
+    </style>
+</head>
+<body>
+<p id="hideable">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi debitis, enim est hic laborum voluptates voluptatibus? Animi asperiores est harum maiores molestias nam placeat, quibusdam ratione repellat sed sequi unde.</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias amet animi blanditiis, eaque fuga hic illum iste itaque labore maxime, natus, non numquam officia porro qui quibusdam repellendus saepe sint!</p>
+<button id="toggle">Toggle Paragraph</button>
+<script>
+    let toggleButton = document.getElementById("toggle");
+    let hideableParagraph = document.getElementById("hideable");
+
+    toggleButton.onclick = function(){
+        let theHideClass = hideableParagraph.getAttribute("class");
+        if (theHideClass == "hidden") {
+            hideableParagraph.removeAttribute("class");
+        } else {
+            hideableParagraph.setAttribute("class", "hidden");
+        }
+    }
+</script>
+</body>
+</html>
