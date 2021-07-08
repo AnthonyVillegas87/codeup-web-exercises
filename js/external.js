@@ -28,7 +28,7 @@ alert("Hi, my name is " + myName + ".")
 // console.log(`If you drive at ${plannedSpeedMph} mph, you will arrive ${minutesGained} minutes and ${seconds} seconds earlier`);
 
 //alert
-alert("Welcome to my Website!");
+//alert("Welcome to my Website!");
 
 /// Favorite color
 
@@ -83,6 +83,23 @@ alert("Welcome to my Website!");
 // }
 
 /// Product Offer
+let numberOfItems = parseFloat(prompt("How many items are you purchasing?")); //number
+let offerExpired = confirm("Has discount expired for this product?"); // boolean
+let premiumMember = confirm("Are you a premium member?"); // boolean
+
+let numberForDiscount = 2
+
+const displayMessage = (premiumMember, numberOfItems, offerExpired) => {
+    let offer = premiumMember === true || (numberOfItems >= numberForDiscount && offerExpired === false)
+    if(offer) {
+      return alert("Congratulations, you qualify for a discount!")
+    }
+    //displayMessage()
+ }
+
+displayMessage(premiumMember, numberOfItems, offerExpired);
+
+
 
 
 
