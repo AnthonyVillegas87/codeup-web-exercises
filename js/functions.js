@@ -8,10 +8,10 @@
  * Example
  * > sayHello("codeup") // returns "Hello, codeup!"
  */
-function sayHello(name) {
-    return `Hello ${name}`
-}
-sayHello("anthony")
+// function sayHello(name) {
+//     return `Hello ${name}`
+// }
+// sayHello("anthony")
 
 /**
  * TODO:
@@ -87,14 +87,15 @@ sayHello("anthony")
  */
 // let bill = prompt("How much is your bill total?");
 // let tip = prompt("How much would you like to tip?");
-// const tipTotal =  function calculateTip(tip, bill) {
+// function calculateTip(bill, tip) {
 //     let gratuityTotal = tip * bill
 //     return gratuityTotal.toFixed(2)
 //
 //
 // }
 //
-// alert("Your tip total is $ " + tipTotal(bill, tip))
+//
+//     alert("Your tip total is $ " + calculateTip(bill, tip))
 
 /**
  * TODO:
@@ -111,10 +112,39 @@ sayHello("anthony")
  * > applyDiscount(45.99, 0.12) // 40.4712
  */
 
-var price = 100;
-var discount = .2;
-function applyDiscount(price, discount) {
-    return price - price * discount
+// var price = 100;
+// var discount = .2;
+// function applyDiscount(price, discount) {
+//     return price - price * discount
+// }
+//
+// console.log(applyDiscount(price, discount))
+
+
+/////////// Function drills
+
+// function isOdd(num) {
+//     if(num % 2) {
+//         return true
+//     } else {
+//         return false
+//     }
+// }
+//
+// console.log(isOdd(1))
+// console.log(isOdd(2))
+//
+// function isEven(num) {
+//     if(num % 2 == 0) {
+//         return true
+//     } else {
+//         return false
+//     }
+// }
+// console.log(isEven(1))
+// console.log(isEven(2))
+
+function identity(input) {
+    return input
 }
 
-console.log(applyDiscount(price, discount))
