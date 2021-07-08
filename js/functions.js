@@ -85,16 +85,16 @@ sayHello("anthony")
  * prompt the user for the bill total and a percentage they would like to tip,
  * then display the dollar amount they should tip
  */
-let bill = prompt("How much is your bill total?");
-let tip = prompt("How much would you like to tip?");
-const tipTotal =  function calculateTip(tip, bill) {
-    let gratuityTotal = tip * bill
-    return gratuityTotal.toFixed(2)
-
-
-}
-
-alert("Your tip total is $ " + tipTotal(bill, tip))
+// let bill = prompt("How much is your bill total?");
+// let tip = prompt("How much would you like to tip?");
+// const tipTotal =  function calculateTip(tip, bill) {
+//     let gratuityTotal = tip * bill
+//     return gratuityTotal.toFixed(2)
+//
+//
+// }
+//
+// alert("Your tip total is $ " + tipTotal(bill, tip))
 
 /**
  * TODO:
@@ -104,10 +104,17 @@ alert("Your tip total is $ " + tipTotal(bill, tip))
  * price.
  *
  * Example:
- * > var originalPrice = 100;
- * > var dicountPercent = .2; // 20%
+ var price = 100;
+ var dicount = .2; // 20%
  * > applyDiscount(originalPrice, dicountPercent) // 80
  *
  * > applyDiscount(45.99, 0.12) // 40.4712
  */
 
+var price = 100;
+var discount = .2;
+function applyDiscount(price, discount) {
+    return price - price * discount
+}
+
+console.log(applyDiscount(price, discount))
