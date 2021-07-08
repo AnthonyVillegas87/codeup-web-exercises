@@ -20,20 +20,21 @@ sayHello("anthony")
  *
  * console.log 'helloMessage' to check your work
  */
-let helloMessage = sayHello("Draco")
-console.log(helloMessage)
+// let helloMessage = sayHello("Draco")
+// console.log(helloMessage)
 /**
  * TODO:
  * Store your name as a string in a variable named 'myName', and pass that
  * variable to the 'sayHello' function. You should see the same output in the
  * console.
  */
-
+// let myName = "Anthony"
+// console.log(sayHello(myName));
 
 
 // Don't modify the following line, it generates a random number between 1 and 3
 // and stores it in a variable named random
-var random = Math.floor((Math.random() * 3) + 1);
+// var random = Math.floor((Math.random() * 3) + 1);
 
 /**
  * TODO:
@@ -53,6 +54,13 @@ var random = Math.floor((Math.random() * 3) + 1);
  * number)
  */
 
+// function isTwo(num) {
+//     return num === 2
+// }
+//
+// isTwo(random)
+// console.log(isTwo(random))
+
 /**
  * TODO:
  * Create a function named 'calculateTip' to calculate a tip on a bill at a
@@ -64,6 +72,11 @@ var random = Math.floor((Math.random() * 3) + 1);
  * > calculateTip(0.25, 25.50) // returns 6.375
  * > calculateTip(0.15, 33.42) // returns 5.013
  */
+//var random = Math.floor((Math.random() * 200) + 1);
+function calculateTip(bill) {
+    return bill <= 300 && bill >= 50 ? bill * 0.15 : bill * 0.2
+}
+console.log(calculateTip(350))
 
 /**
  * TODO:
