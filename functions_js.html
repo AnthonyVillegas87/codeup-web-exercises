@@ -5,7 +5,7 @@
     <title>Functions Lecture</title>
 </head>
 <body>
-<script>
+<script src="js/functions.js">
   "use strict";
 
   /*
@@ -135,14 +135,14 @@
 
 
   // Write a function, isFive, that takes in an input and returns the boolean value true if the passed argument is the number 5 or the string "5". Return false otherwise.
-  //   function isFive(x) {
-  //     if (x === 5) {
-  //       return true
-  //     } else {
-  //       return false
-  //     }
-  //   };
-    //console.log(isFive(5));
+
+   // function isFive(input) {
+   //
+   //   let output = parseFloat(input)
+   //     return output === 5
+   //
+   // };
+   // console.log(isFive("5"));
 
 
   // Write a function, isShortWord, that takes in a string and returns the boolean value true if the passed argument is shorter than 5 characters. Return false otherwise.
@@ -152,18 +152,18 @@
   //   console.log(isShortWord("hello"))
 
 
-  // Write a function, isSameLength, that takes in two string inputs and returns the boolean value true if the passed arguments are the same length. Return false otherwise.
+  //Write a function, isSameLength, that takes in two string inputs and returns the boolean value true if the passed arguments are the same length. Return false otherwise.
   //   function isSameLength(str1, str2) {
   //     return str1.length === str2.length
   //   }
-    //console.log(isSameLength("hello", "hello"));
-
+  //   console.log(isSameLength("hello", "hello"));
+  //
 
   // Write a function, getSmallerSegment, that takes in a string and a number input. The function should return a substring of the first argument that is as many characters long as the second argument in lowercase.
   //     function getSmallerSegment(string, num) {
   //       return string.substring(0 ,num).toLowerCase()
   //     }
-  //     console.log(getSmallerSegment("hello", 4));
+  //     console.log(getSmallerSegment("anthony", 4));
 
 
   // example input: getSmallerSegment("Codeup", 3)
@@ -171,21 +171,24 @@
 
   // Refactor the following code to use functions...
 
-  function sum(x, y) {
-    return `The result of num1 + num2 is ${x + y}`
-  }
-  console.log(sum(4, 5))
+  // function sum(num1, num2) {
+  //  return num1 + num2
+  // }
 
-  // var x = 2;
-  // var y = 4;
-  // var totalXY = x + y;
-  // console.log('The result of num1 + num2 is: ' + totalXY);
-  //
-  // var a = 5;
-  // var b = 1;
-  // var totalAB = a + b;
+
+  // console.log('The result of num1 + num2 is: ' + sum(2,4));
+  // console.log('The result of num1 + num2 is: ' + sum(5,1));
+  // console.log('The result of num1 + num2 is: ' + sum(10,5));
+
+  //var x = 2;
+  //var y = 4;
+  //var totalXY = x + y;
+
+  //  let a = 5;
+  //  let b = 1;
+  //  let totalAB = a + b;
   // console.log('The result of num1 + num2 is: ' + totalAB);
-  //
+
   // var c = 10;
   // var d = 5;
   // var totalCD = c + d;
