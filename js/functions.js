@@ -161,3 +161,41 @@
 //
 // console.log(addFive())
 
+// function isMultipleOfFive(input) {
+//     if(input % 5 === 0) {
+//         return true
+//     } else {
+//         return false
+//     }
+// }
+//
+// console.log(isMultipleOfFive(2))
+
+// function isThree(input) {
+//     return input === 3
+// }
+//
+// console.log(isThree(3))
+
+// function isMultipleOfThree(input) {
+//     if(input % 3 === 0) {
+//         return true
+//     } else {
+//         return false
+//     }
+// }
+//
+// console.log(isMultipleOfThree(4))
+
+// function isMultipleOfThreeAndFive(input) {
+//     if(input % 3 === 0 || input % 5 === 0) {
+//         return true
+//     } else {
+//         return false
+//     }
+// }
+//
+// console.log(isMultipleOfThreeAndFive(19))
+
+
+
