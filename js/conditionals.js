@@ -129,6 +129,23 @@
  * return value.
  */
 
+function calculateTotal(luckyNum, totalAmt) {
+    if(luckyNum === 0) {
+        return totalAmt
+    } else if(luckyNum === 1) {
+        return luckyNum * .10
+    } else if(luckyNum === 2) {
+        return totalAmt * .25
+    } else if(luckyNum === 3) {
+        return totalAmt * .35
+    } else if(luckyNum === 4) {
+        return totalAmt * .50
+    } else if(luckyNum === 5) {
+        return 0
+    }
+}
+console.log(calculateTotal(5, 200));
+
 /**
  * TODO:
  * Uncomment the line below to generate a random number between 0 and 6.
