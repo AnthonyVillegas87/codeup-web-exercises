@@ -67,37 +67,38 @@
  * TODO:
  * Refactor your above function to use a switch-case statement
  */
-var colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
-var randomColor = colors[Math.floor(Math.random() * colors.length)];
-
-function analyzeColor(colors) {
-    switch (colors) {
-        case("blue"):
-            alert("Blue is the color of the sky!");
-            break;
-        case("red"):
-            alert("Strawberries are red!");
-            break;
-        case("orange"):
-            alert("Oranges are orange!");
-            break;
-        case("green"):
-            alert("Granny Smith apples are green!");
-            break;
-        case("yellow"):
-            alert("Bananas are yellow!");
-            break;
-        case("indigo"):
-            alert("Blueberries are indigo!");
-            break;
-        case("violet"):
-            alert("That's the color of a flower!");
-            break;
-        default:
-            alert("I dont know anything about that color");
-    }
-}
-analyzeColor(randomColor)
+// var colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
+// let userColor = prompt("Give me the color you like!")
+// var randomColor = colors[Math.floor(Math.random() * colors.length)];
+//
+// function analyzeColor(colors) {
+//     switch (colors) {
+//         case("blue"):
+//             alert("Blue is the color of the sky!");
+//             break;
+//         case("red"):
+//             alert("Strawberries are red!");
+//             break;
+//         case("orange"):
+//             alert("Oranges are orange!");
+//             break;
+//         case("green"):
+//             alert("Granny Smith apples are green!");
+//             break;
+//         case("yellow"):
+//             alert("Bananas are yellow!");
+//             break;
+//         case("indigo"):
+//             alert("Blueberries are indigo!");
+//             break;
+//         case("violet"):
+//             alert("That's the color of a flower!");
+//             break;
+//         default:
+//             alert("I dont know anything about that color");
+//     }
+// }
+// analyzeColor(userColor)
 
 /**
  * TODO:
