@@ -197,5 +197,13 @@
 //
 // console.log(isMultipleOfThreeAndFive(19))
 
-
+// function isMultipleOf(target, n) {
+//     if(target % n === 0) {
+//         return true
+//     } else {
+//         return false
+//     }
+// }
+//
+// console.log(isMultipleOf(5, 3))
 
