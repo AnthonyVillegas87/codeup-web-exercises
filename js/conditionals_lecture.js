@@ -44,7 +44,7 @@
 // }
 // replyToCustomer(getIceCreamOrder())
 
-let decision = confirm("Are you sure you want to close this page?!")
+//let decision = confirm("Are you sure you want to close this page?!")
 //alert(decision)
 
 // if(decision) {
@@ -53,4 +53,41 @@ let decision = confirm("Are you sure you want to close this page?!")
 //     alert("Yay! Leaving page open...");
 //}
 
-alert((decision === true)? "Okay, closing the page..." : "Yay! Leaving page open..." );
+//alert((decision === true)? "Okay, closing the page..." : "Yay! Leaving page open..." );
+
+// let num = 15;
+// if(num % 5 === 0) {
+//     alert("That number is divisible by 5!")
+// } else {
+//     alert("That number is not divisible by 5!")
+// }
+
+// function divisibleByFive(num) {
+//     if(num % 5 === 0) {
+//         alert("That number is divisible by 5!")
+//     } else {
+//         alert("That number is not divisible by 5!")
+//     }
+// }
+
+
+// function divisibleByFive(num) {
+//     alert((num % 5 === 0)? "That number is divisible by 5!" : "That number is not divisible by 5!")
+// }
+// divisibleByFive(8)
+
+// function divisibleByFive(num) {
+//     if(num % 5 === 0) {
+//         return true
+//     } else {
+//         return false
+//     }
+// }
+// console.log(divisibleByFive(2))
+
+// function isDivisibleByFive(num) {
+//     return num % 5 === 0;
+// }
+//
+// console.log(isDivisibleByFive(101))
+
