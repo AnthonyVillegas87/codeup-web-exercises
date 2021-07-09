@@ -129,22 +129,22 @@
  * return value.
  */
 
-function calculateTotal(luckyNum, totalAmt) {
-    if(luckyNum === 0) {
-        return totalAmt
-    } else if(luckyNum === 1) {
-        return luckyNum * .10
-    } else if(luckyNum === 2) {
-        return totalAmt * .25
-    } else if(luckyNum === 3) {
-        return totalAmt * .35
-    } else if(luckyNum === 4) {
-        return totalAmt * .50
-    } else if(luckyNum === 5) {
-        return 0
-    }
-}
-console.log(calculateTotal(5, 200));
+// function calculateTotal(luckyNum, totalAmt) {
+//     if(luckyNum === 0) {
+//         return totalAmt
+//     } else if(luckyNum === 1) {
+//         return luckyNum * .10
+//     } else if(luckyNum === 2) {
+//         return totalAmt * .25
+//     } else if(luckyNum === 3) {
+//         return totalAmt * .35
+//     } else if(luckyNum === 4) {
+//         return totalAmt * .50
+//     } else if(luckyNum === 5) {
+//         return 0
+//     }
+// }
+//console.log(calculateTotal(5, 200));
 
 /**
  * TODO:
@@ -154,7 +154,27 @@ console.log(calculateTotal(5, 200));
  * price before the discount was, and what their price after the discount is.
  */
 // Generate a random number between 0 and 6
-// var luckyNumber = Math.floor(Math.random() * 6);
+ var luckyNumber = Math.floor(Math.random() * 6);
+
+ let myTotal = prompt("What is your total?");
+ alert("Your lucky number is " + luckyNumber + "!");
+ alert("Before the discount your total was " + myTotal + ".");
+ alert("Your price with the discount is " + calculateTotal(luckyNumber, myTotal));
+function calculateTotal(luckyNumber, myTotal) {
+    if(luckyNumber === 0) {
+       return myTotal
+    } else if(luckyNumber === 1) {
+        return myTotal * .10
+    } else if(luckyNumber === 2) {
+        return myTotal * .25
+    } else if(luckyNumber === 3) {
+        return myTotal * .35
+    } else if(luckyNumber === 4) {
+        return myTotal * .50
+    } else if(luckyNumber === 5) {
+        return 0
+    }
+}
 
 /**
  * TODO:
