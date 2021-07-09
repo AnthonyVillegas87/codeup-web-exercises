@@ -144,7 +144,20 @@
 // console.log(isEven(1))
 // console.log(isEven(2))
 
-function identity(input) {
-    return input
-}
+// function identity(input) {
+//     return input
+// }
+//  console.log(identity(4 <= 3));
+
+// function isFive(input) {
+//     return input === 5
+// }
+//
+// console.log(isFive())
+
+// function addFive(input) {
+//     return input + 5
+// }
+//
+// console.log(addFive())
 
