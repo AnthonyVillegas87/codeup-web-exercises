@@ -192,3 +192,19 @@ function calculateTotal(luckyNumber, myTotal) {
  * Can you refactor your code to use functions?
  * HINT: The way we prompt for a value could be improved
  */
+
+
+
+ const displayMessage = (message = "Would you like to enter a number?") => {
+     let answer = parseFloat(prompt(message))
+   if()
+    if(answer % 2 === 0) {
+        alert("Your number is even")
+    } else if (answer % 2 === 1) {
+            alert("Your number is odd")
+    }
+ }
+
+
+
+
