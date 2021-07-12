@@ -257,15 +257,21 @@
 // - use an if/else
 //     - refactor to use a ternary operator
 //
-function userInput(input = parseFloat(prompt("Please enter an input!"))) {
-      // let answer = parseFloat(prompt(input))
-    if(input) {
-        alert("This is a number!")
-    } else {
-        alert("This is not a number!")
-    }
-}
-userInput()
+
+
+//function userInput(input = parseFloat(prompt("Please enter an input!"))) {
+
+      /// if else statement
+    // if(input) {
+    //     alert("This is a number!")
+    // } else {
+    //     alert("This is not a number!")
+    // }
+
+    /// Ternary operator
+    //input ? alert("This is a number!") : alert("This is not a number");
+//}
+//userInput()
 
 
 
@@ -276,6 +282,75 @@ userInput()
 // - accept both abbreviations and full names of the months
 //
 //
+const seasons = (message = "Select a Season!") => {
+   let season = prompt(message)
+
+    // if(!season) {
+    //     alert("Invalid!")
+    //     //seasons()
+    // }
+    function winterMonths(season) {
+       if(season === "Winter") {
+           alert("December, January, & February are in Winter!")
+           var month = prompt( "PLease select a month")
+       }
+       //var month = prompt( "PLease select a month")
+        if(month === "December") {
+            alert("Christmas is in December")
+        } else if(month === "January") {
+            alert("MLK day is in January!")
+        } else if(month === "February") {
+            alert("Groundhog Day is in February!")
+        }
+    }
+    winterMonths(season)
+
+    function springMonths(season) {
+       if(season === "Spring") {
+           alert("March, April, & May are in Spring!")
+          var month = prompt( "PLease select a month")
+       }
+        //var month = prompt( "PLease select a month")
+        if(month === "March") {
+            alert("Texas Independence Day is in March")
+        } else if(month === "April") {
+            alert("Good Friday is April!")
+        } else if(month === "May") {
+            alert("Memorial Day is in May!")
+        }
+    }
+    springMonths(season)
+
+    function summerMonths(season) {
+       if(season === "Summer") {
+           alert("June, July, & August are in Summer!")
+           var month = prompt("PLease select a month")
+       }
+       if(month === "June") {
+           alert("Juneteenth is in June!")
+       } else if(month === "July") {
+           alert("Independence Day is in July")
+       } else if(month === "August") {
+           alert("National Chocolate Chip Cookie Day is in August!")
+       }
+    }
+    summerMonths(season)
+
+    function fallMonths(season) {
+       if(season === "Fall") {
+           alert("September, October, & November are in Fall")
+           var month = prompt("PLease select a month")
+       }
+    }
+    fallMonths(season)
+
+
+}
+seasons()
+
+
+
+
 // GOLD STAR BONUS
 //
 // Create a distance unit conversion application.
