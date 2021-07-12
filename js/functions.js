@@ -207,3 +207,17 @@
 //
 // console.log(isMultipleOf(5, 3))
 
+// function isTrue(boolean) {
+//     return boolean === true
+// }
+//
+// console.log(isTrue(true))
+
+// function isFalse(boolean) {
+//     return boolean === false
+// }
+
+ function isTruthy(input) {
+     return
+}
+
