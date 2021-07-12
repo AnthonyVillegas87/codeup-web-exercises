@@ -206,9 +206,20 @@
     } else if (answer % 2 === 1) {
             alert("Your number is odd")
     }
+    function myNumber(answer) {
+        return alert(`Your number plus 100 is  ${answer + 100}` )
+    }
+    myNumber(answer)
  }
- displayMessage()
 
+ function negativeOrPositive(answer) {
+     if(answer < 0) {
+         return alert(`The number ${answer} you entered is negative`)
+     } else if(answer > 0) {
+         return alert(`The number ${answer} you entered is positive`)
+     }
+ }
+displayMessage(negativeOrPositive)
 
 
 
