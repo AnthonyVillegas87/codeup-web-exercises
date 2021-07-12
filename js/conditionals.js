@@ -282,7 +282,7 @@
 // - accept both abbreviations and full names of the months
 //
 //
-const seasons = (message = "Select a Season!") => {
+const seasons = ((message = "Select a Season!") => {
    let season = prompt(message)
 
     // if(!season) {
@@ -352,7 +352,7 @@ const seasons = (message = "Select a Season!") => {
     fallMonths(season)
 
 
-}
+})
 seasons()
 
 
