@@ -195,8 +195,8 @@
 
 
 
- const displayMessage = (message = "Would you like to enter a number?") => {
-     let answer = parseFloat(prompt(message))
+ const displayMessage = (message = confirm("Would you like to enter a number?")) => {
+     let answer = parseFloat(prompt("Please enter a number"))
    if(!answer) {
        alert("Not a number")
        displayMessage()
@@ -210,16 +210,21 @@
         return alert(`Your number plus 100 is  ${answer + 100}` )
     }
     myNumber(answer)
- }
 
- function negativeOrPositive(answer) {
-     if(answer < 0) {
-         return alert(`The number ${answer} you entered is negative`)
-     } else if(answer > 0) {
-         return alert(`The number ${answer} you entered is positive`)
-     }
+    function negativeOrPositive(answer) {
+        if(answer < 0) {
+            return alert(`The number ${answer} you entered is negative`)
+        } else if(answer > 0) {
+            return alert(`The number ${answer} you entered is positive`)
+        }
+    }
+    negativeOrPositive(answer)
  }
-displayMessage(negativeOrPositive)
+ displayMessage()
+
+
+
+
 
 
 
