@@ -217,7 +217,34 @@
 //     return boolean === false
 // }
 
- function isTruthy(input) {
-     return
-}
+//  function isTruthy(input) {
+//      return !!input === true
+// }
+//
+// isTruthy()
 
+// function isFalsy(input) {
+//     return !input === false
+// }
+// isFalsy()
+
+// function isVowel(letter) {
+//     return letter === 'a' || letter === 'e' || letter === 'i' || letter === 'o' || letter === 'u'
+// }
+//
+// isVowel()
+
+// function isConsonant(letter) {
+//     if(letter === 'a' || letter === 'e' || letter === 'i' || letter === 'o' || letter === 'u'){
+//         return (`${letter} is a vowel`)
+//     } else {
+//         return (`${letter} is a consonant`)
+//     }
+//
+// }
+//
+// isConsonant()
+
+function isCapital(letter) {
+
+}

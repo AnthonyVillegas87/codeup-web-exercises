@@ -154,27 +154,27 @@
  * price before the discount was, and what their price after the discount is.
  */
 // Generate a random number between 0 and 6
- var luckyNumber = Math.floor(Math.random() * 6);
-
- let myTotal = prompt("What is your total?");
- alert("Your lucky number is " + luckyNumber + "!");
- alert("Before the discount your total was " + myTotal + ".");
- alert("Your price with the discount is " + calculateTotal(luckyNumber, myTotal));
-function calculateTotal(luckyNumber, myTotal) {
-    if(luckyNumber === 0) {
-       return myTotal
-    } else if(luckyNumber === 1) {
-        return myTotal * .10
-    } else if(luckyNumber === 2) {
-        return myTotal * .25
-    } else if(luckyNumber === 3) {
-        return myTotal * .35
-    } else if(luckyNumber === 4) {
-        return myTotal * .50
-    } else if(luckyNumber === 5) {
-        return 0
-    }
-}
+//  var luckyNumber = Math.floor(Math.random() * 6);
+//
+//  let myTotal = prompt("What is your total?");
+//  alert("Your lucky number is " + luckyNumber + "!");
+//  alert("Before the discount your total was " + myTotal + ".");
+//  alert("Your price with the discount is " + calculateTotal(luckyNumber, myTotal));
+// function calculateTotal(luckyNumber, myTotal) {
+//     if(luckyNumber === 0) {
+//        return myTotal
+//     } else if(luckyNumber === 1) {
+//         return myTotal * .10
+//     } else if(luckyNumber === 2) {
+//         return myTotal * .25
+//     } else if(luckyNumber === 3) {
+//         return myTotal * .35
+//     } else if(luckyNumber === 4) {
+//         return myTotal * .50
+//     } else if(luckyNumber === 5) {
+//         return 0
+//     }
+// }
 
 /**
  * TODO:
@@ -197,13 +197,17 @@ function calculateTotal(luckyNumber, myTotal) {
 
  const displayMessage = (message = "Would you like to enter a number?") => {
      let answer = parseFloat(prompt(message))
-   if()
+   if(!answer) {
+       alert("Not a number")
+       displayMessage()
+   }
     if(answer % 2 === 0) {
         alert("Your number is even")
     } else if (answer % 2 === 1) {
             alert("Your number is odd")
     }
  }
+ displayMessage()
 
 
 
