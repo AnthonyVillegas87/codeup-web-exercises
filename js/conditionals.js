@@ -230,44 +230,26 @@
 // - Catch any invalid inputs.
 // - Write the logic using if/else ifs and then refactor using a switch case
 
-function favoriteDay(day = prompt("What is you favorite day of the week?!")) {
-    //let weekDay = day === "Monday" || day === "Tuesday" || day === "Wednesday" || day === "Thursday" || day === "Friday" || day === "Saturday" || day === "Sunday"
-    if(day === "Monday") {
-        alert(`${day} is the beginning of the week, let's go!!`)
-    } else if(day === "Tuesday") {
-        alert(`${day}, we've got the ball rolling!`)
-    } else if(day === "Wednesday") {
-        alert(`${day} means we're halfway there!!`)
-    } else if(day === "Thursday") {
-        alert(`${day}, take a sigh of relief.`)
-    } else if(day === "Friday") {
-        alert(`TGI${day}!`)
-    } else if(day === "Saturday") {
-        alert(`Put your feet up, its ${day}!`)
-    } else if(day === "Sunday") {
-        alert(`${day}! Let's get ready for the week.`)
-    }
-}
-
-favoriteDay()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// function favoriteDay(day = prompt("What is you favorite day of the week?!")) {
+//     //let weekDay = day === "Monday" || day === "Tuesday" || day === "Wednesday" || day === "Thursday" || day === "Friday" || day === "Saturday" || day === "Sunday"
+//     if(day === "Monday") {
+//         alert(`${day} is the beginning of the week, let's go!!`)
+//     } else if(day === "Tuesday") {
+//         alert(`${day}, we've got the ball rolling!`)
+//     } else if(day === "Wednesday") {
+//         alert(`${day} means we're halfway there!!`)
+//     } else if(day === "Thursday") {
+//         alert(`${day}, take a sigh of relief.`)
+//     } else if(day === "Friday") {
+//         alert(`TGI${day}!`)
+//     } else if(day === "Saturday") {
+//         alert(`Put your feet up, its ${day}!`)
+//     } else if(day === "Sunday") {
+//         alert(`${day}! Let's get ready for the week.`)
+//     }
+// }
+//
+// favoriteDay()
 
 //
 //     Bonus 2
@@ -275,6 +257,18 @@ favoriteDay()
 // - use an if/else
 //     - refactor to use a ternary operator
 //
+function userInput(input = parseFloat(prompt("Please enter an input!"))) {
+      // let answer = parseFloat(prompt(input))
+    if(input) {
+        alert("This is a number!")
+    } else {
+        alert("This is not a number!")
+    }
+}
+userInput()
+
+
+
 // Bonus 3
 // Create a function that prompts a user for a season (Spring, Summer, Fall (or Autumn), Winter). The function then alerts the months available in that season and then asks the user to pick a given month. After selecting the month, alert a unique message for the month.
 // - account for any invalid user input
