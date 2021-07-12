@@ -341,6 +341,13 @@ const seasons = (message = "Select a Season!") => {
            alert("September, October, & November are in Fall")
            var month = prompt("PLease select a month")
        }
+       if(month === "September") {
+           alert("Labor Day is in September!")
+       } else if(month === "October") {
+           alert("Halloween is in October!")
+       } else if(month === "November") {
+           alert("Thanksgiving is in November")
+       }
     }
     fallMonths(season)
 
