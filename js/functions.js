@@ -245,6 +245,55 @@
 //
 // isConsonant()
 
-function isCapital(letter) {
 
+// function isArray(input) {
+//      return Array.isArray()
+// }
+//
+// isArray()
+//
+function isString(input) {
+     return typeof input === "string";
 }
+isString()
+//
+// function isNotString(input) {
+//      return typeof input !== "string";
+// }
+// isNotString()
+//
+// function isEmptyString(input) {
+//      return input === '';
+// }
+// isEmptyString()
+//
+// function isNotANumber(input) {
+//      return typeof input !== "number";
+// }
+// isNotANumber()
+//
+// function isNegative(input) {
+//      return input < 0;
+// }
+//
+// isNegative()
+//
+// function isPositive(input) {
+//      return input > 0
+// }
+// isPositive()
+//
+// function isZero(input) {
+//      return input === 0 || input === "0";
+// }
+// isZero()
+//
+// function isUpperCase(input) {
+//      if(!isString(input)) return false;
+//      return input.toUpperCase();
+// }
+// isUpperCase()
+
+
+
+

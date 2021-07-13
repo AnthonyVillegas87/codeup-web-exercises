@@ -283,68 +283,72 @@
 //
 //
 const seasons = ((message = "Select a Season!") => {
-   let season = prompt(message);
+   let season = (prompt(message)).toLowerCase();
 
     // if(!season) {
     //     alert("Invalid!")
     //     //seasons()
     // }
-    function winterMonths(season) {
-       if(season === "Winter") {
+    function winterMonths(season, input) {
+        if(season === "Winter") {
            alert("December, January, & February are in Winter!");
-           var month = prompt( "PLease select a month");
-       }
+           prompt( input = "PLease select a month").toLowerCase();
+        }
+
        //var month = prompt( "PLease select a month")
-        if(month === "December") {
+        if(input === "December") {
             alert("Christmas is in December");
-        } else if(month === "January") {
+        } else if(input === "January") {
             alert("MLK day is in January!");
-        } else if(month === "February") {
+        } else if(input === "February") {
             alert("Groundhog Day is in February!");
         }
     }
     winterMonths(season)
 
-    function springMonths(season) {
-       if(season === "Spring") {
+    function springMonths(season, input) {
+
+        if(season === "Spring") {
            alert("March, April, & May are in Spring!");
-          var month = prompt( "PLease select a month");
-       }
-        if(month === "March") {
+            prompt( "PLease select a month");
+        }
+        if(input === "March") {
             alert("Texas Independence Day is in March");
-        } else if(month === "April") {
+        } else if(input === "April") {
             alert("Good Friday is April!");
-        } else if(month === "May") {
+        } else if(input === "May") {
             alert("Memorial Day is in May!");
         }
     }
     springMonths(season)
 
-    function summerMonths(season) {
-       if(season === "Summer") {
+    function summerMonths(season, input) {
+
+        if(season === "Summer") {
            alert("June, July, & August are in Summer!");
-           var month = prompt("PLease select a month");
-       }
-       if(month === "June") {
+            prompt("PLease select a month");
+        }
+       if(input === "June") {
            alert("Juneteenth is in June!");
-       } else if(month === "July") {
+       } else if(input === "July") {
            alert("Independence Day is in July");
-       } else if(month === "August") {
+       } else if(input === "August") {
            alert("National Chocolate Chip Cookie Day is in August!");
        }
     }
     summerMonths(season)
 
-    function fallMonths(season) {
-       if(season === "Fall") {
+    function fallMonths(season, input) {
+
+        if(season === "Fall") {
            alert("September, October, & November are in Fall");
-           var month = prompt("PLease select a month");
-       }
-       if(month === "September") {
+            prompt(input = "PLease select a month");
+        }
+       if(input === "September") {
            alert("Labor Day is in September!");
-       } else if(month === "October") {
+       } else if(input === "October") {
            alert("Halloween is in October!");
-       } else if(month === "November") {
+       } else if(input === "November") {
            alert("Thanksgiving is in November");
        }
     }
