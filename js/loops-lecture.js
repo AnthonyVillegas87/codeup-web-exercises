@@ -67,4 +67,14 @@ while(true) {
 ///INTRO TO DO/WHILE LOOP
 
 
+// Get a number between 1 & 6
+
+var number = Math.ceil(Math.random() * 6);
+var guess;
+
+do {
+    guess = parseInt(prompt("Enter a number between 1 and 6"));
+} while (guess !== number);
+alert("Your guess of " + guess + " matches the number " + number + "!");
+
 
