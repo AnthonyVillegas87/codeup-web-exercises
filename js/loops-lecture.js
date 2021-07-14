@@ -35,12 +35,36 @@
 //     counter++;
 // }
 
-let count = 0; //variable starts at 0
-while(count < 10) {  // once the expression has executed 10 times the expression becomes false
-    console.log(count);
-    count++;
+// let count = 0;  //variable starts at 0
+// while(count < 10) {   // once the expression has executed 10 times the expression becomes false
+//     console.log(count);
+//     count++;
+// }
+
+///ACCUMULATOR VARIABLE TO KEEP & HOLD A RUNNING TOTAL
+var total = 0;
+var priceOfItem;
+
+
+while(true) {
+    var userInput = prompt("Enter the price of your item: " + "\n " + "Enter STOP end program");
+    /// SENTINEL VALUE INTRO
+    if(userInput === "STOP") {
+        alert("The price of your item was " + priceOfItem);
+        break;
+    } else {
+        priceOfItem = parseFloat(userInput)
+        total = total + priceOfItem
+        alert("Your total cost is now " + total.toFixed(2));
+    }
 }
 
+
+
 /// NOTE THAT YOU CAN CREATE AN INFINITE LOOP WITH THE SYNTAX :: while(true) ///
+
+
+///INTRO TO DO/WHILE LOOP
+
 
 
