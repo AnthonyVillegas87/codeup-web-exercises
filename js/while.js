@@ -8,7 +8,7 @@
 //     }
 
 
-    var allCones = Math.floor(Math.random() * 10) + 10;
+    var allCones = Math.floor(Math.random() * 50) + 50;
     confirm(`You have ${allCones} ice cream cones to sell today!`);
 
     function sellCones() {
@@ -16,20 +16,31 @@
         while(conesSold - allCones) {
             confirm(`You sold ${conesSold} so far!`);
             do {
+                allCones = allCones - conesSold
+
                 if (conesSold < allCones) {
-                    confirm(`You have ${allCones - conesSold} left to sell`);
+                    confirm(`You have ${allCones} left to sell`);
 
                 } else {
                     alert("Yay i sold them all!");
                     break;
                 }
-            } while(--allCones);
+            } while(allCones > conesSold);
 
         }
     }
  sellCones()
 
 
+    //// SOLUTION TO CONES EXERCISE
+    // var allCones = Math.floor(Math.random() * 50) + 150;
+    //
+    // do{
+    //     let conesSold = Math.floor(Math.random() * 5) + 1;
+    //     console.log(conesSold + " cones sold ...");
+    //     console.log(allCones + " cones left");
+    //     allCones = allCones - conesSold;
+    // } while(allCones >= 0)
 
 
 

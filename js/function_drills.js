@@ -40,10 +40,10 @@
 
 //     Make a function named notZero(input) that returns true if the input is not zero
     function notZero(input) {
-    if(input === 'number')
-            return typeof input
+        if(isZero() === false)
+            return typeof input === "number"
     }
-    console.log(notZero(3))
+    console.log(notZero(0))
 
 //     Write a function named lowerCase(string)
 //     Write a function named double(n) that returns a number times two
