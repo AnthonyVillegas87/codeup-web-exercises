@@ -69,11 +69,25 @@ while(true) {
 
 // Get a number between 1 & 6
 
-var number = Math.ceil(Math.random() * 6);
-var guess;
+// var number = Math.ceil(Math.random() * 6);
+// var guess;
+//
+// do {
+//     guess = parseInt(prompt("Enter a number between 1 and 6"));
+// } while (guess !== number);
+// alert("Your guess of " + guess + " matches the number " + number + "!");
 
-do {
-    guess = parseInt(prompt("Enter a number between 1 and 6"));
-} while (guess !== number);
-alert("Your guess of " + guess + " matches the number " + number + "!");
 
+
+
+/////   BREAK & CONTINUE KEYWORDS   ////////
+var words = "";
+for(let i = 0; i < 5; i++) {
+    var word = prompt("Lets make a sentence! Enter a word.");
+    if(word === "Hello") {
+        alert("Ouch! This is a respectable word!");
+        continue;  //// CONTINUE KEYWORD
+    }
+    words = words + "" + word;
+    alert("Your sentence is " + words)
+}
