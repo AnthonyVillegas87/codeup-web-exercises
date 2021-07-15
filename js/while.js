@@ -24,10 +24,6 @@
                     break;
                 }
             } while(--allCones);
-                confirm(`You have ${allCones - conesSold} left to sell`); {
-
-            }
-
 
         }
     }
