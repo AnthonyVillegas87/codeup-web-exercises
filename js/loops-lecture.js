@@ -77,4 +77,3 @@ do {
 } while (guess !== number);
 alert("Your guess of " + guess + " matches the number " + number + "!");
 
-
