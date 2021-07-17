@@ -23,13 +23,13 @@
 
 
 
-//     Make a function named isSpace(letter) that returns if a character is a space character
-//     function isSpace(letter) {
-//         if(letter.trim() === '')
-//         return true
-//     }
-//
-//     console.log(isSpace(" "))
+    //Make a function named isSpace(letter) that returns if a character is a space character
+    // function isSpace(letter) {
+    //     return letter.indexOf() === `\s`;
+    // }
+    //
+    //
+    // console.log(isSpace(" \s"))
 
 
 //     Make a function named isZero(number)
