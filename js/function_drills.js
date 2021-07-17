@@ -40,26 +40,115 @@
 
 //     Make a function named notZero(input) that returns true if the input is not zero
     function notZero(input) {
-        if(isZero() === false)
-            return typeof input === "number"
+            return !isZero(input)
+
     }
-    console.log(notZero(0))
+    console.log(notZero(1))
 
 //     Write a function named lowerCase(string)
+    function lowerCase(string) {
+        return string.toLowerCase()
+
+    }
+    console.log(lowerCase("HELLO"))
+
+
 //     Write a function named double(n) that returns a number times two
-//     Write a function named triple(n) that returns a number times 3
+    function double(n) {
+        return n * 2
+    }
+    console.log(double(10))
+
+
+    //     Write a function named triple(n) that returns a number times 3
+    function triple(n) {
+        return n * 3
+    }
+    console.log(triple(10))
+
+
 //     Write a function named quadruple(n) that returns a number times 4
+    function quadruple(n) {
+        return n * 4
+    }
+    console.log(quadruple(10))
+
 //     Write a function named half(n) that returns 1/2 of the provided input
+    function half(n) {
+        return n / 2
+    }
+    console.log(half(40))
+
+
 //     Write a function named subtract(a, b) that returns a minus b
+    function subtract(a, b) {
+        return  a - b
+    }
+    console.log(subtract(10, 20))
+
+
 //     Write a function named multiply(a, b) that returns the product of a times b
+    function multiply(a, b) {
+        return a * b
+    }
+    console.log(multiply(9, 9))
+
+
 //     Write a function named divide(a, b) that returns a divided by b
+    function divide(a, b) {
+        return a / b
+    }
+
+    console.log(divide(20,10))
+
 //     Write a function named remainder(a, b) that returns the remainder after dividing a by b
+    function remainder(a, b) {
+        return a % b
+    }
+    console.log(remainder(10,3))
+
 //     Make a function named modulo(a, b) that returns the returns the remainder after dividing a by b
+    function modulo(a, b) {
+        return remainder(a, b)
+    }
+    console.log(modulo(15,5))
+
 //     Write a function named cube(n) that returns n * n * n
+    function cube(n) {
+         return n * n * n
+    }
+    console.log(cube(10))
+
 //     Write a function named squareRoot(n) that returns the square root of the input
+    function squareRoot(n) {
+        return Math.sqrt(n)
+    }
+    console.log(squareRoot(50))
+
+
 //     Write a function named cubeRoot(n) that returns the cube root of the input
+    function cubeRoot(n) {
+        return Math.cbrt(n)
+    }
+    console.log(cubeRoot(12))
+
+
 //     Write a function named invertSign(number) that returns a negative version of a postive number, a positve version of negative, and false for all else.
+    function invertSign(number) {
+        if(number > 0 || number < 0) {
+            return number * -1
+        } else
+            return false
+    }
+
+    console.log(invertSign(3))
+
+
 //     Write a function named degreesToRadians(number)
+    function degreesToRadians(number) {
+        return
+    }
+
 //     Write a function named radiansToDegrees(number)
 //     Make a function named isBlank(input) that determines if a given input is spaces, newline characters, or tabs.
 //         Make a function named trim(string) that removes empty spaces before and after the input.
