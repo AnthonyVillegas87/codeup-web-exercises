@@ -145,14 +145,46 @@
 
 
 //     Write a function named degreesToRadians(number)
-    function degreesToRadians(number) {
-        return
+    Math.radians = function degreesToRadians(number) {
+        return  number * Math.PI / 180;
+
     }
+    console.log(Math.radians(90))
 
 //     Write a function named radiansToDegrees(number)
+    function radiansToDegrees(number) {
+        return number * 180 / Math.PI;
+
+    }
+    console.log(radiansToDegrees(3.14159))
+
 //     Make a function named isBlank(input) that determines if a given input is spaces, newline characters, or tabs.
+    function isBlank(input) {
+        if(input === `\n` || input.indexOf(`\s`) || input.includes(`\t`)) {
+            return true
+        } else
+            return false
+    }
+    console.log(isBlank(`hello \n world`))
+
+
 //         Make a function named trim(string) that removes empty spaces before and after the input.
+    function trim(string) {
+        return string.trim()
+    }
+    console.log(trim("     Hello,World       "));
+
+
 //         Make a function named areEqual(input1, input2) that returns if both inputs have the same value
+    function areEqual(input1, input2) {
+        if(input1 === input2) {
+            return true
+        } else
+            return false
+
+    }
+    console.log(areEqual(2,4))
+
 //     Make a function named areIdentical(input1, input2) that returns if both inputs are same value and data type.
 //         Make a function named not(input) returns the input with a flipped boolean
 //     Make a function named notNot(input) that the negation of the negation of the input.
