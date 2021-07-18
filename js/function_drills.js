@@ -224,7 +224,7 @@
 //     Write a function called reverseString(string) that reverses a string
     function reverseString(str) {
         var someLetters = "";
-        for(let i = str.length - 1; i >= 0; i--) {
+        for(var i = str.length - 1; i >= 0; i--) {
             someLetters = someLetters + str[i];
         }
         return someLetters;
@@ -240,6 +240,13 @@
     console.log(absoluteValue(-23))
 
 //         Make a function named rollDice(sides) that takes in an argument containing the number of sides the die should have. Generate a random number between 1 up to and including the number of sides.
+        function rollDice(sides) {
+            return 1 + Math.floor(Math.random() * sides)
+        }
+
+    console.log(rollDice(6))
+
+
 //         Simple Function Drills
 //
 //     Make a function called returnTwo() that returns the number 2 when called
