@@ -186,9 +186,32 @@
     console.log(areEqual(2,4))
 
 //     Make a function named areIdentical(input1, input2) that returns if both inputs are same value and data type.
+    function areIdentical(input1, input2) {
+        return typeof input1 === typeof input2 && input1 === input2;
+
+    }
+
+    console.log(areIdentical(1,1))
+
 //         Make a function named not(input) returns the input with a flipped boolean
+    function not(input) {
+        return !input
+    }
+
+    console.log(not(1))
+
 //     Make a function named notNot(input) that the negation of the negation of the input.
-//         Make a function named and(predicate1, predicate2) that returns the logical operation of AND
+    function notNotInput(input) {
+        return !not(input)
+    }
+
+    console.log(notNotInput(""))
+
+//     Make a function named and(predicate1, predicate2) that returns the logical operation of AND
+    function and(predicate1, predicate2) {
+
+    }
+
 //     Make a function named or(predicate1, predicate2) that returns the logical operation of OR
 //     Write a function called reverseString(string) that reverses a string
 //     Make a function named absoluteValue(number) that returns the absolute value of a number.
