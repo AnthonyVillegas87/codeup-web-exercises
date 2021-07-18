@@ -209,12 +209,36 @@
 
 //     Make a function named and(predicate1, predicate2) that returns the logical operation of AND
     function and(predicate1, predicate2) {
-
+        return typeof predicate1 === "number" && typeof predicate2 === "number"
     }
 
+    console.log(and(3 ,4))
+
 //     Make a function named or(predicate1, predicate2) that returns the logical operation of OR
+    function of(predicate1, predicate2) {
+        return typeof predicate1 === "string" || typeof predicate2 === "number"
+    }
+
+    console.log(of( 3,"hello"))
+
 //     Write a function called reverseString(string) that reverses a string
+    function reverseString(str) {
+        var someLetters = "";
+        for(let i = str.length - 1; i >= 0; i--) {
+            someLetters = someLetters + str[i];
+        }
+        return someLetters;
+    }
+
+    console.log(reverseString("hello"))
+
 //     Make a function named absoluteValue(number) that returns the absolute value of a number.
+    function absoluteValue(number) {
+        return Math.abs(number)
+    }
+
+    console.log(absoluteValue(-23))
+
 //         Make a function named rollDice(sides) that takes in an argument containing the number of sides the die should have. Generate a random number between 1 up to and including the number of sides.
 //         Simple Function Drills
 //
