@@ -323,14 +323,39 @@
 
 //
 //     Write a function called rest(input) that returns everything but the first character of a string.
+    function rest(input) {
+
+            return  input.substring(1);
+
+    }
+
+    console.log(rest('Hello, World!'))
 //
 //         Write a function called reverse(input) that takes a string and returns it reversed.
+    function reverse(input) {
+        return reverseString(input)
+    }
+
+    console.log(reverse("olleH"))
 //
 //         Write a function called isNumeric(input) that takes an input and returns a boolean if the input is numeric.
+    function isNumeric(input) {
+        return !isNaN(parseFloat(input))
+    }
+
+    console.log(isNumeric(5))
+
 //
 //         Write a function called count(input) that takes in a string and returns the number of characters.
+
+    function count(input) {
+        return input.length
+    }
+
+    console.log(count("Hello, World!"));
 //
 //         Write a function called add(a, b) that returns the sum of a and b
+
 //
 //     Write a function called subtract(a, b) that return the difference between the two inputs.
 //
