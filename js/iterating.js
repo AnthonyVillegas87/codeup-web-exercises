@@ -29,8 +29,8 @@
      * Write some code that uses a for loop to log every item in the names
      * array.
      */
-    for(let i = 0; i <= names.length; i++) {
-        console.log(names);
+    for(let i = 0; i < names.length; i+=1) {
+        console.log(names[i]);
     };
     /**
      * TODO:
@@ -51,7 +51,7 @@
      * - last: returns the last item in the array
      *
      * Example:
-     *  > first([1, 2, 3, 4, 5]) // returns 1
+     *  >  // returns 1
      *  > second([1, 2, 3, 4, 5]) // returns 2
      *  > last([1, 2, 3, 4, 5]) // return 5
      */
@@ -71,5 +71,21 @@
     }
     console.log(thirdElement(names));
 
+    let nums = [1, 2, 3, 4, 5]
+    function first(arr) {
+        return arr[0]
+    }
 
+    function second(arr) {
+        return arr[1]
+    }
+
+    function last(arr) {
+        return arr[arr.length - 1]
+
+    }
+
+    console.log(first(nums, 1))
+    console.log(second(nums))
+    console.log(last(nums))
 })();
