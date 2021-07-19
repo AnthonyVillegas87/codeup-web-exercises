@@ -21,17 +21,7 @@
           concatFirstAndLast([true, 'bob']) // false
 
 
-    Array Methods
 
-    someArray.shift() = removes first element
-    someArray.unshift() = adds element to the front/beginning
-    someArray.pop() = removes last element
-    someArray.push() = adds elements to end of array
-    someArray.indexOf() = returns element index
-    someArray.lastIndexOf() = returns last element index
-    someArray.slice(startingIndex, endingIndex) = returns elements within starting & end
-    someArray.sort() = change the original value
-    someArray.reverse() = reverse the order of elements
 
        */
   function concatFirstAndLast(arr) {
@@ -45,6 +35,19 @@
   console.log(concatFirstAndLast([true]))
   console.log(concatFirstAndLast([true, 'bob']))
 
+
+
+  // Array Methods
+  //
+  // someArray.shift() = removes first element
+  // someArray.unshift() = adds element to the front/beginning
+  // someArray.pop() = removes last element
+  // someArray.push() = adds elements to end of array
+  // someArray.indexOf() = returns element index
+  // someArray.lastIndexOf() = returns last element index
+  // someArray.slice(startingIndex, endingIndex) = returns elements within starting & end
+  // someArray.sort() = change the original value
+  // someArray.reverse() = reverse the order of elements
 
   var pies = ['Apple', 'Cherry', 'Key Lime', 'HuckleBerry', 'Peach'];
 
@@ -92,7 +95,23 @@
   pies.reverse()
   console.log(pies)
 
+  // =========  SPLIT // JOIN
 
+  // split string into array
+
+  var names = "anthony,sally,justin,javier";
+
+  var namesArr = names.split(',');
+  console.log(namesArr)
+
+  var namesString = namesArr.join('---')
+  console.log(namesString)
+
+
+  var nameArr = "fred,mary,kris"
+  var myArr = nameArr.split(',')
+var newArr = myArr.join('*')
+  console.log(newArr)
 
 </script>
 
