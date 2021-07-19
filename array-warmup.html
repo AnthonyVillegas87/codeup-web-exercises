@@ -20,6 +20,19 @@
           concatFirstAndLast([true]) // false
           concatFirstAndLast([true, 'bob']) // false
 
+
+    Array Methods
+
+    someArray.shift() = removes first element
+    someArray.unshift() = adds element to the front/beginning
+    someArray.pop() = removes last element
+    someArray.push() = adds elements to end of array
+    someArray.indexOf() = returns element index
+    someArray.lastIndexOf() = returns last element index
+    someArray.slice(startingIndex, endingIndex) = returns elements within starting & end
+    someArray.sort() = change the original value
+    someArray.reverse() = reverse the order of elements
+
        */
   function concatFirstAndLast(arr) {
     if(typeof arr[0] !== "string" || arr[arr.length <= 1] || typeof arr[arr.length -1] !== "string" ) return false
@@ -31,6 +44,55 @@
   console.log(concatFirstAndLast(['23', '12', 'hello']))
   console.log(concatFirstAndLast([true]))
   console.log(concatFirstAndLast([true, 'bob']))
+
+
+  var pies = ['Apple', 'Cherry', 'Key Lime', 'HuckleBerry', 'Peach'];
+
+  //PUSH
+
+  pies.push('Rhubarb')
+  console.log(pies)
+
+  //POP
+  pies.pop()
+  console.log(pies)
+
+  // SHIFT
+  pies.shift()
+  console.log(pies)
+
+  //UNSHIFT
+  pies.unshift('Lime')
+  console.log(pies)
+
+  /// LOCATING ELEMENTS
+
+  // indexOf()
+  console.log(pies.indexOf('HuckleBerry'))
+
+  //lastIndexOf()
+
+  console.log(pies.lastIndexOf('Peach'))
+
+  //slice()
+  console.log(pies.slice(0, 3))
+  // or copy original array
+  console.log(pies.slice(0))
+  // or return elements near end of array
+  console.log(pies.slice(-2))
+
+  //sort()
+  function comparePies(...arr) {
+      return arr - arr
+  }
+  pies.sort(comparePies)
+  console.log(pies)
+
+  //reverse()
+  pies.reverse()
+  console.log(pies)
+
+
 
 </script>
 
