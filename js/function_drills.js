@@ -307,8 +307,20 @@
 
 //
 //     Write a function called first(input) that returns the first character in the provided string.
+    function first(input) {
+        return input[0]
+    }
+
+    console.log(first('Hello'))
+
 //
 //         Write a function called last(input) that returns the last character of a string
+    function last(input) {
+        return input[input.length -1]
+    }
+
+    console.log(last('Hello'))
+
 //
 //     Write a function called rest(input) that returns everything but the first character of a string.
 //
