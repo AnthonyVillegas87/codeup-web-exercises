@@ -250,29 +250,61 @@
 //         Simple Function Drills
 //
 //     Make a function called returnTwo() that returns the number 2 when called
+    function returnTwo() {
+        return 2
+    }
 //     Test this function with console.log(returnTwo())
+    console.log(returnTwo())
 //
 //         Make a function called sayHowdy() which console.logs the string “Howdy!”
+    function sayHowdy() {
+        return "Howdy!"
+    }
 //
 // Test this function by directly calling sayHowdy()
+    console.log(sayHowdy())
 //
 //     Remember this function does not need a defined return value
 //
 //     Make a function called returnName() that returns the string of your name
+    function returnName() {
+        return "Anthony"
+    }
 //
 //     Test this function with console.log(returnName())
+    console.log(returnName())
 //
 //         Make a function called addThree() which takes in a number input and returns the number plus 3.
+    function addThree(input) {
+        return input + 3
+    }
 //     Test this function with console.log(addThree(5))
+    console.log(addThree(7))
 //
 //         Make a function called sayString() which returns the string input passed in.
+    function sayString(string) {
+        return  string
+    }
 //     Test this function with console.log(sayString('codeup'))
+    console.log(sayString("hello"))
 //
 //         Challenge Function Drills
 //
 //     Write a function called identity(input) that takes in an argument called input and returns that input.
+    function identity(input) {
+        return input
+    }
+
+    console.log(identity(3))
 //
 //         Write a function called getRandomNumber(min, max) that returns a random number between min and max values sent to that function call.
+    function getRandomNumber(min, max) {
+        return min + Math.floor(Math.random() * (max-min + 1));
+    }
+
+    console.log(getRandomNumber(1, 20))
+
+
 //
 //     Write a function called first(input) that returns the first character in the provided string.
 //
