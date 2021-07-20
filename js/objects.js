@@ -57,14 +57,23 @@
             amount: 320
         }
     ];
-    shoppers.forEach(function(name){
-        shoppers.amount.forEach(function(amount){
-            if(amount > 200) {
-                return shoppers.name.amount / .12;
-            }
-            console.log(shoppers.forEach())
-        })
-    })
+
+    //function getDiscount(shoppersArr) {}
+
+     // shoppers.forEach(function (shopper) {
+     //
+     //        if (shoppers.name.amount < 200) {
+     //            console.log(`${shoppers.name} does not qualify for the discount! His total will be ${shoppers.amount} `)
+     //
+     //        } else if (shoppers.name.amount > 200) {
+     //            console.log(`${shoppers.name}  qualifies for the discount! Their total before discount is ${shoppers.amount} & total is now ${shoppers.amount / .12} `)
+     //        }
+     //
+     //
+     //    });
+
+
+
 
 
 
