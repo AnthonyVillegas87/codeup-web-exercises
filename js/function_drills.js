@@ -371,16 +371,16 @@
 //         Write multiply(a, b) function that returns the product
     function multiply(a, b) {
             return a * b
-    }
+    }multiply();
 
     console.log(multiply(32, 6))
 //
 //     Write a divide(numerator, denominator) function that returns a divided by b
-    function divide(numerator, denominator) {
+     function divide(numerator, denominator)  {
             return numerator / denominator
-    }
+    }divide();
 
-    console.log(divide(25,5))
+   // console.log(divide(25,5))
 //
 //     Write a remainder(number, divisor) function that returns the remainder left over when dividing number by the divisor
     function remainder(number, divisor) {
@@ -405,10 +405,8 @@
     console.log(sumOfSquares(10,12))
 //
 //     Write a function called doMath(operator, a, b) that takes 3 parameters. The first parameter is the name of the math function you want to apply. a and b are the two numbers to run that function on.
-    function doMath(operator, a, b) {
+       
 
-
-    }
 //
 //     Even More Function Bonuses
 //
