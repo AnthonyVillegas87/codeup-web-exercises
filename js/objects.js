@@ -132,9 +132,9 @@
      */
 
 
-    books.forEach(function(book){
-            console.log("Title: " + book.title + "\n Author: " + book.author.first_name + book.author.last_name + ".")
-    })
+    // books.forEach(function(book){
+    //         console.log("Title: " + book.title + "\n Author: " + book.author.first_name + book.author.last_name + ".")
+    // })
 
 
     /**
@@ -169,10 +169,15 @@ function CreateBook(title, author) {
     }
 
 var newBook = new CreateBook("The Stand", "Stephen King");
-console.log(newBook.title + "\n" + newBook.author)
+console.log(newBook)
 
 
 
+// function showBookInfo() {
+//     return books.title + "\n" + books.author
+// }
+//
+//     console.log(showBookInfo(books))
 
 
     /**
