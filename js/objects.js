@@ -58,34 +58,64 @@
         }
     ];
 
-    //function getDiscount(shoppersArr) {}
-
-     // shoppers.forEach(function (shopper) {
-     //
-     //        if (shoppers.name.amount < 200) {
-     //            console.log(`${shoppers.name} does not qualify for the discount! His total will be ${shoppers.amount} `)
-     //
-     //        } else if (shoppers.name.amount > 200) {
-     //            console.log(`${shoppers.name}  qualifies for the discount! Their total before discount is ${shoppers.amount} & total is now ${shoppers.amount / .12} `)
-     //        }
-     //
-     //
-     //    });
+    shoppers.forEach(function (shopper){
+        if(shopper.amount < 200) {
+            console.log(shopper.name + " spent " + shopper.amount + " and does not receive a discount!")
+        } else if(shopper.amount > 200) {
+            console.log(shopper.name + " spent " + shopper.amount + " and qualifies for a discount! The total is now " + shopper.amount * 0.12 + " !")
+        }
+    })
 
 
 
+// function toLowerCase(string) {
+//     return typeof string === "string" && string === string.toLowerCase();
+// }
+//
+// console.log(toLowerCase("hello"))
+
+    var books = [
+        {
+            title: "IT",
+            author: {
+                first_name: "Stephen",
+                last_name: "King"
+            }
+        },
+        {
+            title: "Battlefield Earth",
+            author: {
+                first_name: "L. Ron",
+                last_name: "Hubbard"
+            }
+        },
+        {
+            title: "The Art Of War",
+            author: {
+                first_name: "Sun",
+                last_name: "Tzu"
+            }
+        },
+        {
+            title: "Last Of The Mohicans",
+            author: {
+                first_name: "James Fenimore",
+                last_name: "Cooper"
+            }
+        },
+        {
+            title: "The Relic",
+            author: {
+                first_name: "Lincoln",
+                last_name: "Child"
+            }
+        }
+        ]
 
 
-
-
-
-
-
-
-
-
-
-
+    console.log(books[4].title)
+    console.log(books[4].author.first_name)
+    console.log(books[4].author.last_name)
 
 
     /** TODO:
@@ -100,6 +130,15 @@
      * > console.log(books[0].author.firstName) // "Douglas"
      * > console.log(books[0].author.lastName) // "Adams"
      */
+
+
+    books.forEach(function(book){
+        console.log(book)
+    })
+
+
+
+
 
     /**
      * TODO:

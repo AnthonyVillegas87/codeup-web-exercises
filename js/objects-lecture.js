@@ -112,8 +112,13 @@ var fighter = {
     name: "Ryu",
     hitPoints: 18,
     maxDamage: 8,
-    attack: function() {
-        console.log(this.name + " attacks!")
+    attack: function(target) {
+        console.log(this.name + " attacks " + target.name + "!");
+        console.log(target.name + " has " + target.hitPoints + " hit points.");
+        var damage = Math.ceil(Math.random() * this.maxDamage);
+        console.log(this.name + " does " + damage + " points of damage!");
+        target.hitPoints -= damage;
+        console.log(target.name + " now has " + target.hitPoints)
     }
 }
 
@@ -123,4 +128,6 @@ var monster = {
     maxDamage: 6
 }
 
-fighter.attack();
+fighter.attack(monster);
+
+
