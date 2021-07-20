@@ -15,12 +15,13 @@
         firstName: "Anthony",
         lastName: "Villegas",
         sayHello() {
-            console.log("Hello from Anthony Villegas!");
+            return  `Hello from Anthony Villegas!`
         }
+
     };
     console.log(student.firstName);
     console.log(student.lastName);
-    console.log(student.sayHello)
+    console.log(student.sayHello())
     /**
      * TODO:
      * Add a sayHello method to the person object that returns a greeting using
@@ -45,11 +46,38 @@
      * and console.log the relevant messages for each person
      */
 
-    // var shoppers = [
-    //     {name: 'Cameron', amount: 180},
-    //     {name: 'Ryan', amount: 250},
-    //     {name: 'George', amount: 320}
-    // ];
+    var shoppers = [
+        {name: 'Cameron',
+            amount: 180
+        },
+        {name: 'Ryan',
+            amount: 250
+        },
+        {name: 'George',
+            amount: 320
+        }
+    ];
+    shoppers.forEach(function(name){
+        shoppers.amount.forEach(function(amount){
+            if(amount > 200) {
+                return shoppers.name.amount / .12;
+            }
+            console.log(shoppers.forEach())
+        })
+    })
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     /** TODO:
      * Create an array of objects that represent books and store it in a
