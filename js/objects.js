@@ -62,7 +62,7 @@
         if(shopper.amount < 200) {
             console.log(shopper.name + " spent " + shopper.amount + " and does not receive a discount!")
         } else if(shopper.amount > 200) {
-            console.log(shopper.name + " spent " + shopper.amount + " and qualifies for a discount! The total is now " + shopper.amount * 0.12 + " !")
+            console.log(shopper.name + " spent " + shopper.amount + " and qualifies for a discount! The total is now " + (shopper.amount - shopper.amount * 0.12) + " !")
         }
     })
 
@@ -79,35 +79,35 @@
             title: "IT",
             author: {
                 first_name: "Stephen",
-                last_name: "King"
+                last_name: " King"
             }
         },
         {
             title: "Battlefield Earth",
             author: {
                 first_name: "L. Ron",
-                last_name: "Hubbard"
+                last_name: " Hubbard"
             }
         },
         {
             title: "The Art Of War",
             author: {
                 first_name: "Sun",
-                last_name: "Tzu"
+                last_name: " Tzu"
             }
         },
         {
             title: "Last Of The Mohicans",
             author: {
                 first_name: "James Fenimore",
-                last_name: "Cooper"
+                last_name: " Cooper"
             }
         },
         {
             title: "The Relic",
             author: {
                 first_name: "Lincoln",
-                last_name: "Child"
+                last_name: " Child"
             }
         }
         ]
@@ -133,11 +133,8 @@
 
 
     books.forEach(function(book){
-        console.log(book)
+            console.log("Title: " + book.title + "\n Author: " + book.author.first_name + book.author.last_name + ".")
     })
-
-
-
 
 
     /**
@@ -164,6 +161,19 @@
      *      ---
      *      ...
      */
+
+
+function CreateBook(title, author) {
+    this.title = title;
+    this.author = author;
+    }
+
+var newBook = new CreateBook("The Stand", "Stephen King");
+console.log(newBook.title + "\n" + newBook.author)
+
+
+
+
 
     /**
      * Bonus:
