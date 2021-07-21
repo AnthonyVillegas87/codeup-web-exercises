@@ -59,6 +59,7 @@
         //George is purchasing 320$ of stuff. He will get 38.40 off the purchase and pay 281.60$
 
     // function to strictly calculate the amount with or without discount
+
             function calcDiscount(amount, threshold, discountPercentage) {
                 // if the amount is greater than the threshold, apply the discountPercentage
             if(amount <= threshold) {
@@ -67,13 +68,44 @@
                 return (amount * discountPercentage);
             }
     }
+    //
+    // calcDiscount(180,200,.12);//0
+    // calcDiscount(250,200,.12);//30
+    // calcDiscount(320,200,.12);//38.4
+    //
+    /// With  for loop
+    // for(var i = 0; i <= shoppers.length; i += 1) {
+    //
+    //     // Cameron is purchasing 180$ of stuff. He will get 0$ off the purchase and pay 180$
+    //     var cameronsDiscountAmount = calcDiscount(shoppers[i].amount, threshold, discountPercentage);
+    //     var output1 = shoppers[i].name + ' is purchasing ' + shoppers[i].amount +
+    //         ' of stuff. He will get ' + cameronsDiscountAmount +
+    //         ' off the purchase and pay ' + (shoppers[i].amount - cameronsDiscountAmount);
+    // }
+    //
 
 
-    calcDiscount(180,200,.12);//0
-    calcDiscount(250,200,.12);//30
-    calcDiscount(320,200,.12);//38.4
+    //NEW FOR EACH EXAMPLE
+        // Cameron is purchasing 180$ of stuff. He will get 0$ off the purchase and pay 180$
+        shoppers.forEach(function(shopper ) {
+            var discountAmount = calcDiscount(shoppers.amount, threshold, discountPercentage);
+            var output = shopper.name + ' is purchasing ' + shopper.amount +
+                ' of stuff. He will get ' + discountAmount +
+                ' off the purchase and pay ' + (shopper.amount - discountAmount);
+
+        })
 
 
+
+
+    // var ryanDiscountAmount = calcDiscount(shoppers[1].amount, threshold, discountPercentage);
+    // var output2 = shoppers[1].name + ' is purchasing ' + shoppers[1].amount +
+    //     ' of stuff. He will get ' + ryanDiscountAmount +
+    //     ' off the purchase and pay ' + ( shoppers[1].amount - ryanDiscountAmount);
+    // var georgeDiscountAmount = calcDiscount(shoppers[2].amount, threshold, discountPercentage);
+    // var output3 = shoppers[2].name + ' is purchasing ' + shoppers[2].amount +
+    //     ' of stuff. He will get ' + georgeDiscountAmount +
+    //     ' off the purchase and pay ' + ( shoppers[2].amount - georgeDiscountedAmount);
 
 
 
@@ -90,6 +122,8 @@
         }
     ];
 
+////    With  For Each
+
     shoppers.forEach(function (shopper){
         if(shopper.amount < 200) {
             console.log(shopper.name + " spent " + shopper.amount + " and does not receive a discount!");
@@ -100,11 +134,6 @@
 
 
 
-// function toLowerCase(string) {
-//     return typeof string === "string" && string === string.toLowerCase();
-// }
-//
-// console.log(toLowerCase("hello"))
 
     var books = [
         {
