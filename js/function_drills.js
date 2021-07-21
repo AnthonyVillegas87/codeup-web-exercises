@@ -2,24 +2,13 @@
 "use strict"
 
 
-//     Make a function named isCapital(letter)
-//     function isCapital(letter) {
-//         return letter
-//     }
-//     isCapital()
 
-//     Make a function named isLowerCase(letter)
-//     function isLowerCase(letter) {
-//         return letter
-//     }
-//     isLowerCase()
-
-//     Make a function named hasLowerCase(string) that returns if a string has any lower cased letter
-//     function hasLowerCase(string) {
-//        if(string.toLowerCase() === false)
-//         return true
-//     }
-//     console.log(hasLowerCase('strong'))
+   // Make a function named hasLowerCase(string) that returns if a string has any lower cased letter
+    function hasLowerCase(string) {
+       if(typeof string === "string" && string === string.toLowerCase())
+        return true
+    }
+    console.log(hasLowerCase('strong'))
 
 
 
@@ -162,15 +151,15 @@
     function isBlank(input) {
         if(input === `\n` || input.indexOf(`\s`) || input.includes(`\t`)) {
             return true
-        } else
-            return false
+        }
+        return false
     }
-    console.log(isBlank(`hello \n world`))
+    console.log(isBlank(`hello \n world`));
 
 
 //         Make a function named trim(string) that removes empty spaces before and after the input.
     function trim(string) {
-        return string.trim()
+        return string.trim();
     }
     console.log(trim("     Hello,World       "));
 
@@ -178,16 +167,16 @@
 //         Make a function named areEqual(input1, input2) that returns if both inputs have the same value
     function areEqual(input1, input2) {
         if(input1 === input2) {
-            return true
-        } else
-            return false
+            return true;
+        }
+            return false;
 
     }
-    console.log(areEqual(2,4))
+    console.log(areEqual(2,4));
 
 //     Make a function named areIdentical(input1, input2) that returns if both inputs are same value and data type.
     function areIdentical(input1, input2) {
-        return typeof input1 === typeof input2 && input1 === input2;
+        return input1 === input2 ;
 
     }
 
@@ -195,31 +184,31 @@
 
 //         Make a function named not(input) returns the input with a flipped boolean
     function not(input) {
-        return !input
+        return !input;
     }
 
-    console.log(not(1))
+    console.log(not(1));
 
 //     Make a function named notNot(input) that the negation of the negation of the input.
     function notNotInput(input) {
-        return !not(input)
+        return !not(input);
     }
 
-    console.log(notNotInput(""))
+    console.log(notNotInput(""));
 
 //     Make a function named and(predicate1, predicate2) that returns the logical operation of AND
     function and(predicate1, predicate2) {
-        return typeof predicate1 === "number" && typeof predicate2 === "number"
+        return typeof predicate1 === "number" && typeof predicate2 === "number";
     }
 
-    console.log(and(3 ,4))
+    console.log(and(3 ,4));
 
 //     Make a function named or(predicate1, predicate2) that returns the logical operation of OR
     function of(predicate1, predicate2) {
-        return typeof predicate1 === "string" || typeof predicate2 === "number"
+        return typeof predicate1 === "string" || typeof predicate2 === "number";
     }
 
-    console.log(of( 3,"hello"))
+    console.log(of( 3,"hello"));
 
 //     Write a function called reverseString(string) that reverses a string
     function reverseString(str) {
@@ -230,49 +219,49 @@
         return someLetters;
     }
 
-    console.log(reverseString("hello"))
+    console.log(reverseString("hello"));
 
 //     Make a function named absoluteValue(number) that returns the absolute value of a number.
     function absoluteValue(number) {
-        return Math.abs(number)
+        return Math.abs(number);
     }
 
-    console.log(absoluteValue(-23))
+    console.log(absoluteValue(-23));
 
 //         Make a function named rollDice(sides) that takes in an argument containing the number of sides the die should have. Generate a random number between 1 up to and including the number of sides.
         function rollDice(sides) {
-            return 1 + Math.floor(Math.random() * sides)
+            return 1 + Math.floor(Math.random() * sides);
         }
 
-    console.log(rollDice(6))
+    console.log(rollDice(6));
 
 
 //         Simple Function Drills
 //
 //     Make a function called returnTwo() that returns the number 2 when called
     function returnTwo() {
-        return 2
+        return 2;
     }
 //     Test this function with console.log(returnTwo())
-    console.log(returnTwo())
+    console.log(returnTwo());
 //
 //         Make a function called sayHowdy() which console.logs the string “Howdy!”
     function sayHowdy() {
-        return "Howdy!"
+        return "Howdy!";
     }
 //
 // Test this function by directly calling sayHowdy()
-    console.log(sayHowdy())
+    console.log(sayHowdy());
 //
 //     Remember this function does not need a defined return value
 //
 //     Make a function called returnName() that returns the string of your name
     function returnName() {
-        return "Anthony"
+        return "Anthony";
     }
 //
 //     Test this function with console.log(returnName())
-    console.log(returnName())
+    console.log(returnName());
 //
 //         Make a function called addThree() which takes in a number input and returns the number plus 3.
     function addThree(input) {
@@ -404,41 +393,14 @@
 
     console.log(sumOfSquares(10,12))
 //
-//     Write a function called doMath(operator, a, b) that takes 3 parameters. The first parameter is the name of the math function you want to apply. a and b are the two numbers to run that function on.
-       
 
-//
-//     Even More Function Bonuses
-//
-//     Create a function that will return how many whitespace characters are at the beginning and end of a string.
-//
-//         Create a function that takes in two string inputs.
-//
-//         If the second string input is present in the first, return the first input string with the second input string removed from it.
-//         If the second string input is present multiple times in the first, the second string will only be removed where it first occurs in the first string.
-//         If the second string input is not present in the first, return the first string as entered in the function.
-//     Create a function that takes in a string and returns true if the last letter is an "a" (otherwise, return false).
-//
-//     EXTRA CHALLENGE: create a function that will return how many whitespace characters are at the beginning of a string (hint: use regex).
-//
-//     Create a function returnTrueMessage() that returns the string "Hey, it's true!"
-//
-//     Create a function returnFalseMessage() that returns the string "Hey, it's false!"
-//     Create a function returnMessage() that takes in a function and returns the call to the function
-//     Experiement passing in different functions.
-//         Create a function, willLoginUser() that takes in a username string, password string, user age, a boolean indicating if they are an admin.
-//
-//         The function will return true if the username is not the same as the password and the user is at least 18 years old. If the user is an admin, they do not have to be a certain age but the password must still not match the username.
+//     Write a function called doMath(operator, a, b) that takes 3 parameters.
+//     The first parameter is the name of the math function you want to apply. a and b are the two numbers to run that function on.
+       function doMath(fn, a, b) {
+            return fn(a,b);
 
-
-
-
-
-
-
-
-
-
+       }
+       doMath(divide, 6, 3)
 
 
 

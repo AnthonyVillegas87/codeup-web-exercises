@@ -15,7 +15,7 @@
         firstName: "Anthony",
         lastName: "Villegas",
         sayHello() {
-            return  `Hello from Anthony Villegas!`
+            return  `Hello from Anthony Villegas!`;
         }
 
     };
@@ -32,6 +32,11 @@
      * > console.log(person.sayHello()) // "Hello from Rick Sanchez!"
      */
 
+    // student.sayHello = function() {
+    //     return 'Hello from ' + student.firstName + '' + student.lastName;
+    // };
+    // console.log(person.sayHello());
+
     /** TODO:
      * HEB has an offer for the shoppers that buy products amounting to
      * more than $200. If a shopper spends more than $200, they get a 12%
@@ -45,6 +50,33 @@
      * represents one shopper. Use a foreach loop to iterate through the array,
      * and console.log the relevant messages for each person
      */
+
+    ///PSEUDO///
+        //if purchasing more than 200, will get 12% off
+
+        // Cameron is purchasing 180$ of stuff. He will get 0$ off the purchase and pay 180$
+        //Ryan is purchasing 250$ of stuff. He will get 30$ off the purchase and pay 220$.
+        //George is purchasing 320$ of stuff. He will get 38.40 off the purchase and pay 281.60$
+
+    // function to strictly calculate the amount with or without discount
+            function calcDiscount(amount, threshold, discountPercentage) {
+                // if the amount is greater than the threshold, apply the discountPercentage
+            if(amount <= threshold) {
+                return 0
+            } else {
+                return (amount * discountPercentage);
+            }
+    }
+
+
+    calcDiscount(180,200,.12);//0
+    calcDiscount(250,200,.12);//30
+    calcDiscount(320,200,.12);//38.4
+
+
+
+
+
 
     var shoppers = [
         {name: 'Cameron',
@@ -60,9 +92,9 @@
 
     shoppers.forEach(function (shopper){
         if(shopper.amount < 200) {
-            console.log(shopper.name + " spent " + shopper.amount + " and does not receive a discount!")
+            console.log(shopper.name + " spent " + shopper.amount + " and does not receive a discount!");
         } else if(shopper.amount > 200) {
-            console.log(shopper.name + " spent " + shopper.amount + " and qualifies for a discount! The total is now " + (shopper.amount - shopper.amount * 0.12) + " !")
+            console.log(shopper.name + " spent " + shopper.amount + " and qualifies for a discount! The total is now " + (shopper.amount - shopper.amount * 0.12) + " !");
         }
     })
 
