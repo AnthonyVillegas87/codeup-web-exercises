@@ -22,17 +22,13 @@ let salesReport = {
     date: 3 - 17 - 2015,
     office: "Codeup",
     getEmployeeCount() {
-        return "There are " + salesReport.employees.length +  " employees in this report. "
+        return "There are " + salesReport.employees.length +  " employees in this report. ";
     },
     getTotalNumberOfSales() {
-        let sumOfSales;
-        salesReport.forEach(employees => {
-            for(let salesUnits in employees) {
-                if(employees.salesUnits)
-                    sumOfSales += employees.salesUnits;
-            }
+        salesReport.forEach(employee => {
+                    employee += this.employees.salesUnits;
+                    return "Collectively this report has a total of " + employee + " sales!";
         })
-        return "Collectively this report has a total of " + sumOfSales + " sales!"
     },
     employees: [
 
@@ -104,11 +100,6 @@ let salesReport = {
         },
 
 
-    // getAverageSalesPerEmployee() should return the average units sold per employee
-    // function getAverageSalesPerEmployee() {
-    //
-    // },
-
 
     ],
 
@@ -129,7 +120,10 @@ console.log(salesReport.getEmployeeCount())
 //
 // },
 console.log(salesReport.getTotalNumberOfSales())
-
+// getAverageSalesPerEmployee() should return the average units sold per employee
+// function getAverageSalesPerEmployee() {
+//
+// },
 
 
 
