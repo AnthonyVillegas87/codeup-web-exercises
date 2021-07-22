@@ -6,9 +6,9 @@
    // Make a function named hasLowerCase(string) that returns if a string has any lower cased letter
     function hasLowerCase(string) {
        if(typeof string === "string" && string === string.toLowerCase())
-        return true
+        return true;
     }
-    console.log(hasLowerCase('strong'))
+    console.log(hasLowerCase('strong'));
 
 
 
@@ -23,103 +23,103 @@
 
 //     Make a function named isZero(number)
     function isZero(number) {
-        return number === 0
+        return number === 0;
     }
-    console.log(isZero(0))
+    console.log(isZero(0));
 
 //     Make a function named notZero(input) that returns true if the input is not zero
     function notZero(input) {
-            return !isZero(input)
+            return !isZero(input);
 
     }
-    console.log(notZero(1))
+    console.log(notZero(1));
 
 //     Write a function named lowerCase(string)
     function lowerCase(string) {
-        return string.toLowerCase()
+        return string === string.toLowerCase();
 
     }
-    console.log(lowerCase("HELLO"))
+    console.log(lowerCase("HELLO"));
 
 
 //     Write a function named double(n) that returns a number times two
     function double(n) {
-        return n * 2
+        return n * 2;
     }
-    console.log(double(10))
+    console.log(double(10));
 
 
     //     Write a function named triple(n) that returns a number times 3
     function triple(n) {
-        return n * 3
+        return n * 3;
     }
-    console.log(triple(10))
+    console.log(triple(10));
 
 
 //     Write a function named quadruple(n) that returns a number times 4
     function quadruple(n) {
-        return n * 4
+        return n * 4;
     }
-    console.log(quadruple(10))
+    console.log(quadruple(10));
 
 //     Write a function named half(n) that returns 1/2 of the provided input
     function half(n) {
-        return n / 2
+        return n / 2;
     }
-    console.log(half(40))
+    console.log(half(40));
 
 
 //     Write a function named subtract(a, b) that returns a minus b
     function subtract(a, b) {
-        return  a - b
+        return  a - b;
     }
-    console.log(subtract(10, 20))
+    console.log(subtract(10, 20));
 
 
 //     Write a function named multiply(a, b) that returns the product of a times b
     function multiply(a, b) {
-        return a * b
+        return a * b;
     }
-    console.log(multiply(9, 9))
+    console.log(multiply(9, 9));
 
 
 //     Write a function named divide(a, b) that returns a divided by b
     function divide(a, b) {
-        return a / b
+        return a / b;
     }
 
-    console.log(divide(20,10))
+    console.log(divide(20,10));
 
 //     Write a function named remainder(a, b) that returns the remainder after dividing a by b
     function remainder(a, b) {
-        return a % b
+        return a % b;
     }
-    console.log(remainder(10,3))
+    console.log(remainder(10,3));
 
 //     Make a function named modulo(a, b) that returns the returns the remainder after dividing a by b
     function modulo(a, b) {
-        return remainder(a, b)
+        return remainder(a, b);
     }
-    console.log(modulo(15,5))
+    console.log(modulo(15,5));
 
 //     Write a function named cube(n) that returns n * n * n
     function cube(n) {
          return n * n * n
     }
-    console.log(cube(10))
+    console.log(cube(10));
 
 //     Write a function named squareRoot(n) that returns the square root of the input
     function squareRoot(n) {
-        return Math.sqrt(n)
+        return Math.sqrt(n);
     }
-    console.log(squareRoot(50))
+    console.log(squareRoot(50));
 
 
 //     Write a function named cubeRoot(n) that returns the cube root of the input
     function cubeRoot(n) {
-        return Math.cbrt(n)
+        return Math.cbrt(n);
     }
-    console.log(cubeRoot(12))
+    console.log(cubeRoot(12));
 
 
 //     Write a function named invertSign(number) that returns a negative version of a postive number, a positve version of negative, and false for all else.
@@ -130,7 +130,7 @@
             return false
     }
 
-    console.log(invertSign(3))
+    console.log(invertSign(3));
 
 
 //     Write a function named degreesToRadians(number)
@@ -138,14 +138,14 @@
         return  number * Math.PI / 180;
 
     }
-    console.log(Math.radians(90))
+    console.log(Math.radians(90));
 
 //     Write a function named radiansToDegrees(number)
     function radiansToDegrees(number) {
         return number * 180 / Math.PI;
 
     }
-    console.log(radiansToDegrees(3.14159))
+    console.log(radiansToDegrees(3.14159));
 
 //     Make a function named isBlank(input) that determines if a given input is spaces, newline characters, or tabs.
     function isBlank(input) {
@@ -265,33 +265,33 @@
 //
 //         Make a function called addThree() which takes in a number input and returns the number plus 3.
     function addThree(input) {
-        return input + 3
+        return input + 3;
     }
 //     Test this function with console.log(addThree(5))
-    console.log(addThree(7))
+    console.log(addThree(7));
 //
 //         Make a function called sayString() which returns the string input passed in.
     function sayString(string) {
-        return  string
+        return  string;
     }
 //     Test this function with console.log(sayString('codeup'))
-    console.log(sayString("hello"))
+    console.log(sayString("hello"));
 //
 //         Challenge Function Drills
 //
 //     Write a function called identity(input) that takes in an argument called input and returns that input.
     function identity(input) {
-        return input
+        return input;
     }
 
-    console.log(identity(3))
+    console.log(identity(3));
 //
 //         Write a function called getRandomNumber(min, max) that returns a random number between min and max values sent to that function call.
     function getRandomNumber(min, max) {
         return min + Math.floor(Math.random() * (max-min + 1));
     }
 
-    console.log(getRandomNumber(1, 20))
+    console.log(getRandomNumber(1, 20));
 
 
 //
@@ -300,15 +300,15 @@
         return input[0]
     }
 
-    console.log(first('Hello'))
+    console.log(first('Hello'));
 
 //
 //         Write a function called last(input) that returns the last character of a string
     function last(input) {
-        return input[input.length -1]
+        return input[input.length -1];
     }
 
-    console.log(last('Hello'))
+    console.log(last('Hello'));
 
 //
 //     Write a function called rest(input) that returns everything but the first character of a string.
@@ -318,80 +318,80 @@
 
     }
 
-    console.log(rest('Hello, World!'))
+    console.log(rest('Hello, World!'));
 //
 //         Write a function called reverse(input) that takes a string and returns it reversed.
     function reverse(input) {
-        return reverseString(input)
+        return reverseString(input);
     }
 
-    console.log(reverse("olleH"))
+    console.log(reverse("olleH"));
 //
 //         Write a function called isNumeric(input) that takes an input and returns a boolean if the input is numeric.
     function isNumeric(input) {
-        return !isNaN(parseFloat(input))
+        return !isNaN(parseFloat(input));
     }
 
-    console.log(isNumeric(5))
+    console.log(isNumeric(5));
 
 //
 //         Write a function called count(input) that takes in a string and returns the number of characters.
 
     function count(input) {
-        return input.length
+        return input.length;
     }
 
     console.log(count("Hello, World!"));
 //
 //         Write a function called add(a, b) that returns the sum of a and b
         function add(a, b) {
-            return a + b
+            return a + b;
         }
 
-    console.log(add(21, 73))
+    console.log(add(21, 73));
 //
 //     Write a function called subtract(a, b) that return the difference between the two inputs.
     function subtract(a, b) {
-            return a - b
+            return a - b;
     }
 
-    console.log(subtract(21, 73))
+    console.log(subtract(21, 73));
 //
 //         Write multiply(a, b) function that returns the product
     function multiply(a, b) {
-            return a * b
+            return a * b;
     }multiply();
 
-    console.log(multiply(32, 6))
+    console.log(multiply(32, 6));
 //
 //     Write a divide(numerator, denominator) function that returns a divided by b
      function divide(numerator, denominator)  {
-            return numerator / denominator
+            return numerator / denominator;
     }divide();
 
    // console.log(divide(25,5))
 //
 //     Write a remainder(number, divisor) function that returns the remainder left over when dividing number by the divisor
     function remainder(number, divisor) {
-            return number % divisor
+            return number % divisor;
     }
 
-    console.log(remainder(3, 44))
+    console.log(remainder(3, 44));
 //
 //     Write the function square(a) that takes in a number and returns the number multiplied by itself.
     function square(a) {
-            return a * a
+            return a * a;
     }
 
-    console.log(square(15))
+    console.log(square(15));
 //
 //         Write a function called sumOfSquares(a, b) that uses only your add() function and your square function and not + or * operators
     function sumOfSquares(a, b) {
 
-            return add(square(a), square(b))
+            return add(square(a), square(b));
     }
 
-    console.log(sumOfSquares(10,12))
+    console.log(sumOfSquares(10,12));
 //
 
 //     Write a function called doMath(operator, a, b) that takes 3 parameters.
@@ -400,7 +400,7 @@
             return fn(a,b);
 
        }
-       doMath(divide, 6, 3)
+       doMath(divide, 6, 3);
 
 
 

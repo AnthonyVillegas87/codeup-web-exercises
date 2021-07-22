@@ -60,14 +60,14 @@
 
     // function to strictly calculate the amount with or without discount
 
-            function calcDiscount(amount, threshold, discountPercentage) {
-                // if the amount is greater than the threshold, apply the discountPercentage
-            if(amount <= threshold) {
-                return 0
-            } else {
-                return (amount * discountPercentage);
-            }
-    }
+            // function calcDiscount(amount, threshold, discountPercentage) {
+            //     // if the amount is greater than the threshold, apply the discountPercentage
+            // if(amount <= threshold) {
+            //     return 0
+            // } else {
+            //     return (amount * discountPercentage);
+            // }
+    //}
     //
     // calcDiscount(180,200,.12);//0
     // calcDiscount(250,200,.12);//30
@@ -87,13 +87,13 @@
 
     //NEW FOR EACH EXAMPLE
         // Cameron is purchasing 180$ of stuff. He will get 0$ off the purchase and pay 180$
-        shoppers.forEach(function(shopper ) {
-            var discountAmount = calcDiscount(shoppers.amount, threshold, discountPercentage);
-            var output = shopper.name + ' is purchasing ' + shopper.amount +
-                ' of stuff. He will get ' + discountAmount +
-                ' off the purchase and pay ' + (shopper.amount - discountAmount);
-
-        })
+        // shoppers.forEach(function(shopper ) {
+        //     var discountAmount = calcDiscount(shoppers.amount, threshold, discountPercentage);
+        //     var output = shopper.name + ' is purchasing ' + shopper.amount +
+        //         ' of stuff. He will get ' + discountAmount +
+        //         ' off the purchase and pay ' + (shopper.amount - discountAmount);
+        //
+        // })
 
 
 
@@ -193,9 +193,9 @@
      */
 
 
-    // books.forEach(function(book){
-    //         console.log("Title: " + book.title + "\n Author: " + book.author.first_name + book.author.last_name + ".")
-    // })
+    books.forEach(function(book){
+            console.log("Title: " + book.title + "\n Author: " + book.author.first_name + book.author.last_name + ".")
+    })
 
 
     /**

@@ -7,7 +7,7 @@ function makeCar(make, model){
         model: model
     }
 }
-var car = makeCar("Ford","Bronco")
+let car = makeCar("Ford","Bronco")
 console.log(car)
 
 // Exercise 2. Use the following data to create an object named salesReport.
@@ -16,31 +16,96 @@ console.log(car)
 //       the employees property should hold an array of objects.
 //       each employee should be represented by an object with the following properties:
 //         employee-number, first-name, last-name, sales-units
-//
-// Monthly Sales Report
+//// Monthly Sales Report
 // Date: 03-17-2015
 // Office: Codeup
 // ===================================================
 // Employee Number, First Name, Last Name, Sales Units
 // ***************************************************
-// 1, Jane, Janeway, 3
-// 3, Tricia, Triciason, 5
-// 4, Jeannette, Jeanson, 4
-// 5, Charles Emmerson III, Winchester, 2
-// 6, Chet, Chedderson, 8
-// 7, Chaiam, Chaiamson, 12
-// 8, Dale, Dalesinger, 1
-// 9, Zig, Ziglar, 50
-// 10, Henry, Kissinger, 1
-// 11, Arthur Herbert, Fonzarelli, 23
-// 12, Betty, Boop, 67
 
-// var salesReport = {
-//     title: "Monthly Sales Report",
-//     date: 03-17-2015,
-//     office: "Codeup",
-//     employees:
-//}
+let salesReport = [
+    {
+        title: "Monthly Sales Report",
+        date: 3 - 17 - 2015,
+        office: "Codeup",
+        employees: [
+
+            {
+                employeeNumber: 1,
+                firstName: "Jane",
+                lastName: "Janeway",
+                salesUnits: 3
+            },
+            {
+                employeeNumber: 3,
+                firstName: "Tricia",
+                lastName: "Triaciason",
+                salesUnits: 5
+            },
+            {
+                employeeNumber: 4,
+                firstName: "Jeanette",
+                lastName: "Jeanson",
+                salesUnits: 4
+            },
+            {
+                employeeNumber: 5,
+                firstName: "Charles Emerson III",
+                lastName: "Wincester",
+                salesUnits: 2
+            },
+            {
+                employeeNumber: 6,
+                firstName: "Chet",
+                lastName: "Chedderson",
+                salesUnits: 8
+            },
+            {
+                employeeNumber: 7,
+                firstName: "Chaium",
+                lastName: "Chaiamson",
+                salesUnits: 12
+            },
+            {
+                employeeNumber: 8,
+                firstName: "Dale",
+                lastName: "Dalesinger",
+                salesUnits: 1
+            },
+            {
+                employeeNumber: 9,
+                firstName: "Zig",
+                lastName: "Ziglar",
+                salesUnits: 50
+            },
+            {
+                employeeNumber: 10,
+                firstName: "Henry",
+                lastName: "Kissinger",
+                salesUnits: 1
+            },
+            {
+                employeeNumber: 11,
+                firstName: "Arthur Herbert",
+                lastName: "Fonzarelli",
+                salesUnits: 23
+            },
+            {
+                employeeNumber: 12,
+                firstName: "Betty",
+                lastName: "Boop",
+                salesUnits: 67
+            }
+        ]}
+
+    ];
+console.log(salesReport)
+
+
+// Exercise 3. On the salesReport object you made, add the following methods.
+// getEmployeeCount() should return the total number of employees
+// getTotalNumberOfSales() should return the total number of units sold
+// getAverageSalesPerEmployee() should return the average units sold per employee
 
 
 
