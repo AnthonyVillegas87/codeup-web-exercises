@@ -21,6 +21,19 @@ let salesReport = {
     title: "Monthly Sales Report",
     date: 3 - 17 - 2015,
     office: "Codeup",
+    getEmployeeCount() {
+        return "There are " + salesReport.employees.length +  " employees in this report. "
+    },
+    getTotalNumberOfSales() {
+        let sumOfSales;
+        salesReport.forEach(employees => {
+            for(let salesUnits in employees) {
+                if(employees.salesUnits)
+                    sumOfSales += employees.salesUnits;
+            }
+        })
+        return "Collectively this report has a total of " + sumOfSales + " sales!"
+    },
     employees: [
 
         {
@@ -89,10 +102,8 @@ let salesReport = {
             lastName: "Boop",
             salesUnits: 67
         },
-    // getTotalNumberOfSales() should return the total number of units sold
-    // function getTotalNumberOfSales() {
-    //
-    // },
+
+
     // getAverageSalesPerEmployee() should return the average units sold per employee
     // function getAverageSalesPerEmployee() {
     //
@@ -104,14 +115,20 @@ let salesReport = {
 }
 
 // getEmployeeCount() should return the total number of employees
-let count = function getEmployeeCount() {
-    salesReport.filter(function(employee) {
-        return employee.employees.length;
-    })
-}
+// function getEmployeeCount() {
+//     salesReport.filter(function(employee) {
+//         return " There are " + employee.employees.length + " in this report. "
+//     })
+//
+// }
+console.log(salesReport.getEmployeeCount())
 
 
-console.log(count)
+// getTotalNumberOfSales() should return the total number of units sold
+// getTotalNumberOfSales() {
+//
+// },
+console.log(salesReport.getTotalNumberOfSales())
 
 
 
