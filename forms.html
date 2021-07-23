@@ -6,7 +6,49 @@
 </head>
 <body>
     <form method="POST" action="https://request-inspector.glitch.me/">
+        <fieldset>
+            <legend>
+                Your Details:
+            </legend>
+            <label>
+                Email:
+                <input type="email" name="email" size="30" maxlength="100" >
+            </label>
+              <br>
+            <label>
+                Password:
+                <input type="password" name="password" size="30" maxlength="100">
+            </label>
+             <br>
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend>
+                Your Review:
+            </legend>
+            <p>
+                <label>
+                    How Did You Hear about us?
+                </label>
+                <label>
+                    <input type="radio" name="default" value="billboard"/>
+                    Billboard
+                </label>
+                <label>
+                    <input type="radio" name="default" value="radio advertisement"/>
+                    Radio
+                </label>
+                <label>
+                    <input type="radio" name="default" value="internet advertisement"/>
+                    Internet Advertisement
+                </label>
+                <label>
+                    <input type="radio" name="default" value="other"/>
+                    Other
+                </label>
 
+            </p>
+        </fieldset>
     </form>
 </body>
 </html>
