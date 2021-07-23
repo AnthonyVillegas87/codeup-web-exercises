@@ -35,8 +35,8 @@ let salesReport = {
         return "There were a total of " + sum + " units sold";
     },
     // getAverageSalesPerEmployee() should return the average units sold per employee
-     getAverageSalesPerEmployee(getEmployeeCount,getTotalNumberOfSales) {
-            return "The average monthly units sold per employee was " + getEmployeeCount / getTotalNumberOfSales + "."
+     getAverageSalesPerEmployee() {
+            return "The average monthly units sold per employee was " + this.employees.salesUnits / this.employees.length + "."
     },
 
     employees: [

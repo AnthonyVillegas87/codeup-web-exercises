@@ -1,0 +1,17 @@
+h1 {
+    color: hotpink;
+    text-align: center;
+    font-size: 100px;
+}
+
+.border-dark {
+    color: #0b5ed7;
+}
+
+p {
+    color: skyblue;
+}
+
+#intro {
+    color: #f2e7c3;
+}
