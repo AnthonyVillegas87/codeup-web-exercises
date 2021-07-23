@@ -35,6 +35,11 @@ let salesReport = {
         return "There were a total of " + sum + " units sold";
     },
     // getAverageSalesPerEmployee() should return the average units sold per employee
+    // function getAverageSalesPerEmployee() {
+    //
+    // },
+
+
     employees: [
 
         {
@@ -118,16 +123,9 @@ let salesReport = {
 // }
 console.log(salesReport.getEmployeeCount())
 
-
-//
-// getTotalNumberOfSales() {
-//
-// },
 console.log(salesReport.getTotalNumberOfSales())
 
-// function getAverageSalesPerEmployee() {
-//
-// },
+
 
 
 
