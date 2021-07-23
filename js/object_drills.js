@@ -21,15 +21,20 @@ let salesReport = {
     title: "Monthly Sales Report",
     date: 3 - 17 - 2015,
     office: "Codeup",
+    // getEmployeeCount() should return the total number of employees
     getEmployeeCount() {
         return "There are " + salesReport.employees.length +  " employees in this report. ";
     },
+    //getTotalNumberOfSales() should return the total number of units sold
     getTotalNumberOfSales() {
-        salesReport.forEach(employee => {
-                    employee += this.employees.salesUnits;
-                    return "Collectively this report has a total of " + employee + " sales!";
-        })
+        var sum = 0;
+        for(var i = 0; i <= this.employees.length - 1; i++){
+            sum += this.employees[i].salesUnits
+
+        }
+        return "There were a total of " + sum + " units sold";
     },
+    // getAverageSalesPerEmployee() should return the average units sold per employee
     employees: [
 
         {
@@ -99,13 +104,12 @@ let salesReport = {
             salesUnits: 67
         },
 
-
-
     ],
+
 
 }
 
-// getEmployeeCount() should return the total number of employees
+
 // function getEmployeeCount() {
 //     salesReport.filter(function(employee) {
 //         return " There are " + employee.employees.length + " in this report. "
@@ -115,12 +119,12 @@ let salesReport = {
 console.log(salesReport.getEmployeeCount())
 
 
-// getTotalNumberOfSales() should return the total number of units sold
+//
 // getTotalNumberOfSales() {
 //
 // },
 console.log(salesReport.getTotalNumberOfSales())
-// getAverageSalesPerEmployee() should return the average units sold per employee
+
 // function getAverageSalesPerEmployee() {
 //
 // },
