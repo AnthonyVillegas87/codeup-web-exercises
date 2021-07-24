@@ -9,7 +9,59 @@ function makeCar(make, model){
 }
 let car = makeCar("Ford","Bronco")
 console.log(car)
+//////////////////////////////////////////////////////
+let books = [
+    {
+        price: 10.99,
+        title: "title"
+    },
+    {
+        price: 9.99,
+        title: "title"
+    },
+    {
+        price: 15.99,
+        title: "title"
+    }
+];
 
+/// .FILTER() FUNCTION METHOD
+
+let expensiveBooks = books.filter(book => isExpensive(book.price));
+function isExpensive(price) {
+    return price > 10;
+}
+//console.log(expensiveBooks);
+
+/// .REDUCE() FUNCTION METHOD
+
+let totalPrice = books.reduce((total, book) => {
+    return total + book.price;
+}, 0);
+//console.log(totalPrice);
+
+/// .MAP()  FUNCTION METHOD
+let booksWithAuthors = books.map(book => {
+    return {...book, author: "Matt B"}
+    // return {
+    //     price: book.price,
+    //     title: book.title,
+    //     author: "Matt B"
+    // }
+});
+//console.log(booksWithAuthors);
+
+
+
+
+
+
+
+
+
+
+
+///////////////////////////////////////////////////////
 // Exercise 2. Use the following data to create an object named salesReport.
 //     The object should have the following properties:
 //       title, date, office, and employees.
@@ -29,7 +81,7 @@ let salesReport = {
     getTotalNumberOfSales() {
         var sum = 0;
         for(var i = 0; i <= this.employees.length - 1; i++){
-            sum += this.employees[i].salesUnits
+            sum += this.employees[i].salesUnits;
 
         }
         return sum;
@@ -114,10 +166,10 @@ let salesReport = {
 }
 
 console.log(salesReport.getEmployeeCount());
-
 console.log(salesReport.getTotalNumberOfSales());
-
 console.log(salesReport.getAverageSalesPerEmployee());
+
+
 
 // Exercise 4. Go to https://gist.githubusercontent.com/ryanorsinger/f77e5ec94dbe14e21771/raw/d4a1f916723ca69ac99fdcab48746c6682bf4530/profiles.json
 // then copy the JSON and assign it to a variable named profiles.
@@ -129,23 +181,26 @@ const profilePromise = fetch("https://gist.githubusercontent.com/ryanorsinger/f7
         // result is turned into json which in turn the act of turning it into a promise use .then
         result.json().then(data => {
             //console.log(data)
-            solutions(data)
+            solutions(data);
         })
     });
-
-function solutions(dataArr) {
-    console.log(getProfileCount(dataArr))
-}
-//  getProfileCount() should return the total number of profiles
-function getProfileCount(dataArr) {
-    return dataArr.length
-}
-//  getActiveCount() should return the number of active profiles
 
 
 // Exercise 5. Create an object named profileReport and add the following methods that use the "profiles" JSON data.
 
+function solutions(dataArr) {
+    console.log(getProfileCount);
+}
+//  getProfileCount() should return the total number of profiles
+function getProfileCount(dataArr) {
+    return dataArr.length;
+}
+//  getActiveCount() should return the number of active profiles
 
+function getActiveCount() {
+
+
+}
 
 
 
