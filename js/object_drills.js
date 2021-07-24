@@ -113,22 +113,37 @@ let salesReport = {
 
 }
 
-
-// function getEmployeeCount() {
-//     salesReport.filter(function(employee) {
-//         return " There are " + employee.employees.length + " in this report. "
-//     })
-//
-// }
 console.log(salesReport.getEmployeeCount());
 
 console.log(salesReport.getTotalNumberOfSales());
 
 console.log(salesReport.getAverageSalesPerEmployee());
 
+// Exercise 4. Go to https://gist.githubusercontent.com/ryanorsinger/f77e5ec94dbe14e21771/raw/d4a1f916723ca69ac99fdcab48746c6682bf4530/profiles.json
+// then copy the JSON and assign it to a variable named profiles.
+
+//// (fetch) returns a response body which is a promise
+const profilePromise = fetch("https://gist.githubusercontent.com/ryanorsinger/f77e5ec94dbe14e21771/raw/d4a1f916723ca69ac99fdcab48746c6682bf4530/profiles.json")
+    /// wait for that promise to fulfill .then
+    profilePromise.then(result => {
+        // result is turned into json which in turn the act of turning it into a promise use .then
+        result.json().then(data => {
+            //console.log(data)
+            solutions(data)
+        })
+    });
+
+function solutions(dataArr) {
+    console.log(getProfileCount(dataArr))
+}
+//  getProfileCount() should return the total number of profiles
+function getProfileCount(dataArr) {
+    return dataArr.length
+}
+//  getActiveCount() should return the number of active profiles
 
 
-
+// Exercise 5. Create an object named profileReport and add the following methods that use the "profiles" JSON data.
 
 
 
