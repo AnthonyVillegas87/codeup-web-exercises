@@ -23,7 +23,7 @@ let salesReport = {
     office: "Codeup",
     // getEmployeeCount() should return the total number of employees
     getEmployeeCount() {
-        return "There are " + salesReport.employees.length +  " employees in this report. ";
+        return  salesReport.employees.length;
     },
     //getTotalNumberOfSales() should return the total number of units sold
     getTotalNumberOfSales() {
@@ -32,11 +32,11 @@ let salesReport = {
             sum += this.employees[i].salesUnits
 
         }
-        return "There were a total of " + sum + " units sold";
+        return sum;
     },
     // getAverageSalesPerEmployee() should return the average units sold per employee
      getAverageSalesPerEmployee() {
-            return "The average monthly units sold per employee was " + this.employees.salesUnits / this.employees.length + "."
+            return  this.getTotalNumberOfSales() / this.getEmployeeCount() ;
     },
 
     employees: [
@@ -125,6 +125,7 @@ console.log(salesReport.getEmployeeCount());
 console.log(salesReport.getTotalNumberOfSales());
 
 console.log(salesReport.getAverageSalesPerEmployee());
+
 
 
 
