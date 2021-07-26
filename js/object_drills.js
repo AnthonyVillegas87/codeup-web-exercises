@@ -189,7 +189,7 @@ const profilePromise = fetch("https://gist.githubusercontent.com/ryanorsinger/f7
 // Exercise 5. Create an object named profileReport and add the following methods that use the "profiles" JSON data.
 
 function solutions(data) {
-    console.log(getLowestBalance(data));
+    console.log();
 }
 //  getProfileCount() should return the total number of profiles
 function getProfileCount(data) {
@@ -216,10 +216,10 @@ function getInactiveCount(data) {
     }
     return totalInactive
 }
-//  sumOfAllBalances() should return sum of the balance of all profiles
 
+//  sumOfAllBalances() should return sum of the balance of all profiles
 function sumOfAllBalances(data) {
-    let totalSum = 0
+    let totalSum = 0;
     for(let i = 0; i < data.length; i++) {
         let sum = parseFloat(data[i]['balance'].replaceAll(',', '').replaceAll('$', ''))
         totalSum += sum
