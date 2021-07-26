@@ -8,7 +8,7 @@
 /*  selector for all "h1" elements
     that are a descendent of id="container"
     and have a class of "fancy-header" */
-h1.fancy-header {
+#container h1.fancy-header {
     color: blue;
     text-decoration: underline;
 }
@@ -25,6 +25,88 @@ em {
 
 /*  selector for all "anchor" elements
     that are a direct child of an element with class="article" */
-a {
+.article>a {
     float:right;
 }
+
+/*===== GROUP 2 - Color Properties (Room 2)*/
+/*Prepare code examples to present answers to the following questions:*/
+/*How does hexadecimal color coding work?*/
+/*Hexadecimal Color Values*/
+
+/*CSS colors can be represented in hexadecimal (or hex) notation. */
+/*Hexadecimal digits can represent sixteen different values using 0-9 and a-f.*/
+/*Hexadecimal colors are composed of 6 characters–each group of two represents a value between 0 and 255 for red, green, or blue. */
+/*For example #ff0000 is all red, no green, and no blue.*/
+/*When both characters of all three colors are repeated, hex colors can be abbreviated to only three values, so #0000ff could also be represented as #00f.*/
+
+red {
+    color: #ff0000;
+}
+
+.short-blue {
+    color: #00f;
+}
+/*Why use CSS color names over hex values and vice versa?*/
+
+/*Color Name Keywords*/
+/*Color name keywords can be used to set color property values for elements in CSS.*/
+            The first and easiest way to specify a color is using 1 of 140 predefined color keywords.
+                                                                           Color keywords are most useful for testing and demonstration purposes
+/*h1 {*/
+/*    color: aqua;*/
+/*}*/
+
+/*li {*/
+/*    color: khaki;*/
+/*}*/
+
+/*Why use rgb to define a CSS color vs. a hex value?*/
+
+
+/*CSS rgb() Colors*/
+/* CSS colors can be declared with RGB colors using rgb() syntax.*/
+
+/*rgb() should be supplied with three values representing red, green, and blue. */
+/*These values range can from 0 to 255.*/
+
+/*  .hot-pink {*/
+/*      color: rgb(249, 2, 171);*/
+/*  }*/
+
+/*.green {*/
+/*    color: rgb(0, 255, 0);*/
+/*}*/
+
+/*What is the difference between 3 digit hex values and 6?*/
+
+
+/*'background' and 'background-color' properties can produce the same output; why is this possible?*/
+/*     What is the 'a' in rgba?*/
+/*CSS Color Alpha Values*/
+/*Alpha values determine the transparency of colors in CSS. */
+/*Alpha values can be set for both RGB and HSL colors by using rgba() and hsla() and providing a fourth value representing alpha. */
+/*Alpha values can range between 0.0 (totally transparent) and 1.0 (totally opaque).*/
+/*The CSS transparent value can also be used to create a fully transparent element.
+/*
+
+.midground background-color: rgba(0, 255, 0, 0.5);
+}
+
+.foreground {
+    background-color: hsla(34, 100%, 50%, 0.1);
+}
+
+.transparent {
+    color: transparent;
+}
+
+
+/*    What is the 'Digital Color Meter' on a Mac? How is this helpful?*/
+/*                                                                                                                              BONUS (if time)*/
+/*What are CSS gradients?*/
+
+
+
+
+
