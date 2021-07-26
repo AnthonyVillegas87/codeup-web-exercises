@@ -236,9 +236,9 @@ function getAverageBalance(data) {
 function getLowestBalance(data) {
    data.forEach(function(element, index, array) {
        if(element[index] === Math.min.apply(Math,array) ) {
-
+           return element[index]
        }
-       return element[index]
+        
    })
 
 
