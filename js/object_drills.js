@@ -180,7 +180,7 @@ const profilePromise = fetch("https://gist.githubusercontent.com/ryanorsinger/f7
     profilePromise.then(result => {
         // result is turned into json which in turn the act of turning it into a promise use .then
         result.json().then(data => {
-            //console.log(data)
+           // console.log(data)
             solutions(data);
         })
     });
@@ -188,23 +188,44 @@ const profilePromise = fetch("https://gist.githubusercontent.com/ryanorsinger/f7
 
 // Exercise 5. Create an object named profileReport and add the following methods that use the "profiles" JSON data.
 
-function solutions(dataArr) {
-    console.log(getProfileCount);
+function solutions(data) {
+    console.log(sumOfAllBalances(data));
 }
 //  getProfileCount() should return the total number of profiles
-function getProfileCount(dataArr) {
-    return dataArr.length;
+function getProfileCount(data) {
+    return data.length;
 }
+
 //  getActiveCount() should return the number of active profiles
-
-function getActiveCount() {
-
-
+function getActiveCount(data) {
+    var totalIsActive = 0
+  for(var i = 0; i < data.length; i++) {
+      if(data[i]['isActive'] === true)
+       totalIsActive++
+  }
+  return totalIsActive
 }
 
 
+//  getInactiveCount() should return the number of inactive profiles
+function getInactiveCount(data) {
+    let totalInactive = 0;
+    for(let i = 0; i < data.length; i++) {
+        if(data[i]['isActive'] === false)
+        totalInactive++
+    }
+    return totalInactive
+}
+//  sumOfAllBalances() should return sum of the balance of all profiles
 
-
+function sumOfAllBalances(data) {
+    let totalSum = 0
+    for(let i = 0; i < data.length; i++) {
+        let sum = parseFloat(data[i]['balance'].replaceAll(',', '').replaceAll('$', ''))
+        totalSum += sum
+    }
+    return totalSum
+}
 
 
 
