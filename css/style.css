@@ -67,7 +67,7 @@ ol {
 
 table  {
     width: 600px;
-    margin-left: 450px;
+    margin-left: 350px;
 }
 
 
@@ -85,9 +85,19 @@ th {
 
 }
 
+img.medium {
+    width: 250px;
+    height: 250px;
+}
+img.align-left {
+    margin-left: 20px;
+}
+
+
 footer {
     margin-top: 50px;
 }
+
 
 
 
