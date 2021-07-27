@@ -37,7 +37,6 @@ html, body{
 
 
 
-
 h2 {
     text-transform: uppercase;
     font-size: larger;
@@ -45,12 +44,51 @@ h2 {
     text-align: center;
     color: whitesmoke;
     text-decoration: underline;
+    margin-top: 25px;
 }
 
-li {
-    display: inline;
-    list-style: inside;
+ul {
+
+    text-align: center;
+    margin: auto;
 }
+li {
+    margin-top: 15px;
+    display: inline-block;
+    margin-right: 25px;
+    font-size: larger;
+}
+
+
+ol {
+    text-align: center;
+    margin-top: 20px;
+}
+
+table  {
+    width: 600px;
+    margin-left: 450px;
+}
+
+
+th, td {
+    padding: 7px 10px 10px 10px;
+}
+
+th {
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 90%;
+    text-align: center;
+    border-top: 1px solid ghostwhite;
+    border-bottom: 2px solid ghostwhite;
+
+}
+
+footer {
+    margin-top: 50px;
+}
+
 
 
 video {
