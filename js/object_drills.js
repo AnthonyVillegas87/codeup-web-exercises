@@ -219,6 +219,9 @@ console.log(salesReport.getAverageSalesPerEmployee());
 
 
 
+
+
+
 // Exercise 4. Go to https://gist.githubusercontent.com/ryanorsinger/f77e5ec94dbe14e21771/raw/d4a1f916723ca69ac99fdcab48746c6682bf4530/profiles.json
 // then copy the JSON and assign it to a variable named profiles.
 
