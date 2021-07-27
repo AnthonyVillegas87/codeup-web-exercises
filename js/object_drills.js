@@ -189,7 +189,7 @@ const profilePromise = fetch("https://gist.githubusercontent.com/ryanorsinger/f7
 // Exercise 5. Create an object named profileReport and add the following methods that use the "profiles" JSON data.
 
 function solutions(data) {
-    console.log(getHighestBalance(data));
+    console.log(getTotalOfUnreadMessages(data));
 }
 //  getProfileCount() should return the total number of profiles
 function getProfileCount(data) {
@@ -245,7 +245,7 @@ function getLowestBalance(data) {
 
 //  getHighestBalance() should return the customer name with the highest balance
 function getHighestBalance(data) {
-    let highAmt = data[0];
+    let highAmt = [];
     for(let i = 0; i < data.length; i++) {
         if(data[i]['balance'] > highAmt) {
             highAmt = data[i]['balance'] + data[i]['name'] ;
@@ -254,7 +254,37 @@ function getHighestBalance(data) {
     return highAmt
 }
 
+//  getMostFavoriteFruit() should return the most common fruit
+function getMostFavoriteFruit(data) {
+    let favFruit = [];
+    for(let i = 0; i < data.length; i++) {
+        if(data[i]['favoriteFruit'] > favFruit) {
+            favFruit = data[i]['favoriteFruit'];
+        }
+    }
+    return favFruit
+}
 
+//  getLeastFavoriteFruit() should return the least favorite fruit
+function getLeastFavoriteFruit(data) {
+    let leastFavFruit = data[0]['favoriteFruit'];
+    for(let i = 0; i < data.length; i++) {
+        if(data[i]['favoriteFruit'] <= leastFavFruit) {
+            leastFavFruit = data[i]['favoriteFruit'];
+        }
+    }
+    return leastFavFruit
+}
+
+//  getTotalNumberOfUnreadMessages() should return the number of unread messages for all users
+function getTotalOfUnreadMessages(data) {
+    let totalUnreadMsg = 0;
+    for(let i = 0; i < data.length; i++) {
+        let sum = parseFloat(data[i]['greeting'].replaceAll(',', '').replaceAll( 'string', ''))
+                totalUnreadMsg += sum
+    }
+    return totalUnreadMsg
+}
 
 
 //## OBJECTS BONUSES
