@@ -50,6 +50,54 @@ let booksWithAuthors = books.map(book => {
     // }
 });
 //console.log(booksWithAuthors);
+//////////////////////////////////////////////////////
+
+//================================= WARM UP
+
+// In a new HTML file in codeup-web-exercises, add a script to solve the following problem...
+//
+// Write a function, getSimpleUser, that takes in a user object and returns a simplified user object.
+//
+//     Assume the following shape of the user object for the function input:
+function UserObj(firstName, lastName, email, userName, passWord) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.email = email;
+    this.userName = userName;
+    this.passWord = passWord;
+}
+
+var user = new UserObj("anthony","villegas","villegasanthony87@yahoo.com", "AAV", 2112)
+console.log(user)
+
+
+    // {
+    //     firstName: '...',
+    //     lastName: '...',
+    //     email: '...',
+    //     username: '...',
+    //     password: '...'
+    // }
+
+// The shape of the output should be the following:
+
+// {
+//     firstName: '...',
+//         lastName: '...',
+// }
+
+// Regardless of the case of the first name and last name input, the output should be in all lower case.
+
+// var fred = {
+//     firstName: 'Fred',
+//     lastName: 'Smith',
+//     email: 'fred@email.com',
+//     username: 'fred123',
+//     password: 'pass123'
+// }
+
+// getSimpleUser(fred) // {firstName: 'fred', lastName: 'smith'}
+
 
 
 
@@ -198,7 +246,7 @@ function getProfileCount(data) {
 
 //  getActiveCount() should return the number of active profiles
 function getActiveCount(data) {
-    var totalIsActive = 0
+    var totalIsActive = 0;
   for(var i = 0; i < data.length; i++) {
       if(data[i]['isActive'] === true)
        totalIsActive++
@@ -280,8 +328,8 @@ function getLeastFavoriteFruit(data) {
 function getTotalOfUnreadMessages(data) {
     let totalUnreadMsg = 0;
     for(let i = 0; i < data.length; i++) {
-        let sum = parseFloat(data[i]['greeting'].replaceAll(',', '').replaceAll( 'string', ''))
-                totalUnreadMsg += sum
+        let sum = parseFloat(data[i]['greeting'].replaceAll(',', '').replaceAll( '.', ''))
+                totalUnreadMsg = sum
     }
     return totalUnreadMsg
 }
