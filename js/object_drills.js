@@ -189,7 +189,7 @@ const profilePromise = fetch("https://gist.githubusercontent.com/ryanorsinger/f7
 // Exercise 5. Create an object named profileReport and add the following methods that use the "profiles" JSON data.
 
 function solutions(data) {
-    console.log(getLowestBalance(data));
+    console.log(getHighestBalance(data));
 }
 //  getProfileCount() should return the total number of profiles
 function getProfileCount(data) {
@@ -229,22 +229,30 @@ function sumOfAllBalances(data) {
 
 //  getAverageBalance() should return the average balance per users
 function getAverageBalance(data) {
-    return sumOfAllBalances(data) / getProfileCount(data)
+    return sumOfAllBalances(data) / getProfileCount(data);
 }
 
 //  getLowestBalance() should return the customer name with the lowest balance
 function getLowestBalance(data) {
-   data.forEach(function(element, index, array) {
-       if(element[index] === Math.min.apply(Math,array) ) {
-           return element[index]
-       }
-        
-   })
-
-
+    let smallAmt = data[0];
+    for(let i = 0; i < data.length; i++) {
+        if(data[i]['balance'] < smallAmt) {
+            smallAmt = data[i]['balance'] + data[i]['name'];
+        }
+    }
+    return smallAmt
 }
 
-
+//  getHighestBalance() should return the customer name with the highest balance
+function getHighestBalance(data) {
+    let highAmt = data[0];
+    for(let i = 0; i < data.length; i++) {
+        if(data[i]['balance'] > highAmt) {
+            highAmt = data[i]['balance'] + data[i]['name'] ;
+        }
+    }
+    return highAmt
+}
 
 
 
