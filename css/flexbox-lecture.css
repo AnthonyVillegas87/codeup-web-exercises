@@ -1,3 +1,7 @@
+body {
+    box-sizing: border-box;
+}
+
 .flexbox, .flex-item {
     border: 1px solid black;
     margin: 5px;
@@ -15,5 +19,14 @@
     justify-content: space-evenly;
     /* align-items controls hoe flex lines are distributed along the container cross-axis */
     align-items: baseline;
+    /*align-content controls how extra cross-axis space is distributed between &
+     around flex lines. Applies only to multi-line containers.
+     Has no effect on nowrap or single line containers*/
+    align-content: space-evenly;
+    height: 900px;
 }
+
+/*flex-grow*/
+
+
 
