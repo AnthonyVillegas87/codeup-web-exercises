@@ -331,8 +331,9 @@ function getLeastFavoriteFruit(data) {
 function getTotalOfUnreadMessages(data) {
     let totalUnreadMsg = 0;
     for(let i = 0; i < data.length; i++) {
-        let sum = parseFloat(data[i]['greeting'].replaceAll(',', '').replaceAll( '.', ''))
-                totalUnreadMsg = sum
+        let sum = isNaN(parseFloat(data[i]['greeting']));
+            if(typeof isNaN(parseFloat(data[i]['greeting'])) !== "string")
+                totalUnreadMsg += sum
     }
     return totalUnreadMsg
 }
