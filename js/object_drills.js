@@ -328,14 +328,16 @@ function getLeastFavoriteFruit(data) {
 }
 
 //  getTotalNumberOfUnreadMessages() should return the number of unread messages for all users
+
+
 function getTotalOfUnreadMessages(data) {
-    let totalUnreadMsg = 0;
-    for(let i = 0; i < data.length; i++) {
-        let sum = isNaN(parseFloat(data[i]['greeting']));
-            if(typeof isNaN(parseFloat(data[i]['greeting'])) !== "string")
-                totalUnreadMsg += sum
-    }
-    return totalUnreadMsg
+    let greet = data[0]['greeting'];
+        for(let i = 0; i < data.length; i++) {
+                greet =  parseFloat(data[i]['greeting'])
+
+        }
+
+   return  greet
 }
 
 

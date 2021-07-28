@@ -1,0 +1,19 @@
+.flexbox, .flex-item {
+    border: 1px solid black;
+    margin: 5px;
+    padding: 5px;
+}
+
+.flexbox {
+    display: flex;
+    flex-direction: row;
+    /*Flex direction defines the main axis*/
+    flex-wrap: wrap;
+    /*height: 400px;*/
+    /*flex-flow: wrap;*/
+    /*justify-content controls how flex items in a flex line are distributed along the main axis*/
+    justify-content: space-evenly;
+    /* align-items controls hoe flex lines are distributed along the container cross-axis */
+    align-items: baseline;
+}
+
