@@ -240,7 +240,7 @@ const profilePromise = fetch("https://gist.githubusercontent.com/ryanorsinger/f7
 // Exercise 5. Create an object named profileReport and add the following methods that use the "profiles" JSON data.
 
 function solutions(data) {
-    console.log(getTotalNumberOfUnreadMessages(data));
+    console.log(getAverageNumberOfUnreadMessages(data));
 }
 //  getProfileCount() should return the total number of profiles
 function getProfileCount(data) {
@@ -333,12 +333,18 @@ function getLeastFavoriteFruit(data) {
      let greetValues = 0
         for(let i = 0; i < data.length; i++) {
             let sum = data[i]['greeting'].slice(30, 35).split('')
-            greetValues = sum + data.length
+            greetValues = sum + data[i]['greeting'].slice(30, 35).split('').length
         }
      return greetValues.replace(/[^0-9]/g,"")
      }
 
+//  getAverageNumberOfUnreadMessages() should return the average number of unread messages per user.
 
+function getAverageNumberOfUnreadMessages(data) {
+    return getTotalNumberOfUnreadMessages(data) / getProfileCount(data)
+}
+
+//  getAverageAge() should return the average age of all users
 
 
 //## OBJECTS BONUSES

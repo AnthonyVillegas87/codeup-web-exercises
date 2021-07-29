@@ -42,3 +42,24 @@ div a {
     /*Create vertical and horizontal centering with this property also */
     margin: auto;
 }
+
+/* Cards */
+
+main {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid darkgray;
+    padding: 5px;
+    width: 330px;
+}
+
+section p {
+    /*border: 1px solid black;*/
+    flex-grow: 1;
+}

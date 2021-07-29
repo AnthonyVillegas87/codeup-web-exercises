@@ -1,0 +1,64 @@
+html {
+    background-color: #deded8;
+    font-family: Helvetica Neue, Helvetica, sans-serif;
+}
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+
+header, article, aside, footer {
+    padding: 0.5rem;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #333;
+    color: #ccc;
+    text-align: center;
+}
+
+main {
+    display: flex;
+    border-bottom: 0.5rem solid;
+}
+
+aside{
+    background-color: white;
+
+}
+
+nav {
+    display: flex;
+    background-color: black;
+    padding: 10px 0;
+}
+
+article {
+    flex: 75%;
+}
+
+aside {
+    flex: 25%;
+}
+
+nav a {
+    flex: auto;
+    background: #ccc;
+    color: black;
+    text-align: center;
+    margin: 0 5px;
+    padding: 5px 0;
+    text-decoration: none;
+}
+
+nav a:hover {
+    outline: 1px solid red;
+    color: red;
+    text-decoration: underline;
+}
+
+nav header {
+    order: -1;
+}
