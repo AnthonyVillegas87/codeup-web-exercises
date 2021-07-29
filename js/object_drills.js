@@ -240,7 +240,7 @@ const profilePromise = fetch("https://gist.githubusercontent.com/ryanorsinger/f7
 // Exercise 5. Create an object named profileReport and add the following methods that use the "profiles" JSON data.
 
 function solutions(data) {
-    console.log(getAverageNumberOfUnreadMessages(data));
+    console.log(getAverageAge(data));
 }
 //  getProfileCount() should return the total number of profiles
 function getProfileCount(data) {
@@ -349,8 +349,18 @@ function getAverageAge(data) {
     let age = 0;
     for(let i = 0; i < data.length; i++) {
         let total = data[i]['age']
+        age += total
     }
+    return Math.trunc(age / getProfileCount(data))
 }
+
+//  getGenderCounts() should return gender count of users as an object: example {"m": 23, "f", 32}
+function getGenderCounts(data) {
+
+
+}
+
+
 
 //## OBJECTS BONUSES
 

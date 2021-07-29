@@ -2,10 +2,7 @@ html {
     background-color: #deded8;
     font-family: Helvetica Neue, Helvetica, sans-serif;
 }
-body {
-    display: flex;
-    flex-direction: column;
-}
+
 
 
 header, article, aside, footer {
@@ -59,6 +56,15 @@ nav a:hover {
     text-decoration: underline;
 }
 
-nav header {
-    order: -1;
+
+
+@media screen and (min-width: 35rem) {
+    body {
+        display: flex;
+        flex-direction: column;
+    }
+    nav header {
+        order: -1;
+    }
+
 }
