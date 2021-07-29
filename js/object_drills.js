@@ -25,7 +25,7 @@ let books = [
     }
 ];
 
-/// .FILTER() FUNCTION METHOD
+/// .FILTER() FUNCTION METHOD  //// RETURN A VALUE
 
 let expensiveBooks = books.filter(book => isExpensive(book.price));
 function isExpensive(price) {
@@ -40,7 +40,7 @@ let totalPrice = books.reduce((total, book) => {
 }, 0);
 //console.log(totalPrice);
 
-/// .MAP()  FUNCTION METHOD
+/// .MAP()  FUNCTION METHOD   //// RETURN A VALUE
 let booksWithAuthors = books.map(book => {
     return {...book, author: "Matt B"}
     // return {
@@ -240,7 +240,7 @@ const profilePromise = fetch("https://gist.githubusercontent.com/ryanorsinger/f7
 // Exercise 5. Create an object named profileReport and add the following methods that use the "profiles" JSON data.
 
 function solutions(data) {
-    console.log(getTotalOfUnreadMessages(data));
+    console.log(getLeastFavoriteFruit(data));
 }
 //  getProfileCount() should return the total number of profiles
 function getProfileCount(data) {
@@ -329,16 +329,12 @@ function getLeastFavoriteFruit(data) {
 
 //  getTotalNumberOfUnreadMessages() should return the number of unread messages for all users
 
-
-function getTotalOfUnreadMessages(data) {
-    let greet = data[0]['greeting'];
-        for(let i = 0; i < data.length; i++) {
-                greet =  parseFloat(data[i]['greeting'])
-
-        }
-
-   return  greet
-}
+ // function getTotalNumberOfUnreadMessages(greeting, index, data) {
+ //     let greetValues = data.forEach(function(greeting) {
+ //         data[index] = parseFloat(greeting[0]) + greeting.replace(/[]/g, '')
+ //     })
+ //    return greetValues
+ // }
 
 
 //## OBJECTS BONUSES
