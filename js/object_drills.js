@@ -341,11 +341,16 @@ function getLeastFavoriteFruit(data) {
 //  getAverageNumberOfUnreadMessages() should return the average number of unread messages per user.
 
 function getAverageNumberOfUnreadMessages(data) {
-    return getTotalNumberOfUnreadMessages(data) / getProfileCount(data)
+    return Math.trunc(getTotalNumberOfUnreadMessages(data) / getProfileCount(data))
 }
 
 //  getAverageAge() should return the average age of all users
-
+function getAverageAge(data) {
+    let age = 0;
+    for(let i = 0; i < data.length; i++) {
+        let total = data[i]['age']
+    }
+}
 
 //## OBJECTS BONUSES
 
