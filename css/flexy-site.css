@@ -16,10 +16,7 @@ header {
     text-align: center;
 }
 
-main {
-    display: flex;
-    border-bottom: 0.5rem solid;
-}
+
 
 aside{
     background-color: white;
@@ -32,13 +29,8 @@ nav {
     padding: 10px 0;
 }
 
-article {
-    flex: 75%;
-}
 
-aside {
-    flex: 25%;
-}
+
 
 nav a {
     flex: auto;
@@ -66,5 +58,17 @@ nav a:hover {
     nav header {
         order: -1;
     }
+
+    main {
+        display: flex;
+        border-bottom: 0.5rem solid;
+    }
+    article {
+        flex: 75%;
+    }
+    aside {
+        flex: 25%;
+    }
+
 
 }
