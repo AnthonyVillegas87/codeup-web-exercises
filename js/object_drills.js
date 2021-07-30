@@ -60,11 +60,11 @@ let booksWithAuthors = books.map(book => {
 //
 //     Assume the following shape of the user object for the function input:
 function UserObj(firstName, lastName, email, userName, passWord) {
-    this.firstName = firstName;
-    this.lastName = lastName;
-    this.email = email;
-    this.userName = userName;
-    this.passWord = passWord;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.email = email;
+        this.userName = userName;
+        this.passWord = passWord;
 }
 
 var user = new UserObj("anthony","villegas","villegasanthony87@yahoo.com", "AAV", 2112)
@@ -136,7 +136,7 @@ let salesReport = {
     },
     // getAverageSalesPerEmployee() should return the average units sold per employee
      getAverageSalesPerEmployee() {
-            return  this.getTotalNumberOfSales() / this.getEmployeeCount() ;
+            return this.getTotalNumberOfSales() / this.getEmployeeCount() ;
     },
 
     employees: [
@@ -240,7 +240,7 @@ const profilePromise = fetch("https://gist.githubusercontent.com/ryanorsinger/f7
 // Exercise 5. Create an object named profileReport and add the following methods that use the "profiles" JSON data.
 
 function solutions(data) {
-    console.log(getGenderCounts(data));
+    console.log(getBalanceForActiveAndNonActive(data));
 }
 //  getProfileCount() should return the total number of profiles
 function getProfileCount(data) {
@@ -370,6 +370,36 @@ function getGenderCounts(data) {
     }, {male: 0, female: 0})
 
 }
+
+//  getAllCompanyNames() should return an array of all companies represented by the users
+
+function getAllCompanyNames(data) {
+    let newArr = []
+        for(let i = 0; i < data.length; i++) {
+            newArr.push(data[i]['company']);
+        }
+        return newArr
+}
+
+//  getMostCommonEyeColor() should return the most commonly occurring eye-color.
+function getMostCommonEyeColor(data) {
+    let color = []
+     for(let i = 0; i < data.length; i++) {
+         if(data[i]['eyeColor'] > color) {
+             color = data[i]['eyeColor']
+         }
+     }
+     return color
+}
+
+//  getBalancesForActiveAndNonActive() should return the balance of all non-active accounts vs. the balance of all active accounts?
+
+function getBalanceForActiveAndNonActive(data) {
+    let activeCount = 0;
+    let inactiveCount = 0;
+
+}
+
 
 
 
