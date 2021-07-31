@@ -395,8 +395,22 @@ function getMostCommonEyeColor(data) {
 //  getBalancesForActiveAndNonActive() should return the balance of all non-active accounts vs. the balance of all active accounts?
 
 function getBalanceForActiveAndNonActive(data) {
-    let activeCount = 0;
-    let inactiveCount = 0;
+    let activeCount = getActiveCount(data);
+    let inactiveCount = getInactiveCount(data);
+
+        for(let i = 0; i < data.length; i++) {
+
+            var activeBal = 0;
+            var inactiveBal = 0;
+
+                if(activeBal > activeCount) {
+                   activeBal += data[i]['balance']
+                }
+                if(inactiveBal < inactiveCount) {
+                    inactiveBal += data[i]['balance']
+                }
+        }
+        return {activeCount, inactiveCount, activeBal, inactiveBal}
 
 }
 
