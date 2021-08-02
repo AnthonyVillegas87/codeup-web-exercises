@@ -496,27 +496,13 @@ class Dog {
 
 }
 
-function narcNum(n) {
-    if(n > 0) {
-        return n ** n.length;
-    }
-}
-
-function infiniteLoop(m) {
-    let sum = [];
-    for(let i = 0; i < m.toString().split(''); i++) {
-
-    }
-    return sum
-}
-
-console.log(infiniteLoop(153))
-
 
 
 
 // 1. Expanding on the books object exercise:
 //
+
+
 //     - Add a property `keywords` that contains an array of possible genres the
 //       book may be categorized by
 //     - Add a boolean property `available` and set it to true

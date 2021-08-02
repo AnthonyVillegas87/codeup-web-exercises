@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device/width, initial-scale=1.0">
+    <title>Start Page</title>
+    <link rel="stylesheet" href="css/start_up.css">
+</head>
+<body>
+    <header class="viewport-header">
+        <nav class="top-nav">
+            <a href="#home" class="active">Home</a>
+            <ul id="myLinks">
+                <li><a href="#">About</a></li>
+                <li><a href="#">Link 2</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <a href="javascript:void(0);" class="icon" onClick="myFunction()"></a>
+            <i class="fa fa-bars"></i>
+        </nav>
+            <h1>START PAGE</h1>
+            <h3>Template by CodeUp</h3>
+            <section class="one"><a href="#">Get Started</a></section>
+    </header>
+    <section>
+        <h1>Lorem Ipsum</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            Eaque eligendi, eos ex ipsa ipsam, nam nisi, odio pariatur perspiciatis quaerat quo rem veniam vitae voluptate voluptatem?
+            Laborum nihil optio vero.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            Aliquam architecto consequuntur cupiditate, esse inventore ipsam ipsum, maiores natus nesciunt pariatur perferendis, quisquam ratione voluptates!
+            Architecto aspernatur dignissimos harum minus nulla.</p>
+    </section>
+    <section>
+        <h1>Lorem Ipsum</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            Accusamus architecto consequatur cumque doloremque doloribus, ea est iusto laudantium minus nobis perferendis qui quibusdam quis quod recusandae?
+            Ad placeat repellat voluptates.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            Aliquam architecto consequuntur cupiditate, esse inventore ipsam ipsum, maiores natus nesciunt pariatur perferendis, quisquam ratione voluptates!
+            Architecto aspernatur dignissimos harum minus nulla.</p>
+    </section>
+
+    <section> <h3>Quote of the day: Live Life!</h3> </section>
+
+    <footer>
+        <div id="social-media-links">
+
+        </div>
+    </footer>
+    <script>
+        function myFunction() {
+            let links = document.getElementById("myLinks");
+            if(links.style.display === "block") {
+                links.display = "none";
+            } else {
+                links.styledisplay = "block";
+            }
+        }
+    </script>
+
+</body>
+</html>
