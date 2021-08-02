@@ -374,7 +374,7 @@ function getGenderCounts(data) {
 //  getAllCompanyNames() should return an array of all companies represented by the users
 
 function getAllCompanyNames(data) {
-    let newArr = []
+    let newArr = [];
         for(let i = 0; i < data.length; i++) {
             newArr.push(data[i]['company']);
         }
@@ -386,7 +386,7 @@ function getMostCommonEyeColor(data) {
     let color = []
      for(let i = 0; i < data.length; i++) {
          if(data[i]['eyeColor'] > color) {
-             color = data[i]['eyeColor']
+             color = data[i]['eyeColor'];
          }
      }
      return color
@@ -403,11 +403,11 @@ function getBalanceForActiveAndNonActive(data) {
             var activeBal = 0;
             var inactiveBal = 0;
 
-                if(activeBal > activeCount) {
-                   activeBal += data[i]['balance']
+                if(activeBal < activeCount) {
+                   activeBal += Math.trunc(parseFloat(data[i]['balance'].replace(/[^0-9]/g,"")) / getActiveCount(data));
                 }
                 if(inactiveBal < inactiveCount) {
-                    inactiveBal += data[i]['balance']
+                    inactiveBal += Math.trunc(parseFloat(data[i]['balance'].replace(/[^0-9]/g,"")) / getInactiveCount(data));
                 }
         }
         return {activeCount, inactiveCount, activeBal, inactiveBal}
