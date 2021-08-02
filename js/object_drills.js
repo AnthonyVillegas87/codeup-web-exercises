@@ -393,6 +393,7 @@ function getMostCommonEyeColor(data) {
 }
 
 //  getBalancesForActiveAndNonActive() should return the balance of all non-active accounts vs. the balance of all active accounts?
+//     this last method should return an object that looks like {"active-balances": 23000, "inactive-balances": 4000} w/ different numbers.
 
 function getBalanceForActiveAndNonActive(data) {
     let activeCount = getActiveCount(data);
@@ -413,6 +414,40 @@ function getBalanceForActiveAndNonActive(data) {
         return {activeCount, inactiveCount, activeBal, inactiveBal}
 
 }
+
+// Exercise 6. Practice with assignment by reference
+// create a variable named person1 with a name property. Assign it a name property.
+let personOne = {name:'Anthony'};
+// Now create a variable named person2 and assign person1 to it.
+let  personTwo = personOne;
+// Then reassign the name property on person2 with person2.name = "Bob";
+personTwo.name = "Joshua";
+// console.log the name property on person 1.
+console.log(personOne.name)
+// Why do you think changing person2 altered person1?
+/// ASSIGNMENT BY REFERENCE MEANS BOTH VARIABLES END UP POINTING AT THE SAME DATA & NOTHING IS COPIED ANYWHERE. THE NEW OPERATOR RETURNS A REFERENCE AUTOMATICALLY.
+// The term for this behavior is assignment by reference.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
