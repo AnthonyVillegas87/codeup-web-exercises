@@ -432,12 +432,18 @@ console.log(personOne.name)
 
 
 
-
-
-
-
-
-
+// Exercise 7. More practice with assignment by reference
+// Add the following HTML to your index.html page in this project.
+var input = document.getElementById("input")
+// now, create a variable named input and assign it document.getElementById("input").
+// now run input.value = "Hello" from the JS console. Did you see any HTML change?
+console.log(input.value = "Hello,World")
+// Create a second variable named inputElement.
+var inputElement = document.getElementById("input");
+// now, run inputElement.value = "I am altering an object by altering its properties" in your JS console.
+console.log(inputElement.value = "I have altered an object by altering its properties")
+// See how both the "input" and "textInput" variables are referencing the same underlying HTML element?
+// This behavior is another example of "assignment by reference"
 
 
 
