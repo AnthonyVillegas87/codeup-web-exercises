@@ -251,8 +251,10 @@ function getProfileCount(data) {
 function getActiveCount(data) {
     var totalIsActive = 0;
   for(var i = 0; i < data.length; i++) {
-      if(data[i]['isActive'] === true)
-       totalIsActive++
+      if(data[i]['isActive'] === true){
+          totalIsActive++;
+      }
+
   }
   return totalIsActive
 }
@@ -262,8 +264,10 @@ function getActiveCount(data) {
 function getInactiveCount(data) {
     let totalInactive = 0;
     for(let i = 0; i < data.length; i++) {
-        if(data[i]['isActive'] === false)
-        totalInactive++
+        if(data[i]['isActive'] === false){
+
+        totalInactive++;
+        }
     }
     return totalInactive
 }
@@ -446,18 +450,6 @@ console.log(inputElement.value = "I have altered an object by altering its prope
 // This behavior is another example of "assignment by reference"
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 //## OBJECTS BONUSES
 
 // 1. Create a dog object
@@ -479,6 +471,50 @@ console.log(inputElement.value = "I have altered an object by altering its prope
 //     - `vaccinate()` - takes in an argument for the name of the shot and adds a
 //       new shot with the current date to the shotRecords array
 //
+
+class Dog {
+    constructor(breed, color, age, weightInPounds, sterilized, shotRecords) {
+        this.breed = breed;
+        this.color = color;
+        this.age = age;
+        this.weightInPounds = weightInPounds;
+        this.sterilized = sterilized;
+        this.shotRecords = shotRecords; //ARRAY
+    }
+    bark() {
+       return "Woof!"
+    }
+    getOlder() {
+        return this.age + 1
+    }
+    fix() {
+        return  this.sterilized === true
+    }
+    vaccinate(shot) {
+        return this.shotRecords.push(shot)
+    }
+
+}
+
+function narcNum(n) {
+    if(n > 0) {
+        return n ** n.length;
+    }
+}
+
+function infiniteLoop(m) {
+    let sum = [];
+    for(let i = 0; i < m.toString().split(''); i++) {
+
+    }
+    return sum
+}
+
+console.log(infiniteLoop(153))
+
+
+
+
 // 1. Expanding on the books object exercise:
 //
 //     - Add a property `keywords` that contains an array of possible genres the
