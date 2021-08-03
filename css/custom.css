@@ -1,0 +1,13 @@
+.jumbotron {
+    background-image: url("/img/pizza.png");
+}
+
+.btn {
+    display: flex;
+    flex-direction: row-reverse;
+
+}
+
+.display-4 {
+    opacity: .7;
+}
