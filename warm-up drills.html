@@ -46,7 +46,72 @@
   "use strict";
 
 
-   //    Create a function, analyzeArray, that takes in a an array and returns an object with information about the passed array.
+
+
+//#3
+  // Given an array of integers, write a function that returns an array of 2 integers.
+  // The first integer will be the count of the positive integers, and the second integer will be the sum of the negative integers.
+  // If the input is empty or null, return an empty array.
+  //
+  //         Examples:
+
+
+  // Input: [1, -6, 5, 4, 3, -7, -10, 201, -3] | Output: [5, -26]
+  // Input: null | Output: []
+
+  function intArray(array) {
+    if(!array) return [];
+    let count = 0;
+    let sum = 0;
+
+      for( let i =0; i < array.length; i++) {
+       var val = array[i];
+          if(val > 0) {
+             count++;
+          } else {
+            sum += val
+          }
+      }
+      return [count, sum]
+
+  }
+
+  console.log(intArray(null))
+
+  // Write a function that translates an input string by replacing each character with a number representing the amount of times that character appears in the string.
+  // Then separate each individual number with a different character.
+  //
+  //         Examples:
+  //#4
+  // Input: "hello world", "-" | Output: "1-1-3-3-2-1-1-2-1-3-1"
+  // Input: "challenge", "/" | Output: "1/1/1/2/2/2/1/1/2"
+// 1. translate input into a string
+//  2. REPLACE each character w/ a number that represents amount of times that char is in string
+function translate(input, divider) {
+    let outputStr = '';
+    for(let i = 0; i < input.length; i++){
+      let val = input[i];
+      let count = charCount(input, val)
+      outputStr = count + divider
+    }
+  return outputStr
+}
+
+function charCount(string, char) {
+    return string.split('').filter(letter => letter === char).length
+}
+
+  console.log(translate("hello world", "/"))
+  //Then seperate each number with a different character
+
+
+
+
+
+
+
+
+  //    Create a function, analyzeArray, that takes in a an array and returns an object with information about the passed array.
    //    The function should return an object with properties containing information about the array, including the lengthOfArray,
    //    containsAllStrings, and the combineResult of adding all elements together.
    //
