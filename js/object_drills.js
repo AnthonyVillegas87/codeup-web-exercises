@@ -400,22 +400,20 @@ function getMostCommonEyeColor(data) {
 //     this last method should return an object that looks like {"active-balances": 23000, "inactive-balances": 4000} w/ different numbers.
 
 function getBalanceForActiveAndNonActive(data) {
-    let activeCount = getActiveCount(data);
+    let activeCount = getActiveCount(data) ;
     let inactiveCount = getInactiveCount(data);
-
+        let totalCount = activeCount + inactiveCount;
+        let totalActiveBal = 0;
+        let totalInactiveBal = 0;
         for(let i = 0; i < data.length; i++) {
+             totalActiveBal += parseFloat(data[i]['balance'].replace(/[^0-9]/g,"")) ;
+             totalInactiveBal += parseFloat(data[i]['balance'].replace(/[^0-9]/g,"")) ;
 
-            var activeBal = 0;
-            var inactiveBal = 0;
-
-                if(activeBal < activeCount) {
-                   activeBal += Math.trunc(parseFloat(data[i]['balance'].replace(/[^0-9]/g,"")) / getActiveCount(data));
-                }
-                if(inactiveBal < inactiveCount) {
-                    inactiveBal += Math.trunc(parseFloat(data[i]['balance'].replace(/[^0-9]/g,"")) / getInactiveCount(data));
-                }
         }
-        return {activeCount, inactiveCount, activeBal, inactiveBal}
+        totalActiveBal = Math.floor(activeCount / totalCount * totalActiveBal)
+        totalInactiveBal = Math.floor(inactiveCount / totalCount * totalInactiveBal)
+
+        return {activeCount, inactiveCount, totalActiveBal, totalInactiveBal}
 
 }
 
