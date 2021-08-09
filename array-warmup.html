@@ -119,19 +119,19 @@ function getLongestString(array) {
   //
   //     ```javascript
 	// ; // returns ['h','h','g']
-	// getFirstLetter(['hello', 'world', '!' ]); // returns ['h','w','!']
+	// ; // returns ['h','w','!']
 	// ```
 
   function getFirstLetter(array) {
 
        return array.map(function(string) {
-
-       }) [0];
+            return string[0]
+       });
 
   }
 
-  console.log(getFirstLetter(['hello', 'hi', 'greetings']));
-
+  //console.log(getFirstLetter(['hello', 'hi', 'greetings']));
+  console.log(getFirstLetter(['hello', 'world', '!' ]))
 
 
   // 1. Create a function, `getStringDeets`,
