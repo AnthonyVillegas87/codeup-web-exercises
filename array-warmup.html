@@ -7,6 +7,30 @@
 <body>
 <script>
   "use strict"
+  // 1. Create a function, `printAll`, that takes an array and logs every element on a new line in the console.
+
+    //   ```javascript
+	// ;
+	// /*
+	//   prints...
+	//   hello
+	//   hi
+	//   greetings
+	// */
+	// ```
+  function printAll(array) {
+
+      for(let i = 0; i < array.length; i++) {
+           array[i] = array[i].replaceAll(',','\n');
+
+      }
+      return  array
+  }
+
+  console.log(printAll(['hello', 'hi', 'greetings']));
+
+
+
   /*
           TODO: Create a function below, concatFirstAndLast, that takes in an array and returns the first and last inputs
            concatentated together if both elements are strings. If either the first or last element does is not a string
