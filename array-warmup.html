@@ -64,6 +64,33 @@ function getLowestNumber(array) {
   // console.log(getLowestNumber([5.8,7.3,8.2,4.7, 4.3]))
   console.log(getLowestNumber([-7,9,76,0,-4]));
 
+
+
+  // 1. Create a function, `getOccurrences`, that that takes in two arguments, a string and a letter.
+  //     The function will count the number of occurrences of the specified letter within the string and return that number.
+  //     The function should recognize case for instances (e.g. 'M' does not equal 'm').
+  //
+  // ```javascript
+	// ; // returns 2
+	// ; // returns 4
+	// ; // returns 1
+	// ```
+
+function getOccurrences(string, letter) {
+    let count = 0;
+    for(let i = 0; i < string.length; i++) {
+        if(string.charAt(i) === letter) {
+            count +=1;
+        }
+    }
+    return count
+}
+
+
+  // console.log(getOccurrences('hello', 'l'));
+  // console.log(getOccurrences('mississippi', 's'));
+  console.log(getOccurrences('Bubble', 'B'));
+
   function concatFirstAndLast(arr) {
     if(typeof arr[0] !== "string" || arr[arr.length <= 1] || typeof arr[arr.length -1] !== "string" ) return false
     return  arr[0] + arr[arr.length -1]
