@@ -131,7 +131,22 @@ function getLongestString(array) {
   }
 
   //console.log(getFirstLetter(['hello', 'hi', 'greetings']));
-  console.log(getFirstLetter(['hello', 'world', '!' ]))
+  console.log(getFirstLetter(['hello', 'world', '!' ]));
+
+
+  // 1. Create a function, `arrayEndsWith`, that takes two arguments, an array and a shorter array, and
+  // returns a boolean whether or not the larger array ends with the same elements as the passed second array elements.
+  // The function should return true if the second array elements are at the end of the first array.
+  // Assume that neither array will be empty, contain only string, number, or boolean elements and that the length of
+  // the second array will always be shorter than the first.
+  //
+  //     ```javascript
+	// arrayEndsWith(['hi', 'hello', 'world', true, 3, 5], [3, 5]); // returns true
+	// arrayEndsWith(['hi', 'hello', 'world', true, 3, 5], [3, 9]); // returns false
+	// arrayEndsWith(['hi', 'hmmm'], ['hmmm']); // returns true
+	// arrayEndsWith([1, 2, 3], [2, 3]); // returns true
+	// arrayEndsWith([1, 2, 3], [3, 2]); // returns false
+	// ```
 
 
   // 1. Create a function, `getStringDeets`,
