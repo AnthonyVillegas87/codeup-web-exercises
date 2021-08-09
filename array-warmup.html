@@ -91,6 +91,29 @@ function getOccurrences(string, letter) {
   // console.log(getOccurrences('mississippi', 's'));
   console.log(getOccurrences('Bubble', 'B'));
 
+
+  // 1. Create a function, `getLongestString`, that takes in an array of strings and returns the longest string.
+  // If the two longest words are equal in length, return the last to appear in the array.
+  //
+  //     ```javascript
+	// ; // returns 'greetings'
+	// ; // returns 'world'
+	// ```
+
+function getLongestString(array) {
+    let string = [0];
+    for(let i = 0; i < array.length; i++) {
+        if(array[i].length >= string.length) {
+            string = array[i];
+        }
+    }
+    return string
+}
+
+  console.log(getLongestString(['hello', 'hi', 'greetings']));
+  console.log(getLongestString(['hello', 'world', '!' ]));
+
+
   function concatFirstAndLast(arr) {
     if(typeof arr[0] !== "string" || arr[arr.length <= 1] || typeof arr[arr.length -1] !== "string" ) return false
     return  arr[0] + arr[arr.length -1]
