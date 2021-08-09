@@ -48,6 +48,22 @@
 
 
        */
+  // 1. Create a function, `getLowestNumber`, that take in an array of numbers and returns the lowest number.
+  //
+  //     ```javascript
+	// ; // returns 5
+	// ; returns 4.3
+	// ; // returns -7
+	// ```
+
+function getLowestNumber(array) {
+    return Math.min.apply(Math,array);
+}
+
+  // console.log(getLowestNumber([23,47,50,5]))
+  // console.log(getLowestNumber([5.8,7.3,8.2,4.7, 4.3]))
+  console.log(getLowestNumber([-7,9,76,0,-4]));
+
   function concatFirstAndLast(arr) {
     if(typeof arr[0] !== "string" || arr[arr.length <= 1] || typeof arr[arr.length -1] !== "string" ) return false
     return  arr[0] + arr[arr.length -1]
@@ -58,6 +74,17 @@
   console.log(concatFirstAndLast(['23', '12', 'hello']))
   console.log(concatFirstAndLast([true]))
   console.log(concatFirstAndLast([true, 'bob']))
+
+
+
+
+
+
+
+
+
+
+
 
 
 
