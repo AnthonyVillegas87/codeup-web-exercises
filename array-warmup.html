@@ -110,8 +110,73 @@ function getLongestString(array) {
     return string
 }
 
-  console.log(getLongestString(['hello', 'hi', 'greetings']));
-  console.log(getLongestString(['hello', 'world', '!' ]));
+  // console.log(getLongestString(['hello', 'hi', 'greetings']));
+  // console.log(getLongestString(['hello', 'world', '!' ]));
+
+
+  // 1. Create a function, `getFirstLetter`, that takes an array of strings and
+  // returns an array of the first letter of each string.
+  //
+  //     ```javascript
+	// ; // returns ['h','h','g']
+	// getFirstLetter(['hello', 'world', '!' ]); // returns ['h','w','!']
+	// ```
+
+  function getFirstLetter(array) {
+
+       return array.map(function(string) {
+
+       }) [0];
+
+  }
+
+  console.log(getFirstLetter(['hello', 'hi', 'greetings']));
+
+
+
+  // 1. Create a function, `getStringDeets`,
+  // that takes in a string and returns an object with specific properties containing
+  // information about the string, namely:
+  //
+  // - `firstChar` -  containing the first character of the string
+  // - `lastChar` - containing the last character of the string
+  // - `length`- containing the length of characters of the string
+  // - `shoutedVersion` - containing an all caps version of the string
+  //
+  //     ```javascript
+	// getStringDeets("apple"); // returns...
+	// /*
+	//   {
+	//     firstChar: "a",
+	//     lastChar: "e",
+	//     length: 5,
+	//     shoutedVersion: "APPLE"
+	//   }
+	// */
+	// ```
+
+function getStringDeets(str) {
+    var isFstChar = str[0];
+    var isLstChar = str[str.length -1];
+        for(var i = 0; i < str.length; i++) {
+            if(i === str[0]) {
+                isFstChar = str[i];
+            }
+            if(i === str[str[0].length - 1]) {
+                isLstChar = str[str[i].length -1];
+            }
+        }
+
+    return {
+        firstChar: isFstChar,
+        lastChar: isLstChar,
+        length: str.length,
+        shoutedVersion: str.toUpperCase()
+    };
+
+}
+
+  console.log(getStringDeets("apple"));
 
 
   function concatFirstAndLast(arr) {
