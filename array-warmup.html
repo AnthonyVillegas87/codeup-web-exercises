@@ -141,12 +141,22 @@ function getLongestString(array) {
   // the second array will always be shorter than the first.
   //
   //     ```javascript
-	// arrayEndsWith(['hi', 'hello', 'world', true, 3, 5], [3, 5]); // returns true
+	//  // returns true
 	// arrayEndsWith(['hi', 'hello', 'world', true, 3, 5], [3, 9]); // returns false
 	// arrayEndsWith(['hi', 'hmmm'], ['hmmm']); // returns true
 	// arrayEndsWith([1, 2, 3], [2, 3]); // returns true
 	// arrayEndsWith([1, 2, 3], [3, 2]); // returns false
 	// ```
+function arrayEndsWith(...array) {
+    for(let i = 0; i < array.length - 1; i ++) {
+        //if(array[i] !== array[i].length - 1) return false
+        if(array[i] === array[i].length - 1) {
+
+        }
+    }
+    return array
+
+  console.log(arrayEndsWith(['hi', 'hello', 'world', true, 3, 5], [3, 5]));
 
 
   // 1. Create a function, `getStringDeets`,
