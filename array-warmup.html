@@ -27,7 +27,7 @@
       return  array
   }
 
-  console.log(printAll(['hello', 'hi', 'greetings']));
+  //console.log(printAll(['hello', 'hi', 'greetings']));
 
 
 
@@ -62,7 +62,7 @@ function getLowestNumber(array) {
 
   // console.log(getLowestNumber([23,47,50,5]))
   // console.log(getLowestNumber([5.8,7.3,8.2,4.7, 4.3]))
-  console.log(getLowestNumber([-7,9,76,0,-4]));
+  //console.log(getLowestNumber([-7,9,76,0,-4]));
 
 
 
@@ -89,7 +89,7 @@ function getOccurrences(string, letter) {
 
   // console.log(getOccurrences('hello', 'l'));
   // console.log(getOccurrences('mississippi', 's'));
-  console.log(getOccurrences('Bubble', 'B'));
+  //console.log(getOccurrences('Bubble', 'B'));
 
 
   // 1. Create a function, `getLongestString`, that takes in an array of strings and returns the longest string.
@@ -131,7 +131,7 @@ function getLongestString(array) {
   }
 
   //console.log(getFirstLetter(['hello', 'hi', 'greetings']));
-  console.log(getFirstLetter(['hello', 'world', '!' ]));
+  //console.log(getFirstLetter(['hello', 'world', '!' ]));
 
 
   // 1. Create a function, `arrayEndsWith`, that takes two arguments, an array and a shorter array, and
@@ -142,21 +142,29 @@ function getLongestString(array) {
   //
   //     ```javascript
 	//  // returns true
-	// arrayEndsWith(['hi', 'hello', 'world', true, 3, 5], [3, 9]); // returns false
-	// arrayEndsWith(['hi', 'hmmm'], ['hmmm']); // returns true
-	// arrayEndsWith([1, 2, 3], [2, 3]); // returns true
-	// arrayEndsWith([1, 2, 3], [3, 2]); // returns false
+	// ; // returns false
+	// ; // returns true
+	// ; // returns true
+	// ; // returns false
 	// ```
-function arrayEndsWith(...array) {
-    for(let i = 0; i < array.length - 1; i ++) {
-        //if(array[i] !== array[i].length - 1) return false
-        if(array[i] === array[i].length - 1) {
+function arrayEndsWith(array1, array2) {
 
+
+    for(let i = 0; i < array2.length - 1; i++){
+        if(array2[i] !== array1[i].length - 1) {
+            return false
         }
     }
-    return array
+    return true;
+}
 
-  console.log(arrayEndsWith(['hi', 'hello', 'world', true, 3, 5], [3, 5]));
+  console.log(arrayEndsWith(['hi', 'hello', 'world', true, 3, 5], [3, 5]));//true
+  console.log(arrayEndsWith(['hi', 'hello', 'world', true, 3, 5], [3, 9]));//false
+  console.log(arrayEndsWith(['hi', 'hmmm'], ['hmmm'])); //true
+  console.log(arrayEndsWith([1, 2, 3], [2, 3]))//true
+  console.log(arrayEndsWith([1, 2, 3], [3, 2]));//false
+
+
 
 
   // 1. Create a function, `getStringDeets`,
@@ -201,7 +209,7 @@ function getStringDeets(str) {
 
 }
 
-  console.log(getStringDeets("apple"));
+  //console.log(getStringDeets("apple"));
 
 
   function concatFirstAndLast(arr) {
@@ -209,14 +217,69 @@ function getStringDeets(str) {
     return  arr[0] + arr[arr.length -1]
   }
 
-  console.log(concatFirstAndLast(['a', 'b', 'c']) )
-  console.log(concatFirstAndLast([]))
-  console.log(concatFirstAndLast(['23', '12', 'hello']))
-  console.log(concatFirstAndLast([true]))
-  console.log(concatFirstAndLast([true, 'bob']))
+  // console.log(concatFirstAndLast(['a', 'b', 'c']) )
+  // console.log(concatFirstAndLast([]))
+  // console.log(concatFirstAndLast(['23', '12', 'hello']))
+  // console.log(concatFirstAndLast([true]))
+  // console.log(concatFirstAndLast([true, 'bob']))
+
+
+  // Create a function, filterOutBobUsers,
+  //     that takes in an array of user objects with firstName and lastName properties and returns an array of user objects without any Bob users.
+  //     The case of the Bob names does not matter.
 
 
 
+  var users = [
+      {
+      firstName: 'bob',
+      lastName: 'Smith'
+  },
+  {
+      firstName: 'BOB',
+      lastName: 'Smith'
+  },
+  {
+      firstName: 'Fred',
+      lastName: 'Smith'
+  },
+  {
+      firstName: 'Cathy',
+      lastName: 'Smith'
+  },
+  {
+      firstName: 'Dawn',
+      lastName: 'Smith'
+  }
+  ]
+
+  function filterOutBobUsers(users) {
+    let otherUsers = [];
+    for(let i = 0; i < users.length; i++ ) {
+        if(users[i].firstName !== 'bob' && users[i].firstName !== 'BOB') {
+            otherUsers.push(users[i]);
+        }
+    }
+    return otherUsers
+  }
+
+  console.log(filterOutBobUsers(users))
+
+  // filterOutBobUsers(users) // returns...
+  //     [
+  //     {
+  //         firstName: ‘Fred’,
+  // lastName: ‘Smith’
+  // },
+  // {
+  //     firstName: ‘Cathy’,
+  //     lastName: ‘Smith’
+  // },
+  // {
+  //     firstName: ‘Dawn’,
+  //     lastName: ‘Smith’
+  // }
+  // ]
 
 
 
@@ -301,7 +364,7 @@ function getStringDeets(str) {
 
   var nameArr = "fred,mary,kris"
   var myArr = nameArr.split(',')
-var newArr = myArr.join('*')
+  var newArr = myArr.join('*')
   console.log(newArr)
 
 </script>
