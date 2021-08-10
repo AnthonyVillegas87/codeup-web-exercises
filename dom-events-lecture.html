@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM Events</title>
+</head>
+<body>
+
+<h1>DOM Event Listener</h1>
+<button id="test-btn">Test Button</button>
+<button id="shrink-size">Restore Text Size</button>
+
+
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+    Aliquam eos inventore nulla quae veritatis! Atque cupiditate,
+    delectus dolorem, dolorum, ducimus excepturi facilis incidunt libero omnis quas sapiente tempora vero vitae?</p>
+
+
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+    Commodi delectus dicta dolorem doloribus eius eos, excepturi expedita illum inventore necessitatibus
+    nemo nihil nostrum pariatur quam qui unde, vel?
+    Adipisci, aperiam?
+</p>
+<div style="height: 1000px"></div>
+</body>
+<script>
+   var testBtn = document.getElementById('test-btn');
+
+
+
+// CREAT A SEPERATE NAMED LISTENER TO LOG TEST TO REGISTER THE EVENT
+           function logTest() {
+               console.log('test');
+           }
+   testBtn.addEventListener('click', logTest);
+
+   testBtn.addEventListener('click', function () {
+       var currentColor = document.getElementsByTagName('body')[0].style.backgroundColor ;
+           if(currentColor === "firebrick"){
+               document.getElementsByTagName('body')[0].style.backgroundColor = "unset";
+           } else {
+               document.getElementsByTagName('body')[0].style.backgroundColor = "firebrick";
+           }
+
+   });
+
+// REMOVE THE EVENT LISTENER FOR LOG TEST
+//            setTimeout(function () {
+//                testBtn.removeEventListener('click', logTest);
+//            }, 2000);
+
+
+
+// var firstPara = document.querySelector('p');
+//     firstPara.addEventListener('mouseover', function() {
+//         this.style.color = 'red';
+//         this.style.fontFamily = 'arial';
+//         this.style.fontSize = '2em';
+//     });
+
+    var paragraphs = document.getElementsByTagName('p');
+        // for(var i = 0; i < paragraphs.length; i+=1) {
+        //     paragraphs[i].addEventListener('mouseover', function () {
+        //         this.style.color = 'red';
+        //         this.style.fontFamily = 'arial';
+        //         this.style.fontSize = '2em';
+        //     });
+        // }
+
+   ///EVENT OBJECT
+// document.addEventListener('click', function (eventObject) {
+//     console.log(eventObject)
+// });
+
+
+
+</script>
+</html>

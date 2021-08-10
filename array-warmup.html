@@ -19,17 +19,12 @@
 	// */
 	// ```
   function printAll(array) {
-
-      for(let i = 0; i < array.length; i++) {
-           array[i] = array[i].replaceAll(',','\n');
-
-      }
-      return  array
+      array.forEach(function(arr) {
+          console.log(arr);
+      });
   }
 
-  //console.log(printAll(['hello', 'hi', 'greetings']));
-
-
+  console.log(printAll(['hello', 'hi', 'greetings']));
 
   /*
           TODO: Create a function below, concatFirstAndLast, that takes in an array and returns the first and last inputs
@@ -44,37 +39,22 @@
           concatFirstAndLast([true]) // false
           concatFirstAndLast([true, 'bob']) // false
 
-
-
-
        */
   // 1. Create a function, `getLowestNumber`, that take in an array of numbers and returns the lowest number.
-  //
-  //     ```javascript
-	// ; // returns 5
-	// ; returns 4.3
-	// ; // returns -7
-	// ```
 
 function getLowestNumber(array) {
     return Math.min.apply(Math,array);
 }
 
-  // console.log(getLowestNumber([23,47,50,5]))
-  // console.log(getLowestNumber([5.8,7.3,8.2,4.7, 4.3]))
-  //console.log(getLowestNumber([-7,9,76,0,-4]));
+  // console.log(getLowestNumber([23,47,50,5])) // returns 5
+  // console.log(getLowestNumber([5.8,7.3,8.2,4.7, 4.3])) //returns 4.3
+  // console.log(getLowestNumber([-7,9,76,0,-4]));// returns -7
 
 
 
   // 1. Create a function, `getOccurrences`, that that takes in two arguments, a string and a letter.
   //     The function will count the number of occurrences of the specified letter within the string and return that number.
   //     The function should recognize case for instances (e.g. 'M' does not equal 'm').
-  //
-  // ```javascript
-	// ; // returns 2
-	// ; // returns 4
-	// ; // returns 1
-	// ```
 
 function getOccurrences(string, letter) {
     let count = 0;
@@ -87,18 +67,13 @@ function getOccurrences(string, letter) {
 }
 
 
-  // console.log(getOccurrences('hello', 'l'));
-  // console.log(getOccurrences('mississippi', 's'));
-  //console.log(getOccurrences('Bubble', 'B'));
+  // console.log(getOccurrences('hello', 'l'));   // returns 2
+  // console.log(getOccurrences('mississippi', 's')); // returns 4
+  //console.log(getOccurrences('Bubble', 'B')); // returns 1
 
 
   // 1. Create a function, `getLongestString`, that takes in an array of strings and returns the longest string.
   // If the two longest words are equal in length, return the last to appear in the array.
-  //
-  //     ```javascript
-	// ; // returns 'greetings'
-	// ; // returns 'world'
-	// ```
 
 function getLongestString(array) {
     let string = [0];
@@ -110,17 +85,12 @@ function getLongestString(array) {
     return string
 }
 
-  // console.log(getLongestString(['hello', 'hi', 'greetings']));
-  // console.log(getLongestString(['hello', 'world', '!' ]));
+  // console.log(getLongestString(['hello', 'hi', 'greetings']));// returns 'greetings'
+  // console.log(getLongestString(['hello', 'world', '!' ]));// returns 'world'
 
 
   // 1. Create a function, `getFirstLetter`, that takes an array of strings and
   // returns an array of the first letter of each string.
-  //
-  //     ```javascript
-	// ; // returns ['h','h','g']
-	// ; // returns ['h','w','!']
-	// ```
 
   function getFirstLetter(array) {
 
@@ -130,8 +100,8 @@ function getLongestString(array) {
 
   }
 
-  //console.log(getFirstLetter(['hello', 'hi', 'greetings']));
-  //console.log(getFirstLetter(['hello', 'world', '!' ]));
+  //console.log(getFirstLetter(['hello', 'hi', 'greetings']));// returns ['h','h','g']
+  //console.log(getFirstLetter(['hello', 'world', '!' ]));// returns ['h','w','!']
 
 
   // 1. Create a function, `arrayEndsWith`, that takes two arguments, an array and a shorter array, and
@@ -140,18 +110,11 @@ function getLongestString(array) {
   // Assume that neither array will be empty, contain only string, number, or boolean elements and that the length of
   // the second array will always be shorter than the first.
   //
-  //     ```javascript
-	//  // returns true
-	// ; // returns false
-	// ; // returns true
-	// ; // returns true
-	// ; // returns false
-	// ```
+
 function arrayEndsWith(array1, array2) {
 
-
     for(let i = 0; i < array2.length - 1; i++){
-        if(array2[i] !== array1[i].length - 1) {
+        if(array2[i] !== array1[i]) {
             return false
         }
     }
@@ -163,8 +126,6 @@ function arrayEndsWith(array1, array2) {
   console.log(arrayEndsWith(['hi', 'hmmm'], ['hmmm'])); //true
   console.log(arrayEndsWith([1, 2, 3], [2, 3]))//true
   console.log(arrayEndsWith([1, 2, 3], [3, 2]));//false
-
-
 
 
   // 1. Create a function, `getStringDeets`,
@@ -228,8 +189,6 @@ function getStringDeets(str) {
   //     that takes in an array of user objects with firstName and lastName properties and returns an array of user objects without any Bob users.
   //     The case of the Bob names does not matter.
 
-
-
   var users = [
       {
       firstName: 'bob',
@@ -263,7 +222,7 @@ function getStringDeets(str) {
     return otherUsers
   }
 
-  console.log(filterOutBobUsers(users))
+  console.log(filterOutBobUsers(users));
 
   // filterOutBobUsers(users) // returns...
   //     [
