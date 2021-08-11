@@ -112,14 +112,30 @@ function getLongestString(array) {
   //
 
 function arrayEndsWith(array1, array2) {
-
-    for(let i = 0; i < array2.length - 1; i++){
-        if(array2[i] !== array1[i]) {
-            return false
+    let stoppingPoint = array1.length - array2.length;
+    let array2Indexer = array2.length - 1;
+    for (let i = array1.length - 1; i >= stoppingPoint; i--) {
+        if(array1[i] !== array2[array2Indexer]) {
+            return false;
         }
+        array2Indexer--;
     }
     return true;
+
+
+
+
+//
+//     for(let i = 0; i < array1.length - 1; i++){
+//         if(array2[i].length !== array1[i]) {
+//             return false
+//         }
+//     }
+//     return true;
 }
+
+
+
 
   console.log(arrayEndsWith(['hi', 'hello', 'world', true, 3, 5], [3, 5]));//true
   console.log(arrayEndsWith(['hi', 'hello', 'world', true, 3, 5], [3, 9]));//false
@@ -241,9 +257,55 @@ function getStringDeets(str) {
   // ]
 
 
-
-
-
+////// FUNCTIONS TO SIMPLIFY  ////
+  // function createShoppingList(itemCount) {
+  //     var itemQuantities = generateItemCounts(itemCount);
+  //     var items = generateItems(itemCount);
+  //     var list = makeList(itemQuantities, items);
+  //     return list;
+  // }
+  //
+  //
+  // function generateItemCounts(itemCount){
+  //     var arr = [];
+  //     for(var i = 0; i < itemCount; i++) {
+  //         arr.push(getRanNumber(5, 1));
+  //     }
+  //     return arr;
+  // }
+  //
+  // function generateItems(itemCount){
+  //     var items = ["bread", "water", "cereal", "milk", "steak", "ice cream", "dog food", "soap", "clothes", "apples"];
+  //     var itemList = [];
+  //     for(var i = 0; i < itemCount; i++) {
+  //         var ran = getRanNumber(items.length);
+  //         itemList.push(items[ran]);
+  //     }
+  //     return itemList;
+  // }
+  //
+  // function makeList(arr1, arr2) {
+  //     var bucket = [];
+  //     for(var i = 0; i < arr1.length; i++) {
+  //         bucket.push(createArr(arr1[i], arr2[i]));
+  //     }
+  //     return bucket;
+  // }
+  //
+  // function createArr(item1, item2) {
+  //     return [item1, item2];
+  // }
+  //
+  // function getRanNumber(upTo, minimum = 0) {
+  //     return ~~(Math.random() * upTo) + minimum;
+  // }
+  //
+  //
+  // console.log(createShoppingList(4));
+  // 9:02
+  // let s = "h%el%lo;
+  // let arr = s.split("%")
+  // arr => ["h", "el", "lo"]
 
 
 
