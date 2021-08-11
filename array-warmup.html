@@ -306,7 +306,8 @@ function removeNums(arr) {
   // objectToSum({foo: 'one', bar: 'two'}) // returns 0
 
 
-  // 1. Create a function, `objToObj`, that takes in an object with only property values of a string type and returns another object with a single property called 'all' with a value of all input object properties values concatenated together.
+  // 1. Create a function, `objToObj`, that takes in an object with only property values of a string type and
+  // returns another object with a single property called 'all' with a value of all input object properties values concatenated together.
   //
   // ***Please note that the order of object properties is uncertain and concatenating the object property values will be unpredictable. This is fine.***
   //
@@ -314,7 +315,16 @@ function removeNums(arr) {
 	// objToObj({foo: 'hello', bar:'world'}) // returns {all: 'helloworld'} or {all: 'worldhello'}
 	// objToObj({a: 'codeup', b:'rocks'}) // returns {all: 'rockscodeup'} or {all: 'codeuprocks'}
 	// ```
-
+function objToObj(obj) {
+    var objArr = Object.values(obj);
+    var string = "";
+    objArr.forEach(function (element) {
+        string+=element
+    })
+    return {
+        all: string
+    }
+  }
 
 
 
