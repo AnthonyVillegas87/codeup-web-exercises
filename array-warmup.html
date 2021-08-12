@@ -86,8 +86,9 @@ function getLongestString(array) {
 }
 
   // console.log(getLongestString(['hello', 'hi', 'greetings']));// returns 'greetings'
-  // console.log(getLongestString(['hello', 'world', '!' ]));// returns 'world'
+  console.log(getLongestString(['hello', 'world', '!' ]));// returns 'world'
 
+ // console.log(getLongestString(['racecar', 'greetin', 'cometcs']))
 
   // 1. Create a function, `getFirstLetter`, that takes an array of strings and
   // returns an array of the first letter of each string.
@@ -106,23 +107,27 @@ function getLongestString(array) {
 
   // 1. Create a function, `arrayEndsWith`, that takes two arguments, an array and a shorter array, and
   // returns a boolean whether or not the larger array ends with the same elements as the passed second array elements.
+
   // The function should return true if the second array elements are at the end of the first array.
   // Assume that neither array will be empty, contain only string, number, or boolean elements and that the length of
   // the second array will always be shorter than the first.
   //
 
-function arrayEndsWith(array1, array2) {
-    let stoppingPoint = array1.length - array2.length;
-    let array2Indexer = array2.length - 1;
-    for (let i = array1.length - 1; i >= stoppingPoint; i--) {
-        if(array1[i] !== array2[array2Indexer]) {
-            return false;
-        }
-        array2Indexer--;
-    }
-    return true;
 
-}
+  function arrayEndsWith(arr1, arr2) {
+    let stop = arr1.length - arr2.length;
+    let indexOf2 =  arr2.length - 1;
+    for(let i = arr1.length - 1; i >= stop; i--){
+        if(arr1[i] !== arr2[indexOf2]) {
+            return false
+        }
+        indexOf2--
+    }
+    return true
+  }
+
+
+
 
 
 
@@ -132,7 +137,6 @@ function arrayEndsWith(array1, array2) {
   console.log(arrayEndsWith(['hi', 'hmmm'], ['hmmm'])); //true
   console.log(arrayEndsWith([1, 2, 3], [2, 3]))//true
   console.log(arrayEndsWith([1, 2, 3], [3, 2]));//false
-
 
   // 1. Create a function, `getStringDeets`,
   // that takes in a string and returns an object with specific properties containing
@@ -282,23 +286,21 @@ function removeNums(arr) {
   // removeNums(['a', 'b', 'c']) // returns ['a', true, null, [], {}, '5']
 
 
-
-
-
   // 1. Create a function, `objectToSum`, that takes in an object, and returns
   // the sum of any number property values (numeric strings will not be added).
   // Expect that no object property values will be NaN. If no number properties are present, return 0.
   //
-  function objectToSum({}) {
-    let obj = {};
-    for(let i = 0; i < obj.length; i++) {
-        if(typeof this.obj[i] === "number") {
-            obj += obj[i]
-        }
-    }
-
-    return obj['property'] = 'value';
-
+  function objectToSum(obj) {
+      var objArr = Object.values(obj);
+      var newArr = 0;
+      objArr.forEach(function (arr){
+          if (typeof arr !== "number") {
+              newArr += 0;
+          } else {
+              newArr += arr;
+          }
+      });
+      return newArr;
   }
 
   console.log(objectToSum({prop1: 'bob', prop2: true, prop3: 5}))// returns 5
@@ -326,11 +328,28 @@ function objToObj(obj) {
     }
   }
 
+  // . Create a function, `createUsersObject`,
+  // that takes in two arrays: the first array is an array of strings (usernames),
+  // the second is an array of numbers (user ages).
+  // The function should return an object with property names matching to the first array elements paired with property values matching the second  array elements.
+  // Assume both arrays are the same length.
+  //
+  //     ```javascript
+	//
+	//  // returns {cindy: 34, fred: 22, cathy: 45}
+	// ```
 
+   var usernames = ['cindy', 'fred', 'cathy'];
+   var ages = [34, 22, 45];
+function createUsersObject(usernames,ages) {
+   var obj = {};
+   usernames.forEach(function(name, index) {
+       obj[name] = ages[index]
+   })
+    return obj
+}
 
-
-
-
+  console.log(createUsersObject(usernames, ages))
 
 
 
