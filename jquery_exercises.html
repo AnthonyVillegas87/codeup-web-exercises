@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery Exercise</title>
+</head>
+<body>
+<h1 class="codeup">My Exercise!</h1>
+<p id="specific">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+    Culpa dolor est eum fugiat ipsum molestiae nemo nesciunt quod.
+    Corporis deleniti dicta et eum fugit,
+    impedit incidunt neque reiciendis rerum unde?</p>
+<ul id="unique">
+    <li>hello!</li>
+    <li>hey!</li>
+    <li>hi!</li>
+    <li>howdy!</li>
+    <li>hola!</li>
+    <div class="codeup">COFFEE!! </div>
+</ul>
+
+<script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+<script>
+     $(document).ready(function () {
+    //     "use strict";
+    //     var contents = $('#intro').html();
+    //     alert(contents);
+
+
+
+       $('.codeup').css('border', '1px solid #F00');
+
+        $('li').css('font-size', '20px');
+
+         $('h1, p, li').css({
+             'background-color':'yellow',
+
+         });
+         var next = $('h1').html();
+         alert(next);
+    });
+</script>
+</body>
+</html>
