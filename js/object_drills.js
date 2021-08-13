@@ -499,7 +499,64 @@ class Dog {
 
 // 1. Expanding on the books object exercise:
 //
+var books = [
+    {
+        title: "IT",
+        author: {
+            first_name: "Stephen",
+            last_name: " King",
+            key_words: ['horror,' ,'literary fiction' ,'fiction'],
+            available: true,
+            dateAvailable: '13-Aug/08:05'
+        }
+    },
+    {
+        title: "Battlefield Earth",
+        author: {
+            first_name: "L. Ron",
+            last_name: " Hubbard",
+            key_words: ['sci-fi','fiction'],
+            available: true,
+            dateAvailable: '13-Sep/09:30'
+        }
+    },
+    {
+        title: "The Art Of War",
+        author: {
+            first_name: "Sun",
+            last_name: " Tzu",
+            key_words: ['treatise', 'fiction'],
+            available: true,
+            dateAvailable: '10-Oct/10:00'
+        }
+    },
+    {
+        title: "Last Of The Mohicans",
+        author: {
+            first_name: "James Fenimore",
+            last_name: " Cooper",
+            key_words: ['historical fiction', 'western'],
+            available: true,
+            dateAvailable: '21-Oct/10:00'
+        }
+    },
+    {
+        title: "The Relic",
+        author: {
+            first_name: "Lincoln",
+            last_name: " Child",
+            key_words: ['horror', 'fiction'],
+            available: true,
+            dateAvailable: '05-Nov/9:00'
+        },
+        lend() {
+            if(this.available === true) {
+                return false
+            }
+        }
+    }
 
+]
 
 //     - Add a property `keywords` that contains an array of possible genres the
 //       book may be categorized by
@@ -511,6 +568,7 @@ class Dog {
 //         - sets the `dateAvailable` to a date exactly two weeks from when the
 //           `lend()` method is called (to do this, research the JS Date object and
 //           use methods from it in your code)
+
 //     Add a method `receive()` that...
 //         - changes the `available` property to true
 //         - changes the `dateAvailable` property to the string `"now"`
