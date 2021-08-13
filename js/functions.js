@@ -295,5 +295,9 @@ isString()
 // isUpperCase()
 
 
+function hasTwo(num) {
+     return num === 2
+}
 
-
+let array = [15, 10, 3, 2, 15, 2, 15].filter(hasTwo)
+console.log(array)
