@@ -123,37 +123,29 @@
 
 /////////// Function drills
 
-// function isOdd(num) {
-//     if(num % 2) {
-//         return true
-//     } else {
-//         return false
-//     }
-// }
-//
-// console.log(isOdd(1))
-// console.log(isOdd(2))
-//
-// function isEven(num) {
-//     if(num % 2 == 0) {
-//         return true
-//     } else {
-//         return false
-//     }
-// }
-// console.log(isEven(1))
-// console.log(isEven(2))
+function isOdd(num) {
+    return !!(num % 2);
+}
 
-// function identity(input) {
-//     return input
-// }
-//  console.log(identity(4 <= 3));
+console.log(isOdd(1))
+console.log(isOdd(2))
 
-// function isFive(input) {
-//     return input === 5
-// }
-//
-// console.log(isFive())
+function isEven(num) {
+    return num % 2 == 0;
+}
+console.log(isEven(1))
+console.log(isEven(2))
+
+function identity(input) {
+    return input
+}
+ console.log(identity(3 <= 3));
+
+function isFive(input) {
+    return input === 5
+}
+
+console.log(isFive(5))
 
 // function addFive(input) {
 //     return input + 5
@@ -252,10 +244,10 @@
 //
 // isArray()
 //
-function isString(input) {
-     return typeof input === "string";
-}
-isString()
+// function isString(input) {
+//      return typeof input === "string";
+// }
+// isString()
 //
 // function isNotString(input) {
 //      return typeof input !== "string";

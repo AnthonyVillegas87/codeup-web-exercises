@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>dom warmup</title>
+</head>
+<body>
+<head>
+  <meta charset="UTF-8">
+  <title>DOM Warmups</title>
+</head>
+
+<h1 id="goodMorning">Good Morning, Draco!</h1>
+<button id="afternoon">It's afternoon</button>
+<script>
+  let button = document.getElementById("afternoon");
+  button.addEventListener('click', function () {
+    let changeButton = document.getElementById("goodMorning").innerText;
+    if(changeButton === 'Good Morning, Draco!') {
+      document.getElementById('goodMorning').innerText = "Good Afternoon, Draco!";
+    } else {
+      document.getElementById("goodMorning").innerText = "Good Morning, Draco!"
+    }
+  })
+</script>
+</body>
+</html>
