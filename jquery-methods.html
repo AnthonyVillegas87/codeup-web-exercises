@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery Methods</title>
+</head>
+<body>
+<h1>Essential Methods</h1>
+<h2 id="leader">Im the leader</h2>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+    Accusamus alias aliquam, dicta ea odit quis tempore ut?
+    Accusamus cumque dicta dignissimos dolorem iusto nobis possimus repellat.
+    Aperiam ipsam molestias saepe?</p>
+<h2 id="follower">I follow</h2>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+    Aliquam aliquid culpa cum deleniti et laborum maiores necessitatibus optio quo vero!
+    Aut, cumque dolor ducimus ipsa necessitatibus rem repellendus soluta ut!</p>
+<button id="font-changer">Change the font!</button>
+<script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+<script>
+    $(document).ready(() => {
+        // let htmlMethod = $("#follower").html();
+        // if(htmlMethod === "Essential Methods") {
+        //     $("#leader").html("And they're needed!")
+        // }
+
+        $('#font-changer').on('click', () => {
+            let currentFontFamily = $("body").css("font-family");
+        });
+    });
+</script>
+</body>
+</html>
