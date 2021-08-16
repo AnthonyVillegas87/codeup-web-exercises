@@ -25,19 +25,35 @@
     //     "use strict";
     //     var contents = $('#intro').html();
     //     alert(contents);
-
-
-
-       $('.codeup').css('border', '1px solid #F00');
-
-        $('li').css('font-size', '20px');
-
-         $('h1, p, li').css({
-             'background-color':'yellow',
-
+         $('h1').click( function() {
+             $(this).css('background-color', 'pink');
          });
-         var next = $('h1').html();
-         alert(next);
+
+         $('p').dblclick(function (e) {
+             $(this).css('font-size', '18px');
+         });
+
+         $('li').hover(
+             function() {
+                 $(this).css('color', 'red');
+             },
+             function() {
+              $(this).css('color', 'black');
+             }
+         );
+
+
+
+       // $('.codeup').css('border', '1px solid #F00');
+       //
+       //  $('li').css('font-size', '20px');
+       //
+       //   $('h1, p, li').css({
+       //       'background-color':'yellow',
+       //
+       //   });
+       //   var next = $('h1').html();
+       //   alert(next);
     });
 </script>
 </body>
