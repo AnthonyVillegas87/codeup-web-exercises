@@ -10,7 +10,7 @@ function changeColor() {
     return randomColor.substring(0, randomColor.length -1) + ')'
 }
 
-console.log(changeColor())
+
 boxes.forEach(function (box) {
     box.addEventListener('mouseover', function() {
         box.style.backgroundColor = changeColor()
