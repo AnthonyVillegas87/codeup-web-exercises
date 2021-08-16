@@ -63,15 +63,18 @@
 <a href="#" id="highlight-important">Click to toggle the highlighting of important text.</a>
 
 
-<script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+<script src="js/jquery-3.6.0.min.js"></script>
 <script>
     "use strict";
 
     $(document).ready(function() {
         $("#highlight-important").on('click', () => {
-            $("dd").toggleClass("invisible")
-        })
+            $("dd").toggleClass("invisible");
+        });
 
+        $("dt").on('click',function()  {
+            $(this).css("background-color", "gold");
+        });
 
     });
 </script>
