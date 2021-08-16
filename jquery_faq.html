@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Example jQuery Page</title>
+    <style>
+        .centered {
+            text-align: center;
+        }
+        .highlighted {
+            background-color: #FF0;
+        }
+        .invisible {
+           visibility: hidden;
+        }
+    </style>
+</head>
+<body>
+<h1>Example Page</h1>
+<div class="centered highlighted">
+    <h3>NOTICE</h3>
+    <p>This is an important message!</p>
+</div>
+<div class="not-important">
+    <h2>Lorem Ipsum</h2>
+    <p>Lorem ipsum dolor sit amet, incididunt ut <span class="important highlighted">labore et dolore magna aliqua.</span>, quis ut aliquip ex ea commodo.</p>
+</div>
+<p class="centered highlighted">This is also very important.</p>
+<dl>
+    <dt>Beast of Bodmin</dt>
+    <dd class="invisible">A large feline inhabiting Bodmin Moor.</dd>
+
+    <dt>Morgawr</dt>
+    <dd class="invisible">A sea serpent.</dd>
+
+    <dt>Owlman</dt>
+    <dd class="invisible">A giant owl-like creature.</dd>
+</dl>
+<dl>
+    <dt>Draco</dt>
+    <dd class="invisible">A large dragon.</dd>
+
+    <dt>Unicorn</dt>
+    <dd class="invisible">A mythical horse.</dd>
+
+    <dt>Entz</dt>
+    <dd class="invisible">A giant treelike creature.</dd>
+</dl>
+<dl>
+    <dt>Cyclops</dt>
+    <dd class="invisible">A large one-eyed creature.</dd>
+
+    <dt>Hydra</dt>
+    <dd class="invisible">A sea serpent.</dd>
+
+    <dt>Hades</dt>
+    <dd class="invisible">Greek god of the depths of hell.</dd>
+</dl>
+
+
+
+
+
+<a href="#" id="highlight-important">Click to toggle the highlighting of important text.</a>
+
+
+<script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+<script>
+    "use strict";
+
+    $(document).ready(function() {
+        $("#highlight-important").on('click', () => {
+            $("dd").toggleClass("invisible")
+        })
+
+
+    });
+</script>
+</body>
+</html>

@@ -3,6 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <title>jQuery Methods</title>
+    <style>
+        .highlight {
+            background-color: yellow;
+        }
+    </style>
 </head>
 <body>
 <h1>Essential Methods</h1>
@@ -26,7 +31,27 @@
 
         $('#font-changer').on('click', () => {
             let currentFontFamily = $("body").css("font-family");
+            if(currentFontFamily ===  "serif") {
+                $('body').css("font-family", "sans-serif");
+            }else{
+                $('body').css('font-family', 'serif')
+            }
         });
+
+        // $("h2").on('mouseenter', () => {
+        //     $(this).addClass("highlight");
+        // });
+        // $("h2").on('mouseleave', () => {
+        //     $(this).removeClass("highlight");
+        // });
+
+        // $("h2").hover(function () {
+        //     $(this).toggleClass("highlight");
+        // })
+
+        $("h2").hover(function (e) {
+            $(e.target).toggleClass("highlight");
+        })
     });
 </script>
 </body>
