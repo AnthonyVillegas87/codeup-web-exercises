@@ -88,19 +88,19 @@ $('selector')
 
         // tag
 
-        // var lis = $('li');
-        // lis.html('Some Film');
+        var lis = $('li');
+        lis.html('Some Film');
 
 
         // multiple
 
-        // $('p, h1').html("Test");
+        $('p, h1').html("Test");
 
 
         // ===================================== GETTING A VALUE
 
-        // var element = $("main"); // select tag
-        // console.log(element.html());
+        var element = $("main"); // select tag
+        console.log(element.html());
 
 
         // ===================================== CHANGING A VALUE
@@ -113,22 +113,46 @@ $('selector')
 
         // single CSS property
 
-        // $('p').css('background-color', 'blue');
+        $('p').css('background-color', 'blue');
 
 
 
         // multiple CSS properties
 
-        // $('p').css({
-        //     "background-color": "blue",
-        //     "color": "yellow"
-        // });
+        $('p').css({
+            "background-color": "blue",
+            "color": "yellow"
+        });
 
 
         // chaining css methods
 
-        // $('p').css('background-color', 'blue').css("color", "yellow").css("font-size", "4em");
+        $('p').css('background-color', 'blue').css("color", "yellow").css("font-size", "4em");
 
+
+        // jQuery gives us access to tons of different methods to add dynamic behavior to our sites, some methods you’ll see and use often including effects, events, and DOM manipulation:
+        //
+        //     effect methods:
+        //     .animate()
+        //     .delay()
+        //     .fadeIn()/.fadeOut()
+        //     .hide()/.show()
+        //     .toggle()
+        // event methods:
+        //     .change()
+        //     .click()
+        //     .focus()
+        //     .hover()
+        //     .keydown()/.keyup()/.keypress()
+        //     .mouseenter()/.mouseleave()
+        //     .on()
+        //     .ready()
+        // DOM manipulation methods:
+        //     .addClass()/.toggleClass()
+        //     .after()/.before()
+        //     .append()/.prepend()
+        //     .remove()
+        //     .val()
 
     });
 
