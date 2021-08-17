@@ -9,6 +9,14 @@
         .highlighted {
             background-color: #FF0;
         }
+
+        .bolded-font {
+            font-weight: bold;
+        }
+
+        .li-color {
+            color: blue;
+        }
         /*.invisible {*/
         /*   visibility: hidden;*/
         /*}*/
@@ -17,7 +25,7 @@
 <body>
 <h1>Example Page</h1>
 <div class="centered highlighted">
-    <h3>NOTICE</h3>
+    <h4>NOTICE</h4>
     <p>This is an important message!</p>
 </div>
 <div class="not-important">
@@ -56,10 +64,28 @@
     <dd class="invisible">Greek god of the depths of hell.</dd>
 </dl>
 
-
-
-
-
+<ul>
+    <h3>The Park</h3>
+    <li>Fact</li>
+    <li>Fact</li>
+    <li>Fact</li>
+    <li>Fact</li>
+</ul>
+<ul>
+    <h3>The Other Park</h3>
+    <li>Fact</li>
+    <li>Fact</li>
+    <li>Fact</li>
+    <li>Fact</li>
+</ul>
+<ul>
+    <h3>Yet Other Park</h3>
+    <li>Fact</li>
+    <li>Fact</li>
+    <li>Fact</li>
+    <li>Fact</li>
+</ul>
+<button>Click ul ii</button>
 <a href="#" id="highlight-important">Click to toggle the highlighting of important text.</a>
 
 
@@ -76,6 +102,21 @@
             $(e.currentTarget).css("background-color", "gold");
         })
 
+        $('ul').each( (index, element) => {
+            $('button').on('click',() => {
+                $(element).children().last().toggleClass('highlighted')
+            })
+        });
+
+        $('h3').on('click', e => {
+           $(e.currentTarget).siblings().toggleClass('bolded-font')
+        })
+
+        $('ul').each((index, element) => {
+            $('li').on('click', () => {
+                $(element).children().first().next().toggleClass('li-color')
+            })
+        })
     });
 </script>
 </body>
