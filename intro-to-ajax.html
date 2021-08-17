@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ajax Intro</title>
+    <style>
+        #murals-info {
+            margin: 10px auto;
+            border: 5px ridge blueviolet;
+            padding: 15px;
+            width: 35%;
+            text-align: center;
+        }
+        #murals-info:hover {
+            cursor: pointer;
+            background-color: #0dcaf0;
+        }
+        #card-section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .card {
+            display: flex;
+            flex-direction: column;
+            border: 2px solid black;
+            padding: 5px;
+            width: 330px;
+        }
+
+    </style>
+</head>
+<body>
+<section id="murals-info">
+    <p>I want know more!</p>
+</section>
+<section id="card-section"></section>
+<script src="js/jquery-3.6.0.min.js"></script>
+<script>
+$(document).ready(() => {
+    $('#murals-info').on('click', () => {
+        $.get('data/murals.json').done((data) => {
+            data.forEach((mural) => {
+                console.log(mural.artwork_credit);
+                console.log(mural.artwork_title ?? "Untitled")
+                $('#card-section').append(`
+        <article class="card">
+            <p>${mural.artwork_title}</p>
+            <p>${mural.artist_credit}</p>
+                <button class="more-info">More</button>
+            <p class="index" style="display: none">index</p>
+        </article>`)
+            });
+        });
+
+        $("#card-section").on('click', '.more-info', (e) => {
+            let clickedButton = $(e.currentTarget);
+            let index = clickedButton.next().text();
+            $.ajax('data/murals.json').done((data) => {
+                let year = data[index].year_installed
+                    $(clickedButton).after(`<p>${year}</p>`);
+            });
+
+        });
+    });
+});
+
+
+</script>
+</body>
+</html>
