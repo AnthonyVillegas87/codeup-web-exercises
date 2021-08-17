@@ -94,29 +94,34 @@
     "use strict";
 
     $(document).ready(function() {
+
         $("#highlight-important").on('click', () => {
             $("dd").toggle("invisible");
-        })
+        });
 
         $("dt").on('click', e => {
             $(e.currentTarget).css("background-color", "gold");
-        })
+        });
 
-        $('ul').each( (index, element) => {
+        $('ul').each((index, element) => {
             $('button').on('click',() => {
-                $(element).children().last().toggleClass('highlighted')
+                $(element).children().last().toggleClass('highlighted');
             })
         });
 
         $('h3').on('click', e => {
-           $(e.currentTarget).siblings().toggleClass('bolded-font')
-        })
+           $(e.currentTarget).siblings().toggleClass('bolded-font');
+        });
 
         $('ul').each((index, element) => {
             $('li').on('click', () => {
-                $(element).children().first().next().toggleClass('li-color')
+                $(element).children().first().next().toggleClass('li-color');
             })
-        })
+        });
+
+
+
+
     });
 </script>
 </body>
