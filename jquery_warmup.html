@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<section>
+  <button data-number="1">Change Me</button>
+  <button data-number="2">Change Me Too</button>
+  <button data-number="3">Don't forget about me</button>
+  <p id="message"></p>
+</section>
+<button id="reset">Reset</button>
+<script src="js/jquery-3.6.0.min.js"></script>
+<script>
+  "use strict"
+
+  $(document).ready( () => {
+    $('section button').hover(function(e) {
+        $(e.target).css("background-color", 'hotpink');
+        let number = $(this).attr('data-number');
+        $('#message').html(number)
+    },
+    function(e){
+        $(e.target).css('background-color', 'white');
+        $('#message').html('')
+    });
+
+    $('#reset').on('click', () => {
+        location.reload()
+    });
+
+
+
+
+
+
+  });
+
+</script>
+</body>
+</html>
