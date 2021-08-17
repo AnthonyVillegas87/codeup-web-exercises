@@ -9,9 +9,9 @@
         .highlighted {
             background-color: #FF0;
         }
-        .invisible {
-           visibility: hidden;
-        }
+        /*.invisible {*/
+        /*   visibility: hidden;*/
+        /*}*/
     </style>
 </head>
 <body>
@@ -69,12 +69,12 @@
 
     $(document).ready(function() {
         $("#highlight-important").on('click', () => {
-            $("dd").toggleClass("invisible");
-        });
+            $("dd").toggle("invisible");
+        })
 
-        $("dt").on('click',function()  {
-            $(this).css("background-color", "gold");
-        });
+        $("dt").on('click', e => {
+            $(e.currentTarget).css("background-color", "gold");
+        })
 
     });
 </script>
