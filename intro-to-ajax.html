@@ -41,7 +41,7 @@
 $(document).ready(() => {
     $('#murals-info').on('click', () => {
         $.get('data/murals.json').done((data) => {
-            data.forEach((mural) => {
+            data.forEach((mural,idx) => {
                 console.log(mural.artwork_credit);
                 console.log(mural.artwork_title ?? "Untitled")
                 $('#card-section').append(`
@@ -49,7 +49,7 @@ $(document).ready(() => {
             <p>${mural.artwork_title}</p>
             <p>${mural.artist_credit}</p>
                 <button class="more-info">More</button>
-            <p class="index" style="display: none">index</p>
+            <p class="index" style="display: none">${idx}</p>
         </article>`)
             });
         });
@@ -57,7 +57,10 @@ $(document).ready(() => {
         $("#card-section").on('click', '.more-info', (e) => {
             let clickedButton = $(e.currentTarget);
             let index = clickedButton.next().text();
+            console.log(index)
             $.ajax('data/murals.json').done((data) => {
+                console.log(data)
+
                 let year = data[index].year_installed
                     $(clickedButton).after(`<p>${year}</p>`);
             });

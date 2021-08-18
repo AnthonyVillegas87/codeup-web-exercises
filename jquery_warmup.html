@@ -12,11 +12,36 @@
   <p id="message"></p>
 </section>
 <button id="reset">Reset</button>
+
+
+
+<section>
+    <input type="text" id="wordToDisplay">
+    <button id="displayWord">Display in DOM</button>
+    <p id="word"></p>
+</section>
+<section>
+    <button id="create-an-element">Create an Element</button>
+</section>
+
+
 <script src="js/jquery-3.6.0.min.js"></script>
 <script>
   "use strict"
 
   $(document).ready( () => {
+
+
+      $('#displayWord').on('click', () => {
+          let input = $("#wordToDisplay").val()
+          $("#word").html(input);
+      })
+//// Javier solution
+      $('#create-an-element').on('click', (e) => {
+         $(e.currentTarget).after('<p>Hi</p>')
+      })
+
+
     $('section button').hover(function(e) {
         $(e.target).css("background-color", 'hotpink');
         let number = $(this).attr('data-number');
