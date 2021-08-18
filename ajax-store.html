@@ -1,6 +1,7 @@
 <html>
 <head>
   <title>Online Store</title>
+  <link rel="stylesheet" href="css/ajax-store.css">
 </head>
 <body>
 
@@ -18,7 +19,6 @@
   <tbody id="insertProducts"></tbody>
 </table>
 <button id="info">Load</button>
-<button id="reload">Reload</button>
 <script src="js/jquery-3.6.0.min.js"></script>
 <script>
 
@@ -26,7 +26,21 @@
     $(document).ready(() => {
       // TODO: Create an AJAX GET request for the file under data/inventory.json
       "use strict";
+    function getData() {
+      $.ajax('data/inventory.json').done((data) => {
+        data.forEach((idx) => {
+          $('#insertProducts').append
+          (`<tr>
+                        <td>${idx.title}</td>
+                        <td>${idx.quantity}</td>
+                        <td>$${idx.price}</td>
+                        <td>${idx.categories.join(', ')}</td>
+                                            </tr>`)
 
+        });
+      });
+    }
+    getData()
 
       // TODO: Take the data from inventory.json and append it to the products table
       //       HINT: Your data should come back as a JSON object; use console.log() to inspect
@@ -34,19 +48,8 @@
       //       HINT: You will want to target #insertProducts for your new HTML elements
       $('#info').on('click', () => {
         $('#insertProducts').html('')
+        getData()
 
-        $.ajax('data/inventory.json').done((data) => {
-          data.forEach((idx) => {
-            $('#insertProducts').append
-                        (`<tr>
-                        <td>${idx.title}</td>
-                        <td>${idx.quantity}</td>
-                        <td>$${idx.price}</td>
-                        <td>${idx.categories.join(', ')}</td>
-                                            </tr>`)
-
-          });
-        });
     });
   });
 
