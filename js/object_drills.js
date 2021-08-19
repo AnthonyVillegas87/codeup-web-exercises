@@ -236,6 +236,15 @@ const profilePromise = fetch("https://gist.githubusercontent.com/ryanorsinger/f7
         })
     });
 
+// const geocode = (search, token)  => fetch('https://api.mapbox.com/geocoding/v5/mapbox.places/' + encodeURIComponent(search) + '.json' + "?" + 'access_token=' + token)
+//        geocode.then((res) => {
+//             res.json().then((data) => {
+//             return data.features[0].center;
+//         });
+
+
+
+
 
 // Exercise 5. Create an object named profileReport and add the following methods that use the "profiles" JSON data.
 
