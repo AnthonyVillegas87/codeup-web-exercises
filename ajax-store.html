@@ -31,12 +31,11 @@
         data.forEach((idx) => {
           $('#insertProducts').append
           (`<tr>
-                        <td>${idx.title}</td>
-                        <td>${idx.quantity}</td>
-                        <td>$${idx.price}</td>
-                        <td>${idx.categories.join(', ')}</td>
-                                            </tr>`)
-
+                <td>${idx.title}</td>
+                <td>${idx.quantity}</td>
+                <td>$${idx.price}</td>
+                <td>${idx.categories.join(', ')}</td>
+                                    </tr>`)
         });
       });
     }
