@@ -42,8 +42,8 @@ $(document).ready(() => {
     $('#murals-info').on('click', () => {
         $.get('data/murals.json').done((data) => {
             data.forEach((mural,idx) => {
-                console.log(mural.artwork_credit);
-                console.log(mural.artwork_title ?? "Untitled")
+                // console.log(mural.artwork_credit);
+                // console.log(mural.artwork_title ?? "Untitled")
                 $('#card-section').append(`
         <article class="card">
             <p>${mural.artwork_title}</p>

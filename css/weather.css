@@ -1,4 +1,15 @@
-#map {
+.container {
+    /*float: right;*/
+    /*position: relative;*/
+    margin: 10px 50px 10px auto;
     width: 900px;
     height: 550px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid black;
+    padding: 5px;
+    width: 330px;
 }
