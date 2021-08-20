@@ -83,6 +83,16 @@
     });
 
 
+    if(navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition((position) => {
+            alert('Can We have your Location ?')
+            // const {latitude} = position.coords
+            // const {longitude} = position.coords
+            console.log(navigator)
+        }, () => {
+            alert('Could not get your position')
+        })
+    }
 
 
    // Create a handler to find location on click
