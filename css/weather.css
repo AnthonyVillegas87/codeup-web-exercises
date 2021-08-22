@@ -2,16 +2,23 @@
     /*float: right;*/
     /*position: relative;*/
     margin: 10px 50px 10px auto;
-    width: 900px;
+    width: 600px;
     height: 550px;
 }
 li {
     list-style: none;
 }
+
 .card {
     display: flex;
-    flex-direction: column;
-    border: 2px solid black;
+    flex-direction: row;
     padding: 5px;
 
+}
+
+#card {
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    width: 250px;
 }
