@@ -1,19 +1,31 @@
+* {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
 .container {
     /*float: right;*/
     /*position: relative;*/
     margin: 10px 50px 10px auto;
-    width: 600px;
+    width: 700px;
     height: 550px;
 }
 li {
     list-style: none;
 }
+/*.card {*/
+/*    flex: 0 1 calc(25% - 1em);*/
+/*}*/
 
 .card {
     display: flex;
-    flex-direction: row;
-    padding: 5px;
-
+    justify-content: space-between;
+    flex-wrap: wrap;
+    /*padding: 5px;*/
 }
 
 #card {
