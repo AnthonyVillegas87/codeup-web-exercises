@@ -27,13 +27,18 @@ $(document).ready(() => {
 
         });
     });
-    const marker = new mapboxgl.Marker({draggable: true})
+    const marker = new mapboxgl.Marker({
+        draggable: true
+    })
         .setLngLat([-98.47987660309634, 29.441973866341172])
         .addTo(map);
-    marker.on('dragend', (result) => {
-        // marker.getLngLat()
-        // weather({lon: result[0], lat: result[1]})
+    geocode(marker, MAPBOX_API_TOKEN).then(() => {
+        marker.on('dragend', () => {
+
+
+        })
     })
+
 
 
 
@@ -57,13 +62,13 @@ $(document).ready(() => {
         let date = new Date(city.dt * 1000);
         let icon =  city.weather[0].icon;
         return `
-                <div class="card bg-info text-white mb-3 text-center">
+                <div class="card bg-info text-white mb-3 ml-2 text-center">
                     <div class="card-body">
                         <h4 class="card-title">${currentDay}</h4>
                             <li class="card-text">${date.toLocaleString()}</li>                   
                             <li class="card-text">${city.weather[0].description}</li>
                             <li class="card-text">Temp: ${city.temp}&#176</li>
-                            <li class="card-text">Feels like: ${city.feels_like}</li>
+                            <li class="card-text">Feels like: ${city.feels_like}&#176</li>
                             <li class="card-text">Humidity: ${city.humidity}%</li>
                             <div class="weather-icon"><img src="icons/icons/${icon}.png" /></div>
                     </div>
@@ -77,27 +82,22 @@ $(document).ready(() => {
             let date = new Date(daily.dt * 1000);
             let icon =  daily.weather[0].icon;
             html +=
-                `                           
-                   <div class="row">
-        <div class="cols-12">
-                <div class="card-deck">
-                    <div class="card bg-info text-white mb-3 text-center">
-                        <div class="card-body">
-                            <h4 class="card-title">${currentDay}</h4>
-                            <li class="card-text">${date.toLocaleString()}</li>
-                            <li class="card-text">${daily.weather[0].description}</li>
-                            <li class="card-text">High: ${daily.temp.day}&#176</li>
-                            <li class="card-text">Low: ${daily.temp.eve}</li>
-                            <li class="card-text">Humidity: ${daily.humidity}%</li>
-                            <div class="weather-icon"> <img src="icons/icons/${icon}.png"></div>
+                `                                           
+                        <div class="card bg-info text-white mb-3 ml-1 text-center">
+                            <div class="card-body">
+                                <h4 class="card-title">${currentDay}</h4>
+                                <li class="card-text">${date.toLocaleString()}</li>
+                                <li class="card-text">${daily.weather[0].description}</li>
+                                <li class="card-text">High: ${daily.temp.day}&#176</li>
+                                <li class="card-text">Low: ${daily.temp.eve}&#176</li>
+                                <li class="card-text">Humidity: ${daily.humidity}%</li>
+                                <div class="weather-icon"><img src="icons/icons/${icon}.png"></div>
+                            </div>
                         </div>
-                    </div>
-            </div>
-        </div>
-    </div> 
                 `
         })
          return  html
     }
 
 });
+

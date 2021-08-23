@@ -15,21 +15,37 @@
 
 <nav class="navbar navbar-expand-sm navbar-light bg-light mt-3 mb-3">
         <div class="collapse navbar-collapse" id="navbarNav">
+            <h1>Weather Forecast</h1>
             <form class="form-inline ml-auto">
                 <input  id="location" type="text" class="form-control mr-2" placeholder="Search">
                 <button class="btn btn-outline-info" id="button" type="button">Search</button>
             </form>
         </div>
 </nav>
-    <div class="container float-lg-right" id="map"></div>
+
+    <div id="map">
+
+    </div>
 
 
-<div id="card">
+<div id="card"><h3>Current Day</h3>
     <div id="day"></div>
 </div>
 
-<div id="week">
-</div>
+<br>
+
+<h3>Weekly Forecast</h3>
+    <div class="row ml-3"  id="week"></div>
+
+
+
+
+
+
+
+
+
+
 
 <script src="js/jquery-3.6.0.min.js"></script>
 <script src="js/weather.js"></script>
