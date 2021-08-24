@@ -5,7 +5,7 @@ $(document).ready(() => {
     //start
     let day = document.getElementById('day');
     let week = document.getElementById('week');
-    let startCoordinates = {lat:29.4419,lon:-98.479};
+    // let startCoordinates = {lat:29.4419,lon:-98.479};
 
     // Map Box
     mapboxgl.accessToken = MAPBOX_API_TOKEN;
@@ -13,7 +13,7 @@ $(document).ready(() => {
         container: 'map',
         style: 'mapbox://styles/mapbox/streets-v11',
         center: [-98.47987660309634, 29.441973866341172],
-        zoom: 6
+        zoom: 12
 
     });
     document.querySelector('#button').addEventListener('click', () => {
@@ -32,9 +32,11 @@ $(document).ready(() => {
     })
         .setLngLat([-98.47987660309634, 29.441973866341172])
         .addTo(map);
-    geocode(marker, MAPBOX_API_TOKEN).then(() => {
-        marker.on('dragend', () => {
 
+    geocode(marker, MAPBOX_API_TOKEN).then((result) => {
+        marker.on('dragend', () => {
+            marker.getLngLat(result)
+            weather({lon: result[0], lat: result[1]})
 
         })
     })
