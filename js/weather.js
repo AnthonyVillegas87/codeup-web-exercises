@@ -23,20 +23,21 @@ $(document).ready(() => {
             map.flyTo({
                 center: result,
             })
-            weather({lon: result[0], lat: result[1]})
+            weather({lng: result[0], lat: result[1]})
 
         });
     });
+
     const marker = new mapboxgl.Marker({
         draggable: true
     })
         .setLngLat([-98.47987660309634, 29.441973866341172])
         .addTo(map);
 
-    geocode(marker, MAPBOX_API_TOKEN).then((result) => {
+    geocode(marker, MAPBOX_API_TOKEN).then(() => {
         marker.on('dragend', () => {
-            marker.getLngLat(result)
-            weather({lon: result[0], lat: result[1]})
+          const lngLat =  marker.getLngLat({lng:[0], lat: [1]})
+            weather(lngLat)
 
         })
     })
@@ -46,7 +47,7 @@ $(document).ready(() => {
 
 // for data retrieval
     function weather(obj) {
-        fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${obj.lat}&lon=${obj.lon}&exclude=minutely&units=imperial&appid=${WEATHER_API_TOKEN}`)
+        fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${obj.lat}&lon=${obj.lng}&exclude=minutely&units=imperial&appid=${WEATHER_API_TOKEN}`)
             .then(result => result.json())
             .then(data => {
                 console.log(data)
