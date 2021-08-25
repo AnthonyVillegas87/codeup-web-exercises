@@ -5,7 +5,7 @@ $(document).ready(() => {
     //start
     let day = document.getElementById('day');
     let week = document.getElementById('week');
-    // let startCoordinates = {lat:29.4419,lon:-98.479};
+
 
     // Map Box
     mapboxgl.accessToken = MAPBOX_API_TOKEN;
