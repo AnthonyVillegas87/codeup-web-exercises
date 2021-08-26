@@ -36,14 +36,15 @@ const users = [
 // declared as `const`
 const name = 'Anthony Villegas';
 const email = 'villegasanthony87@yahoo.com';
-const languages = ['html', 'css', 'javascript'];
+const languages = ['html', 'css', 'javascript'] ;
 
 // TODO: rewrite the object literal using object property shorthand
- const  {
+
+ users.push({
     name,
     email,
     languages
-} = users ;
+}) ;
 
 
 
@@ -68,16 +69,18 @@ let developers = [];
     // const languages = user.languages;
 
     // TODO: rewrite the assignment below to use template strings
-    developers.push(`${name}'\'s email is ${email} knows ${languages.join(', ')}`);
+    developers.push(`${name}\'s email is ${email}, ${name} knows ${languages.join(', ')}`);
 });
 
 // TODO: Use `let` for the following variable
-let list = '<ul>';
+let list = '';
 
 // TODO: rewrite the following loop to use a for..of loop
-for(const developer in developers) {
+for(const name of developers) {
 
     // TODO: rewrite the assignment below to use template strings
-    list += `<li>${developer}</li>`;
+    list += `${name}: ${developers[name]}`;
 }
+list += ''
+
 console.log(list)
