@@ -52,7 +52,9 @@ return total + current.yearsOfExperience
 // 4.
 let longestEmail = users.reduce((total, current) => {
     return total.email.length > current.email.length ? total : current
-});
+}).email;
 
 // 5.
-let list = users.reduce((prev,curr) =>  prev.concat(curr.name),'Your instructors are: ')
+let list = users.reduce((prev,curr) =>  prev.concat(curr.name),'Your instructors are: ');
+
+// BONUS // 6.
