@@ -228,8 +228,8 @@ A new array with the elements that pass the test. If no elements pass the test, 
 */
 
 
-  // const under10K = cars.filter(car => car.mileage < 10000);
-  //
+  const under10K = cars.filter(car => car.mileage < 10000);
+
   // let affordableWithTax = prices.filter(price => price < 10).map(price => {
   //     let tax = (price * 0.0825).toFixed(2);
   //     let total = (parseFloat(price) + parseFloat(tax)).toFixed(2);
@@ -304,9 +304,10 @@ Throws a TypeError if the array contains no elements and initialValue is not pro
 
   */
 
-  let total = prices.reduce((total, price) => {
-      return total + price
-  }, 158.62);
+  // let total = prices.reduce((total, price) => {
+  //     return total + price
+  // }, 158.62);
 </script>
+<script src="js/map-filter-reduce.js"></script>
 </body>
 </html>
