@@ -42,24 +42,29 @@ const dogs = [
 // MAP
 
 // TODO 1: using map, create a new array of dog names from the dogs array
+let dogNames = dogs.map(dog => dog.dogName)
 console.log('Exercise 1:');
 
 // TODO 2: using map, create a new array of dog ages from the dogs array
+let ages = dogs.map(dog => dog.age)
 console.log('Exercise 2:');
 
 // TODO 3: using map, create a new array of dog objects from the dogs array that only have dog names and age properties and values
 console.log('Exercise 3:');
-
+let newDogArray = dogs.map(ele => ({dogName: ele.dogName, age: ele.age }));
 
 // FILTER
 
 // TODO 4: using filter, create a new array containing only dogs younger than 10 years old
+let youngDogs = dogs.filter(dog => dog.age < 10)
 console.log('Exercise 4:');
 
 // TODO 5: using filter, create a new array containing only dogs named 'Lexie'
+let lex = dogs.filter(dog => dog.dogName === 'Lexie')
 console.log('Exercise 5:');
 
 // TODO 6: using filter, create a new array containing only dogs that are trained and younger than 10
+let trainedYoung = dogs.filter(dog => dog.isTrained === true && dog.age < 10)
 console.log('Exercise 6:');
 
 

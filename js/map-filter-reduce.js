@@ -55,6 +55,6 @@ let longestEmail = users.reduce((total, current) => {
 }).email;
 
 // 5.
-let list = users.reduce((prev,curr) =>  prev.concat(curr.name),'Your instructors are: ');
+let list = users.reduce((prev,curr) =>  prev.concat(curr.name),`Your instructors are: `);
 
 // BONUS // 6.
