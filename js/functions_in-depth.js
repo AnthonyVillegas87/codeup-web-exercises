@@ -71,18 +71,27 @@ console.log('Exercise 6:');
 // REDUCE
 
 // TODO 7: using reduce, return a string containing all dog names together with no spaces ("BubblesLexieDoggy...")
+let allNames = dogNames.reduce((prev, curr) => prev.concat(curr), ' ');
 console.log('Exercise 7:');
 
 // TODO 8: using reduce, return the total of adding all dog ages together (18)
+let addAges = ages.reduce((prev, curr) => prev + curr);
 console.log('Exercise 8:');
 
 // TODO 9: using reduce, return an array of dog objects with all isTrained properties set to true
+let trained = dogs.reduce((prev, curr)  => {
+    if(curr.isTrained === true) {
+        prev.push(curr)
+    }
+    return prev
+}, [])
 console.log('Exercise 9:');
 
 
 // EXTRA CHALLENGES
 
 // TODO 10: what is the average age of each dog?
+let averageAge = ages.reduce((prev, curr) => )
 console.log('Exercise 10:');
 
 // TODO 11: what is the average age of dogs that are trained?
@@ -98,7 +107,61 @@ console.log('Exercise 13:');
 console.log('Exercise 14:');
 
 
+let movies = [
+    {
+        title: "Shrek",
+        rating: 4
+    },
+    {
+        title: "The Incredibles",
+        rating: 4
+    },
+    {
+        title: "The Lion King",
+        rating: 5
+    },
+    {
+        title: "It",
+        rating: 5
+    },
+    {
+        title: "Toy Story",
+        rating: 4
+    },
+    {
+        title: "The Jungle Book",
+        rating: 4
+    },
+    {
+        title: "Up",
+        rating: 5
+    },
+    {
+        title: "Tombstone",
+        rating: 5
+    },
+    {
+        title: "The Gentlemen",
+        rating: 5
+    },
+    {
+        title: "Gangster Squad",
+        rating: 5
+    }
+];
 
+// To =>
+//
+// 0: {title: "Gangster Squad", rating: 5}
+// 1: {title: "The Gentlemen", rating: 5}
+// 2: {title: "The Incredibles", rating: 4}
+// 3: {title: "It", rating: 5}
+// 4: {title: "The Jungle Book", rating: 4}
+// 5: {title: "The Lion King", rating: 5}
+// 6: {title: "Shrek", rating: 4}
+// 7: {title: "Tombstone", rating: 5}
+// 8: {title: "Toy Story", rating: 4}
+// 9: {title: "Up", rating: 5}
 
 
 
