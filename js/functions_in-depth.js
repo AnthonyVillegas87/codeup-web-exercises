@@ -91,16 +91,27 @@ console.log('Exercise 9:');
 // EXTRA CHALLENGES
 
 // TODO 10: what is the average age of each dog?
-let averageAge = ages.reduce((prev, curr) => )
+let averageAge = ages.reduce((prev, curr) => prev + curr) / ages.length
 console.log('Exercise 10:');
 
 // TODO 11: what is the average age of dogs that are trained?
+let averageTrained = trained.reduce((prev, curr) => prev + curr.age, 0) / trained.length
 console.log('Exercise 11:');
 
 // TODO 12: what is the average length of names of untrained dogs?
-console.log('Exercise 12:');
+let unTrained = dogs.reduce((prev, curr) => {
+    if(curr.isTrained === false) {
+        prev.push(curr)
+    }
+    return prev
+}, [])
+
+let untrainedNames = unTrained.map(dog => dog.dogName)
+let averageLengthOfNames = untrainedNames.reduce((prev, curr, i, arr) => prev + curr.length / arr.length, 0)
+console.log(`Exercise 12:`);
 
 // TODO 13: what are the combined ages of all dogs in dog years? (7x more than a human year)
+let agesInDogYears = ages.reduce((prev, curr) => prev + curr * 7 ,0)
 console.log('Exercise 13:');
 
 // TODO 14: create a string of the first letters of each dog name for dogs three years old (should be "LF")
@@ -163,7 +174,17 @@ let movies = [
 // 8: {title: "Toy Story", rating: 4}
 // 9: {title: "Up", rating: 5}
 
-
+let assortedMovies = movies.sort((firstEl, secondEl) => {
+   let val1 =  firstEl.title.toUpperCase();
+    let val2 = secondEl.title.toUpperCase();
+    if(val1 < val2) {
+        return -1
+    }
+    if(val1 > val2) {
+        return 1
+    }
+    return 0
+});
 
 
 
