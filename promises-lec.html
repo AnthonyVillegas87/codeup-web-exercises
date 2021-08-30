@@ -126,6 +126,33 @@ How will I likely use promises in the future (what is the real world application
     // Fetch API Version...
 
 
+   // fetch('https://swapi.dev/api/people/1').then((response) => {
+   //     return response.json();
+   // })
+   //  .then((data) => {
+   //      console.log(data);
+   //  })
+   //  .catch((error) => {
+   //      console.log(error)
+   //  })
+
+    // fetch('https://swapi.dev/api/planets/1').then(response =>
+    //     response.json()).then(data => {
+    //     console.log(data);
+    // })
+    // .catch(error => {
+    //     console.log(error)
+    // })
+
+    fetch('http://quotes.stormconsultancy.co.uk/random.json').then(response =>
+    response.json()).then(data => {
+        console.log(data);
+    })
+    .catch(error => {
+        console.log(error)
+    })
+
+
     // -------- MINI EXERCISE 2
 
     /* TODO: make a GET request using fetch to the url below to get an array of five cat fact objects.
