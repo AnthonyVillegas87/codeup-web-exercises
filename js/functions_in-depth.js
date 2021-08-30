@@ -115,6 +115,9 @@ let agesInDogYears = ages.reduce((prev, curr) => prev + curr * 7 ,0)
 console.log('Exercise 13:');
 
 // TODO 14: create a string of the first letters of each dog name for dogs three years old (should be "LF")
+let puppy = dogs.filter(dog => dog.age <= 3);
+//let firstLetters = puppy.reduce((pre, curr) => pre + curr)
+
 console.log('Exercise 14:');
 
 
@@ -175,7 +178,7 @@ let movies = [
 // 9: {title: "Up", rating: 5}
 
 let assortedMovies = movies.sort((firstEl, secondEl) => {
-   let val1 =  firstEl.title.toUpperCase();
+   let val1 =  firstEl.title.replace('The', '').toUpperCase();
     let val2 = secondEl.title.toUpperCase();
     if(val1 < val2) {
         return -1
