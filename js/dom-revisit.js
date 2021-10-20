@@ -39,3 +39,4 @@ function newStyle() {
     elem.style.fontFamily = newFont;
 }
 document.querySelector('h1').innerHTML = 'The .querySelector() method allows us to specify a CSS selector and then returns the first element that matches that selector. The following code would return the first paragraph in the document.'
+document.getElementById('four').innerHTML = '.getElementById() method to access the element with an id of "four".'
