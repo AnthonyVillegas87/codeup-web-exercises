@@ -47,3 +47,13 @@ let newDestination = document.createElement('li');
 newDestination.id = 'six';
 newDestination.innerHTML = 'The .createElement(tagName) method creates a new element based on the specified tag name passed into it as an argument. However, it does not append it to the document. It creates an empty element with no inner HTML.In order to create an element and add it to the web page, you must assign it to be the child of an element that already exists on the DOM. We call this process appending. The .appendChild() method will add a child element as the last child node.'
 document.body.appendChild(newDestination);
+
+let specialButton = document.querySelector('#special');
+
+function turnButtonRed() {
+    specialButton.style.backgroundColor = 'red';
+    specialButton.style.color = 'white';
+    specialButton.innerHTML = "Red Button";
+}
+
+specialButton.onclick = turnButtonRed;
