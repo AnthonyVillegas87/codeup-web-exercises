@@ -25,7 +25,7 @@ body {
 }
 
 .instructions-row {
-    margin: 0;
+    margin: 0 auto;
     width: 400px;
 }
 

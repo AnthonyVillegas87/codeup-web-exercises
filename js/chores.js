@@ -11,25 +11,25 @@ let spaceDoorPath = "https://content.codecademy.com/projects/chore-door/images/s
 let closedDoorPath = "https://content.codecademy.com/projects/chore-door/images/closed_door.svg";
 
 
-let numClosedDoors = 4;
+let numClosedDoors = 3;
 let openDoor1;
 let openDoor2;
 let openDoor3;
 
 const isClicked = (door) => {
     if(door.src === closedDoorPath) {
-        return false
+        return false;
     } else {
-        return true
+        return true;
     }
 
 
 }
 
-const playDoor = () => {
+const playDoor = (door) => {
     numClosedDoors--;
     if(numClosedDoors === 0) {
-        gameOver();
+        gameOver('win');
     }
 }
 
