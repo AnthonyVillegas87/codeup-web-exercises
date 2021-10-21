@@ -5,6 +5,11 @@ let doorImage2 = document.getElementById("door2");
 let doorImage3 = document.getElementById("door3");
 
 
+
+const randomChoreDoorGenerator = () => {
+
+}
+
 let botDoorPath = "https://content.codecademy.com/projects/chore-door/images/robot.svg";
 let doorBeachPath = "https://content.codecademy.com/projects/chore-door/images/beach.svg";
 let spaceDoorPath = "https://content.codecademy.com/projects/chore-door/images/space.svg";
