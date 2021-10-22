@@ -70,7 +70,7 @@ const randomChoreDoorGenerator = () => {
 
 
 doorImage1.onclick = () => {
-    if(currentlyPlaying && isClicked(doorImage1)) {
+    if(currentlyPlaying && !isClicked(doorImage1)) {
         doorImage1.src = openDoor1;
         playDoor(doorImage1);
     }
@@ -78,7 +78,7 @@ doorImage1.onclick = () => {
 }
 
 doorImage2.onclick = () => {
-    if(currentlyPlaying && isClicked(doorImage2)) {
+    if(currentlyPlaying && !isClicked(doorImage2)) {
         doorImage2.src = openDoor2;
         playDoor(doorImage2);
     }
@@ -86,7 +86,7 @@ doorImage2.onclick = () => {
 }
 
 doorImage3.onclick = () => {
-    if(currentlyPlaying && isClicked(doorImage2)) {
+    if(currentlyPlaying && !isClicked(doorImage2)) {
         doorImage3.src = openDoor3;
         playDoor(doorImage3);
     }
@@ -94,7 +94,10 @@ doorImage3.onclick = () => {
 }
 
 startBtn.onclick = () => {
-    startRound();
+    if(!currentlyPlaying) {
+        startRound();
+    }
+
 }
 
 const startRound = () => {
@@ -104,6 +107,7 @@ const startRound = () => {
     numClosedDoors = 3;
     currentlyPlaying = true;
     startBtn.innerHTML = 'Good Luck!';
+    randomChoreDoorGenerator();
 }
 
 const gameOver = (status) => {
@@ -115,4 +119,4 @@ const gameOver = (status) => {
     currentlyPlaying = false;
 }
 
-randomChoreDoorGenerator();
+startRound();
