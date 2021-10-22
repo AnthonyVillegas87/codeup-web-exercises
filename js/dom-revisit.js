@@ -1,4 +1,11 @@
 "use strict";
+let readMore = document.getElementById("read-more");
+let moreInfo = document.getElementById("more-info")
+function showInfo() {
+    moreInfo.style.display = "block";
+}
+readMore.addEventListener('click', showInfo);
+
 
 function newStyle() {
     let newColor = '';
@@ -57,3 +64,4 @@ function turnButtonRed() {
 }
 
 specialButton.onclick = turnButtonRed;
+
