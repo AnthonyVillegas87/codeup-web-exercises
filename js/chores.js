@@ -23,7 +23,7 @@ const isBot = (door) => {
     if(door.src === botDoorPath) {
         return true;
     } else {
-        return true;
+        return false;
     }
 }
 
@@ -43,7 +43,7 @@ const playDoor = (door) => {
     if(numClosedDoors === 0) {
         gameOver('win');
     } else if(isBot(door)) {
-        gameOver();
+        gameOver('lose');
     }
 }
 
@@ -70,7 +70,7 @@ const randomChoreDoorGenerator = () => {
 
 
 doorImage1.onclick = () => {
-    if(currentlyPlaying && !isClicked(doorImage1)) {
+    if(currentlyPlaying && isClicked(doorImage1)) {
         doorImage1.src = openDoor1;
         playDoor(doorImage1);
     }
@@ -78,7 +78,7 @@ doorImage1.onclick = () => {
 }
 
 doorImage2.onclick = () => {
-    if(currentlyPlaying && !isClicked(doorImage2)) {
+    if(currentlyPlaying && isClicked(doorImage2)) {
         doorImage2.src = openDoor2;
         playDoor(doorImage2);
     }
@@ -86,7 +86,7 @@ doorImage2.onclick = () => {
 }
 
 doorImage3.onclick = () => {
-    if(currentlyPlaying && !isClicked(doorImage2)) {
+    if(currentlyPlaying && isClicked(doorImage2)) {
         doorImage3.src = openDoor3;
         playDoor(doorImage3);
     }
@@ -98,7 +98,12 @@ startBtn.onclick = () => {
 }
 
 const startRound = () => {
-
+    doorImage1.src = closedDoorPath;
+    doorImage2.src = closedDoorPath;
+    doorImage3.src = closedDoorPath;
+    numClosedDoors = 3;
+    currentlyPlaying = true;
+    startBtn.innerHTML = 'Good Luck!';
 }
 
 const gameOver = (status) => {
