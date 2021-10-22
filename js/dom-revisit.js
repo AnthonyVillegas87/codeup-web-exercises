@@ -1,6 +1,8 @@
 "use strict";
 let readMore = document.getElementById("read-more");
-let moreInfo = document.getElementById("more-info")
+let moreInfo = document.getElementById("more-info");
+
+
 function showInfo() {
     moreInfo.style.display = "block";
 }
