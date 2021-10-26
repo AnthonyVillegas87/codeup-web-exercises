@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery Methods</title>
+    <style>
+        .highlight {
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+<h1>Essential Methods</h1>
+<h2 id="leader">Im the leader</h2>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+    Accusamus alias aliquam, dicta ea odit quis tempore ut?
+    Accusamus cumque dicta dignissimos dolorem iusto nobis possimus repellat.
+    Aperiam ipsam molestias saepe?</p>
+<h2 id="follower">I follow</h2>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+    Aliquam aliquid culpa cum deleniti et laborum maiores necessitatibus optio quo vero!
+    Aut, cumque dolor ducimus ipsa necessitatibus rem repellendus soluta ut!</p>
+<button id="font-changer">Change the font!</button>
+<script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+<script>
+    $(document).ready(() => {
+        // let htmlMethod = $("#follower").html();
+        // if(htmlMethod === "Essential Methods") {
+        //     $("#leader").html("And they're needed!")
+        // }
+
+        $('#font-changer').on('click', () => {
+            let currentFontFamily = $("body").css("font-family");
+            if(currentFontFamily ===  "serif") {
+                $('body').css("font-family", "sans-serif");
+            }else{
+                $('body').css('font-family', 'serif')
+            }
+        });
+
+        // $("h2").on('mouseenter', () => {
+        //     $(this).addClass("highlight");
+        // });
+        // $("h2").on('mouseleave', () => {
+        //     $(this).removeClass("highlight");
+        // });
+
+        // $("h2").hover(function () {
+        //     $(this).toggleClass("highlight");
+        // })
+
+        $("h2").hover(function (e) {
+            $(e.target).toggleClass("highlight");
+        })
+    });
+    // mouse *
+    // .click()
+    // Bind an event handler to the “click” JavaScript event, or trigger that event on an element.
+    //     .contextmenu()
+    // Bind an event handler to the “contextmenu” JavaScript event, or trigger that event on an element.
+    //     .dblclick()
+    // Bind an event handler to the “dblclick” JavaScript event, or trigger that event on an element.
+    //     .hover()
+    // Bind one or two handlers to the matched elements, to be executed when the mouse pointer enters and leaves the elements.
+    //     .mousedown()
+    // Bind an event handler to the “mousedown” JavaScript event, or trigger that event on an element.
+    //     .mouseenter()
+    // Bind an event handler to be fired when the mouse enters an element, or trigger that handler on an element.
+    //     .mouseleave()
+    // Bind an event handler to be fired when the mouse leaves an element, or trigger that handler on an element.
+    //     .mousemove()
+    // Bind an event handler to the “mousemove” JavaScript event, or trigger that event on an element.
+    //     .mouseout()
+    // Bind an event handler to the “mouseout” JavaScript event, or trigger that event on an element.
+    //     .mouseover()
+    // Bind an event handler to the “mouseover” JavaScript event, or trigger that event on an element.
+    //     .mouseup()
+    // Bind an event handler to the “mouseup” JavaScript event, or trigger that event on an element.
+    //     Browser *
+    // .resize()
+    // Bind an event handler to the “resize” JavaScript event, or trigger that event on an element.
+    //     .scroll()
+    // Bind an event handler to the “scroll” JavaScript event, or trigger that event on an element.
+    //     Event Attachment *
+    // .off()
+    // Remove an event handler.
+    //     .on()
+    // Attach an event handler function for one or more events to the selected elements.
+    //     .one()
+    // Attach a handler to an event for the elements. The handler is executed at most once per element per event type.
+    //     .trigger()
+    // Execute all handlers and behaviors attached to the matched elements for the given event type.
+    //     .triggerHandler()
+    // Execute all handlers attached to an element for an event.
+    //     Event Objects *
+    // event.currentTarget
+    // The current DOM element within the event bubbling phase.
+    //     event.data
+    // An optional object of data passed to an event method when the current executing handler is bound.
+    //     Also in: Events
+    // event.delegateTarget
+    // The element where the currently-called jQuery event handler was attached.
+    // event.isDefaultPrevented()
+    // Returns whether event.preventDefault() was ever called on this event object.
+    // event.isImmediatePropagationStopped()
+    // Returns whether event.stopImmediatePropagation() was ever called on this event object.
+    // event.isPropagationStopped()
+    // Returns whether event.stopPropagation() was ever called on this event object.
+    //     event.metaKey
+    // Indicates whether the META key was pressed when the event fired.
+    //     event.namespace
+    // The namespace specified when the event was triggered.
+    //     event.pageX
+    // The mouse position relative to the left edge of the document.
+    //     event.pageY
+    // The mouse position relative to the top edge of the document.
+    // event.preventDefault()
+    // If this method is called, the default action of the event will not be triggered.
+    //     event.relatedTarget
+    // The other DOM element involved in the event, if any.
+    //     event.result
+    //     The last value returned by an event handler that was triggered by this event, unless the value was undefined.
+    // event.stopImmediatePropagation()
+    // Keeps the rest of the handlers from being executed and prevents the event from bubbling up the DOM tree.
+    // event.stopPropagation()
+    // Prevents the event from bubbling up the DOM tree, preventing any parent handlers from being notified of the event.
+    //     event.target
+    // The DOM element that initiated the event.
+    //     event.timeStamp
+    // The difference in milliseconds between the time the browser created the event and January 1, 1970.
+    // event.type
+    // Describes the nature of the event.
+    //     event.which
+    // For key or mouse events, this property indicates the specific key or button that was pressed.
+    //     Forms *
+    // .blur()
+    // Bind an event handler to the “blur” JavaScript event, or trigger that event on an element.
+    //     .change()
+    // Bind an event handler to the “change” JavaScript event, or trigger that event on an element.
+    //     .focus()
+    // Bind an event handler to the “focus” JavaScript event, or trigger that event on an element.
+    //     .focusin()
+    // Bind an event handler to the “focusin” event.
+    //     .focusout()
+    // Bind an event handler to the “focusout” JavaScript event.
+    //     .select()
+    // Bind an event handler to the “select” JavaScript event, or trigger that event on an element.
+    //     .submit()
+    // Bind an event handler to the “submit” JavaScript event, or trigger that event on an element.
+    //     Keyboard *
+    // .keydown()
+    // Bind an event handler to the “keydown” JavaScript event, or trigger that event on an element.
+    //     .keypress()
+    // Bind an event handler to the “keypress” JavaScript event, or trigger that event on an element.
+    //     .keyup()
+    // Bind an event handler to the “keyup” JavaScript event, or trigger that event on an element.
+    // 4:47
+    // $(window).on('scroll', () => {
+    //     $('.first-image').hide();
+    // }
+    // or if we wanted to show the image on a keystroke like enter, we could write something like so:
+    //     $(window).keydown(( event ) => {
+    //         if ( event.which == 13 ) {
+    //             $('.first-image').show();
+    //         }
+    //     });
+    // and we could also use mouse interaction, like hiding the image when the mouse cursor is on the button, and showing it when the mouse cursor has moved away:
+    //     $('.hide-button').mouseenter( () => {
+    //         $('.first-image').hide(2000);
+    //     });
+    //
+    // $('.hide-button').mouseout( () => {
+    //     $('.first-image').show(2000);
+    // });
+    // .show() and .hide() might need an event, but luckily there are many types of events. other JQuery event listeners are:
+    //
+
+</script>
+</body>
+</html>

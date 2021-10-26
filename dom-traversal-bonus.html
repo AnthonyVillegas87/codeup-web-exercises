@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dom Bonus</title>
+    <style>
+        #container {
+            width: 826px;
+            height:auto;
+            margin: 0 auto;
+            display: flex;
+        }
+        h1 {
+            text-align: center;
+        }
+        .picture {
+            display: flex;
+            margin: 0 10px;
+            flex-direction: column;
+        }
+        .picture img {
+            border: 10px solid saddlebrown;
+        }
+
+        button {
+            margin-top: 15px;
+            align-self: center;
+        }
+    </style>
+</head>
+<body>
+<h1>DOM Traversing</h1>
+    <div id="container">
+        <div id="picture1">
+            <img src="img/github_32_black.png" alt="">
+        </div>
+        <button type="button">swap</button>
+        <div id="picture2">
+            <img src="img/github_32_black.png" alt="">
+        </div>
+        <button type="button">swap</button>
+        <div id="picture3">
+            <img src="img/github_32_black.png" alt="">
+        </div>
+        <button type="button">swap</button>
+    </div>
+
+
+<script src="js/jquery-3.6.0.min.js"></script>
+<script src="js/bonus.js"></script>
+</body>
+</html>

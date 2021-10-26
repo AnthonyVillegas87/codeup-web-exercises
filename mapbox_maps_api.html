@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mapbox Maps API</title>
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.4.1/mapbox-gl.css" rel="stylesheet">
+
+    <style>
+        body { margin: 0; padding: 0; }
+        #map { width: 800px; height: 800px }
+    </style>
+</head>
+<body>
+
+
+<h1>Marker Coordinates : <span id="coordinates"></span></h1>
+
+<h3>Enter Address</h3>
+<input type="text" id="address" placeholder="Enter address">
+<button id="change-map-btn">Change Map</button>
+<div id="map"></div>
+
+
+
+
+
+
+
+
+
+
+
+<script src="https://api.mapbox.com/mapbox-gl-js/v2.4.1/mapbox-gl.js"></script>
+<script src="js/mapbox-utils.js"></script>
+<script src="js/keys.js"></script>
+
+<script>
+
+    "use strict"
+    mapboxgl.accessToken = MAPBOX_API_TOKEN;
+    const map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/streets-v11',
+        center: [-98.47987660309634, 29.441973866341172],
+        zoom: 15
+    });
+
+    // Create a handler to find location on click
+    document.querySelector('#change-map-btn').addEventListener('click', () => {
+        let address = document.querySelector('#address').value;
+        geocode(address, MAPBOX_API_TOKEN).then((result) => {
+            map.setCenter(result);
+        });
+    });
+
+    var restaurantInfo = [
+    {
+        name: 'Cured',
+        cuisine: 'American Regional',
+        longitude: -98.47987660309634,
+        latitude: 29.44189912031983
+
+    },
+    {
+        name: 'Fish City Grill',
+        cuisine: 'Seafood',
+        longitude: -98.4675670992182,
+        latitude: 29.60536276581088
+    },
+    {
+        name: 'SoutherLeigh',
+        cuisine: 'Southern Cuisine',
+        longitude: -98.48072105010743,
+         latitude:  29.442499739240972
+    },
+    ]
+
+    restaurantInfo.forEach((restaurant) => {
+        const marker = new mapboxgl.Marker({draggable: true})
+            .setLngLat([restaurant.longitude, restaurant.latitude]).addTo(map)
+        const newPopup = new mapboxgl.Popup().setHTML(restaurant.name);
+
+        marker.on('dragend', () => {
+            document.querySelector('#coordinates').innerHTML = marker.getLngLat()
+        });
+
+        marker.setPopup(newPopup)
+
+    });
+
+
+    // if(navigator.geolocation) {
+    //     navigator.geolocation.getCurrentPosition((position) => {
+    //         alert('Can We have your Location ?')
+    //         // const {latitude} = position.coords
+    //         // const {longitude} = position.coords
+    //         console.log(navigator)
+    //     }, () => {
+    //         alert('Could not get your position')
+    //     })
+    // }
+
+
+
+
+
+</script>
+</body>
+</html>

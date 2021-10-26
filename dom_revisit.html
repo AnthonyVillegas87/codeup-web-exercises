@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #containerToo {
+            background: #141c3a;
+            margin: 0;
+            display: block;
+            float: left;
+            width: 100vw;
+            height: 100vh;
+        }
+        #read-more {
+            width: 200px;
+            height: 50px;
+            font-size: 24px;
+            border: none;
+            display: block;
+            background-color: #6DF0C2;
+            margin: 0 auto;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+        #info, #more-info{
+            display: block;
+            margin: 0 auto;
+            width: 350px;
+            height: 120px;
+            padding: 20px;
+            font-size: 20px;
+            text-align: center;
+            display: block;
+            background-color: #fd4d3f;
+            color: white;
+            margin-top: 20px;
+        }
+        #more-info{
+            display: none;
+        }
+
+    </style>
+</head>
+<body>
+
+<!--PART 1-->
+<section class = "container">
+  <img src = "img/OfficialCodeupLogo.png" id= "myImage">
+  <h1>CodeUp</h1>
+    <button onclick="appear()">Click me</button>
+    <button id="special">Blue Button</button>
+</section>
+
+<p onclick="newStyle();" id="SoC">
+    Linking code is preferable because of a programming concept called Separation of Concerns (SoC).
+    Instead of having messy code that is all in the same file,
+    web developers separate their code into different files,
+    making each “concern” easier to understand and more convenient when changes must be made.
+
+</p>
+
+<ol>
+    <li id="one">Hurricanes</li>
+    <li id="two">Buckeyes</li>
+    <li id="three">Crimson Tide</li>
+    <li id="four">Volunteers</li>
+    <li id="five">Longhorns</li>
+</ol>
+
+
+<!--PART 2-->
+<section id="containerToo">
+    <p id="info">JavaScript is the programming language of the web. You can use it to add dynamic behavior and store information.</p>
+    <p id="more-info">JavaScript can also handle requests and responses on a website. It's a great language to master for front-end and back-end web development.</p>
+    <button id="read-more">Read More</button>
+</section>
+
+
+
+
+
+
+
+
+
+
+<script>
+    function appear() {
+        var image = document.getElementById('myImage');
+        if (image.src.match("Official")) {
+            image.src = "img/codeup-arrow.png";
+        } else {
+            image.src = "img/OfficialCodeupLogo.png";
+        }
+    }
+</script>
+<script src="js/dom-revisit.js"></script>
+</body>
+</html>

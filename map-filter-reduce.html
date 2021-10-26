@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Map-Filter-Reduce lec</title>
+</head>
+<body>
+<div id="output"></div>
+
+<script src="js/jquery-3.6.0.min.js"></script>
+<script>
+  //Array Iteration Methods = methods that operate on every item inside an array
+
+
+  //Map, filter, reduce do not alter the original array
+  //either create a new array from the old one, OR generate a value based on the old array
+
+  let output = "";
+  let prices = [22, 60, 6, 21, 8, 10, 22.6, 15.5];
+
+
+//=======================   forEach()  ======================================//
+  /*
+  The forEach() method executes a provided function once for each array element.
+
+  // Arrow function
+forEach((element) => { ... } )
+forEach((element, index) => { ... } )
+forEach((element, index, array) => { ... } )
+
+// Callback function
+forEach(callbackFn)
+forEach(callbackFn, thisArg)
+
+// Inline callback function
+forEach(function callbackFn(element) { ... })
+forEach(function callbackFn(element, index) { ... })
+forEach(function callbackFn(element, index, array){ ... })
+forEach(function callbackFn(element, index, array) { ... }, thisArg)
+
+
+Parameters
+callbackFn
+Function to execute on each element. It accepts between one and three arguments:
+
+element
+The current element being processed in the array.
+
+index Optional
+The index of element in the array.
+
+array Optional
+The array forEach() was called upon.
+
+thisArg Optional
+Value to use as this when executing callbackFn.
+
+Return value
+undefined.
+
+  */
+
+      // prices.forEach((item) => {
+      //   //console.log(item);
+      //   output += `<p>${item}</p>`
+      //
+      // });
+      // $('#output').html(output)
+
+      // prices.forEach((item, index) => {
+      //   let tax = (item * 0.0825).toFixed(2);
+      //   let total = (parseFloat(item) + parseFloat(tax)).toFixed(2);
+      //   output += `<p> Item number ${index + 1}. Price: $${item}. Tax: $${tax}. Total: $${total}</p>`
+      // })
+      // $('#output').html(output)
+
+
+
+
+  //=======================   map() ========================//
+
+/*
+The map() method creates a new array populated with
+the results of calling a provided function on every element in the calling array.
+
+  Arrow function
+  map((element) => { ... } )
+  map((element, index) => { ... } )
+  map((element, index, array) => { ... } )
+
+  Callback function
+  map(callbackFn)
+  map(callbackFn, thisArg)
+
+  Inline callback function
+  map(function callbackFn(element) { ... })
+  map(function callbackFn(element, index) { ... })
+  map(function callbackFn(element, index, array){ ... })
+  map(function callbackFn(element, index, array) { ... }, thisArg)
+
+  Parameters
+  callbackFn
+  Function that is called for every element of arr.
+  Each time callbackFn executes, the returned value is added to newArray.
+
+      The callbackFn function accepts the following arguments:
+
+      element
+  The current element being processed in the array.
+
+      indexOptional
+  The index of the current element being processed in the array.
+
+      arrayOptional
+  The array map was called upon.
+
+      thisArgOptional
+  Value to use as this when executing callbackFn.
+
+      Return value
+  A new array with each element being the result of the callback function.
+*/
+
+
+  //let pricesAfterTax = [];
+
+      // let pricesAfterTax = prices.map((item) => {
+      //   let tax = (item * 0.0825).toFixed(2);
+      //   let total = (parseFloat(item) + parseFloat(tax)).toFixed(2);
+      //   return parseFloat(total);
+      // });
+      // pricesAfterTax.forEach((item) => output +=`<p>${item}</p>`)
+      //$('#output').html(output)
+
+      let things = ["book", "pencil", "marker", "eraser"];
+      // let pluralThings = things.map(function(item){
+      //   item = item + 's';
+      //   return item;
+      // });
+
+      // let pluralThings = things.map((item) => `${item}s`)
+      // pluralThings.forEach((item, index) => {
+      //   if(index === 0) {
+      //     output = `<p>You must try the following items: </p>`;
+      //     output += `<p>${item}</p>`;
+      //   } else {
+      //     output += `<p>${item}</p>`
+      //   }
+      // });
+      //$('#output').html(output)
+
+      const cars = [
+        {
+          make: "Honda",
+          model: "Civic",
+          mileage: 10428
+        },
+        {
+          make: "Toyota",
+          model: "Corolla",
+          mileage: 9425
+        },
+        {
+          make: "Ford",
+          model: "Mustang",
+          mileage: 2567
+        },
+        {
+          make: "Audi",
+          model: "A3",
+          mileage: 14500
+        },
+        {
+          make: "Mazda",
+          model: "3",
+          mileage: 11248
+        }
+      ];
+
+      // const mileages = cars.map(car => car.mileage)
+      // mileages.forEach(item => output += `<p>${item}</p>`)
+      // $('#output').html(output)
+      //
+  //=========================   filter()  ===========================//
+/*
+The filter() method creates a new array with all elements that pass the
+test implemented by the provided function.
+
+
+// Arrow function
+filter((element) => { ... } )
+filter((element, index) => { ... } )
+filter((element, index, array) => { ... } )
+
+// Callback function
+filter(callbackFn)
+filter(callbackFn, thisArg)
+
+// Inline callback function
+filter(function callbackFn(element) { ... })
+filter(function callbackFn(element, index) { ... })
+filter(function callbackFn(element, index, array){ ... })
+filter(function callbackFn(element, index, array) { ... }, thisArg)
+
+
+
+Parameters
+callbackFn
+Function is a predicate, to test each element of the array.
+Return a value that coerces to true to keep the element, or to false otherwise.
+
+It accepts three arguments:
+
+element
+The current element being processed in the array.
+
+indexOptional
+The index of the current element being processed in the array.
+
+arrayOptional
+The array filter was called upon.
+
+thisArgOptional
+Value to use as this when executing callbackFn.
+
+Return value
+A new array with the elements that pass the test. If no elements pass the test, an empty array will be returned.
+*/
+
+
+  const under10K = cars.filter(car => car.mileage < 10000);
+
+  // let affordableWithTax = prices.filter(price => price < 10).map(price => {
+  //     let tax = (price * 0.0825).toFixed(2);
+  //     let total = (parseFloat(price) + parseFloat(tax)).toFixed(2);
+  //     return parseFloat(total);
+  // })
+
+
+
+  //=================================  reduce() =======================//
+
+
+// let totalCost = affordableWithTax.reduce((total, itemCost) => total + itemCost)
+//   let averagePrice = affordableWithTax.reduce((total, itemCost, index, array) => {
+//       total = total + itemCost;
+//       if(index === array.length -1) {
+//           return total/array.length
+//       } else {
+//           return total
+//       }
+//   });
+
+  /*
+  The reduce() method executes a user-supplied “reducer” callback function on each element of the array,
+   passing in the return value from the calculation on the preceding element.
+   The final result of running the reducer across all elements of the array is a single value.
+
+Perhaps the easiest-to-understand case for reduce() is to return the sum of all the elements in an array.
+
+The reducer walks through the array element-by-element, at each step adding the current array value to the result
+from the previous step (this result is the running sum of all the previous steps) — until there are no more elements to add.
+
+
+  Arrow function
+  reduce((previousValue, currentValue) => { ... } )
+  reduce((previousValue, currentValue, currentIndex) => { ... } )
+  reduce((previousValue, currentValue, currentIndex, array) => { ... } )
+  reduce((previousValue, currentValue, currentIndex, array) => { ... }, initialValue)
+
+  Callback function
+  reduce(callbackFn)
+  reduce(callbackFn, initialValue)
+
+  Inline callback function
+
+  reduce(function callbackFn(previousValue, currentValue) { ... })
+  reduce(function callbackFn(previousValue, currentValue, currentIndex) { ... })
+  reduce(function callbackFn(previousValue, currentValue, currentIndex, array){ ... })
+  reduce(function callbackFn(previousValue, currentValue, currentIndex, array) { ... }, initialValue)
+  Copy to Clipboard
+
+  Parameters:
+  callbackFn
+  A “reducer” function that takes four arguments:
+
+      previousValue (the value resulting from the previous call to callbackfn)
+  currentValue (the value of the current element)
+  currentIndex Optional
+  array (the array to traverse) Optional
+
+  initialValue Optional
+  A value to which previousValue is initialized the first time the callback is called.
+  If initialValue is specified, that also causes currentValue to be initialized to
+  the first value in the array. If initialValue is not specified, previousValue is
+  initialized to the first value in the array, and currentValue is initialized to the
+  second value in the array.
+
+  Return value
+The value that results from running the “reducer” callback function to completion over the entire array.
+
+Exceptions
+Throws a TypeError if the array contains no elements and initialValue is not provided.
+
+  */
+
+  // let total = prices.reduce((total, price) => {
+  //     return total + price
+  // }, 158.62);
+</script>
+<script src="js/map-filter-reduce.js"></script>
+</body>
+</html>

@@ -494,7 +494,14 @@
         if( str === 'string') {
             return str.split('').reverse().join('')
         }
-
     }
+
+    function twoNumberSum(array, targetSum) {
+        for(let i = 0; i < array.length; i++) {
+            
+        }
+    }
+
+
 
 })();

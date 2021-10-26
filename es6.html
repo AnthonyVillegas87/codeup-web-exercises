@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ES6</title>
+</head>
+<body>
+<script src="js/es6.js"></script>
+<script>
+    // let for values that are expected to change
+    {
+        /// global scope
+        var name = 'anthony';
+    }
+
+    {
+        /// local scope
+        let name = 'javier';
+    }
+
+    /// no conflict
+    // let name = 'reich';
+
+    function scopeTest() {
+        //var myName = 'luis';
+        //let newName = 'joe';
+    }
+    scopeTest();
+
+    // const for values that will never change
+
+    //TEMPLATE LITERALS
+
+    // let name = 'javier';
+    // let job = 'programmer';
+    // let place = 'Texas';
+
+    //old
+    // console.log(name + " is a " + job + ' in ' + place);
+
+    //new
+    // console.log(`${name} is ${job} in ${place.toUpperCase()}.`);
+
+
+    // Object destructuring
+    const car = {
+        make: 'Toyota',
+        model: 'Tacoma',
+        year: 2019
+    }
+
+    const {make , model, year} = car;
+    console.log(`My ${make} ${model} is a ${year}`)
+
+
+    car.model = 'Tundra';
+    console.log(car.model);
+
+
+    // Arrow functions
+    // function expression
+    const add = (x, y) => x + y;
+    console.log(add(3, 5))
+
+    // if only 1 parameter, no parentheses needed
+    const addTen = num => num + 10;
+
+    //if no parameters, use empty parentheses
+     const helloWorld = () => 'Hello World!';
+
+     //other functionality in Arrow syntax
+    //declare default values for parameters
+    const addSomethingSpecific = (augend, addend = 25) => augend + addend;
+    console.log(addSomethingSpecific(50));
+
+    //you can destructure objects within parameters
+    const outPutCar = ({make, model, year} = car) => `My ${make} ${model} is a ${year}`;
+
+    // for... of loop
+    //allows you to iterate over data types that are defined as iterable objects --
+    // strings and arrays, as well as nodelists. but not regular objects
+
+    //Iterate over an array
+    const instructors = ['justin', 'javier', 'douglas']
+    for(const name of instructors) {
+        console.log(`${name} teaches at Codeup!`);
+    }
+
+    //Iterate over a string
+    for(const letter of 'CodeUp') {
+        console.log(letter);
+        let p = document.createElement('p');
+        document.getElementsByTagName('body')[0].append(letter, p)
+    }
+
+    let newString = '';
+    for(const letter of 'javier') {
+        let charCode = letter.charCodeAt(0);
+        charCode++;
+        newString += String.fromCharCode(charCode)
+    }
+    console.log(newString);
+
+    // difference of for... in loop & for of
+    // for... in -- loop over the innumerable properties of an object
+    for(const index in instructors) {
+        console.log(index);
+    }
+
+    // for... of -- loop over the values of an object
+    for(const name of instructors) {
+        console.log(name);
+    }
+
+    // To get the values in a for... in loop
+    for(const index in instructors) {
+        console.log(`${index}: ${instructors[index]}`);
+    }
+
+    //Typical use of for...in : get keys & values from an object
+    for(const property in car) {
+        console.log(`${property}: ${car[property]}`);
+    }
+
+</script>
+</body>
+</html>

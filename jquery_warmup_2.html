@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Warmup</title>
+</head>
+<body>
+<!-- TODO: add functionality such that the number in the input will be added to the total in the h1 when the button is clicked
+      No changes to the existing HTML is needed, other than adding jQuery or JavaScript.
+-->
+<h1 id="number-output">0</h1>
+<form>
+  <input id="number-input" type="number" min="0" max="100">
+  <button id="add-btn">Add</button>
+</form>
+
+<script src="js/jquery-3.6.0.min.js"></script>
+
+
+<script>
+    const output = document.getElementById("number-output");
+    const numInput = document.getElementById("number-input");
+    const addBtn = document.getElementById("add-btn");
+
+
+
+  $(document).ready(() => {
+
+$('#add-btn').on('click', () => {
+    let number = $('#number-input')
+    $('#number-output').html().add(number)
+})
+
+
+
+
+  })
+
+
+</script>
+</body>
+</html>

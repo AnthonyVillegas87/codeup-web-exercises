@@ -1,0 +1,41 @@
+* {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    /*box-sizing: border-box;*/
+}
+
+/*.mapboxgl-map {*/
+/*    margin-left: 0;*/
+/*    margin-right: 0;*/
+/*    float: right;*/
+/*}*/
+
+#map {
+    margin: 10px 50px 10px auto;
+    width: 100%;
+    height: 550px;
+}
+
+
+
+li {
+    list-style: none;
+}
+
+.card {
+
+    padding: 5px;
+    width: 210px;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+
+#card {
+    /*display: flex;*/
+    padding: 5px;
+    width: 250px;
+
+}
