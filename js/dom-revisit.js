@@ -8,7 +8,7 @@ let moreInfo = document.getElementById("more-info");
 function newStyle() {
     let newColor = '';
     let newFont = '';
-    let x = Math.floor(Math.random()*7);
+    let x = Math.floor(Math.random() * 7);
     switch (x){
         case 0:
             newColor = 'red';
