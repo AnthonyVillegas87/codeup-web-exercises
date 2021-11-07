@@ -130,55 +130,65 @@
     <!-- START HERE -->
     <form>
       <!-- SWITCH -->
-      <div>
-
+      <div class="switch">
+        <label>
+          Disable
+          <input type="checkbox" checked>
+          <span class="lever"></span>
+          Enable
+        </label>
       </div>
 
       <!-- DISABLED SWITCH -->
-      <div>
-
+      <div class="switch">
+        <label>
+          Disable
+          <input type="checkbox">
+          <span class="lever"></span>
+          Enable
+        </label>
       </div>
 
       <br>
       <br>
 
       <!-- FILE INPUT -->
-      <div>
-        <div>
+      <div class="file-field input-field">
+        <div class="btn">
           <span>Upload File</span>
           <input type="file">
         </div>
-        <div>
-          <input type="text">
+        <div class="file-path-wrapper">
+          <input type="text" class="file-path">
         </div>
       </div>
 
       <!-- RANGE SLIDER -->
-      <p>
-        <input type="range">
+      <p class="range-field">
+        <input type="range" min="0" max="100">
       </p>
 
       <!-- DATE PICKER -->
-      <div>
-        <input type="text" id="date">
+      <div class="input-field">
+        <input type="text" class="datepicker" id="date">
         <label for="date">Choose a Date</label>
       </div>
 
       <!-- TIME PICKER -->
       <div>
-        <input type="text" id="time">
+        <input type="text" class="timepicker" id="time">
         <label for="time">Choose a Time</label>
       </div>
 
       <!-- CHARACTER COUNTER -->
       <div>
-        <input id="post" type="text">
+        <input id="post" type="text" data-length="20">
         <label for="post">Post</label>
       </div>
 
       <!-- AUTOCOMPLETE -->
       <div>
-        <input type="text" id="fruit">
+        <input type="text" id="fruit" class="autocomplete">
         <label for="fruit">Type a Fruit</label>
       </div>
 
@@ -213,8 +223,35 @@
       });
 
       // JAVASCRIPT START HERE //
+      //INIT DATE PICKER
+      $('.datepicker').pickadate({
+        selectMonths: true,
+        selectYear: 15,
+        closeOnSelect: true
+      });
+      // INIT TIMEPICKER
+      $('.timepicker').pickatime({
+        default: 'now',
+        twelvehour: false,
+        donetext: 'ok',
+        cleartext: 'clear',
+        canceltext: 'cancel',
+        autoclose: true
+      });
 
-
+      //INIT AUTOCOMPLETE
+      $('.autocomplete').autocomplete({
+        data: {
+          "Apple": null,
+          "Orange": null,
+          "Banana": null,
+          "Berries": null,
+          "Pears": null,
+          "Plumbs": null
+        },
+       limit: 20,
+        minLength: 2
+      });
 
 
     });
